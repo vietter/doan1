@@ -71,9 +71,10 @@
             // 
             // btnTrolai
             // 
-            this.btnTrolai.Location = new System.Drawing.Point(514, 86);
+            this.btnTrolai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnTrolai.Location = new System.Drawing.Point(7, 478);
             this.btnTrolai.Name = "btnTrolai";
-            this.btnTrolai.Size = new System.Drawing.Size(95, 39);
+            this.btnTrolai.Size = new System.Drawing.Size(93, 30);
             this.btnTrolai.TabIndex = 0;
             this.btnTrolai.Text = "Trở lại";
             this.btnTrolai.UseVisualStyleBackColor = true;
@@ -97,7 +98,8 @@
             // 
             // btnDoiPhong
             // 
-            this.btnDoiPhong.Location = new System.Drawing.Point(680, 86);
+            this.btnDoiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDoiPhong.Location = new System.Drawing.Point(710, 86);
             this.btnDoiPhong.Name = "btnDoiPhong";
             this.btnDoiPhong.Size = new System.Drawing.Size(95, 39);
             this.btnDoiPhong.TabIndex = 0;
@@ -359,7 +361,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 500);
+            this.ClientSize = new System.Drawing.Size(812, 511);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSoPhong);

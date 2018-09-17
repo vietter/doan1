@@ -101,7 +101,7 @@
             // btnTroLai
             // 
             this.btnTroLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnTroLai.Location = new System.Drawing.Point(18, 80);
+            this.btnTroLai.Location = new System.Drawing.Point(12, 80);
             this.btnTroLai.Name = "btnTroLai";
             this.btnTroLai.Size = new System.Drawing.Size(89, 30);
             this.btnTroLai.TabIndex = 7;

@@ -157,7 +157,7 @@
             // btnKiemTra
             // 
             this.btnKiemTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnKiemTra.Location = new System.Drawing.Point(498, 153);
+            this.btnKiemTra.Location = new System.Drawing.Point(327, 153);
             this.btnKiemTra.Margin = new System.Windows.Forms.Padding(4);
             this.btnKiemTra.Name = "btnKiemTra";
             this.btnKiemTra.Size = new System.Drawing.Size(153, 48);
@@ -168,7 +168,7 @@
             // ptCheck
             // 
             this.ptCheck.Image = ((System.Drawing.Image)(resources.GetObject("ptCheck.Image")));
-            this.ptCheck.Location = new System.Drawing.Point(658, 146);
+            this.ptCheck.Location = new System.Drawing.Point(502, 152);
             this.ptCheck.Name = "ptCheck";
             this.ptCheck.Size = new System.Drawing.Size(100, 85);
             this.ptCheck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +178,7 @@
             // ptDennie
             // 
             this.ptDennie.Image = ((System.Drawing.Image)(resources.GetObject("ptDennie.Image")));
-            this.ptDennie.Location = new System.Drawing.Point(658, 146);
+            this.ptDennie.Location = new System.Drawing.Point(502, 152);
             this.ptDennie.Name = "ptDennie";
             this.ptDennie.Size = new System.Drawing.Size(100, 85);
             this.ptDennie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -189,7 +189,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(776, 168);
+            this.label6.Location = new System.Drawing.Point(620, 174);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 18);
@@ -199,7 +199,7 @@
             // btnDatPhong
             // 
             this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDatPhong.Location = new System.Drawing.Point(498, 153);
+            this.btnDatPhong.Location = new System.Drawing.Point(327, 153);
             this.btnDatPhong.Margin = new System.Windows.Forms.Padding(4);
             this.btnDatPhong.Name = "btnDatPhong";
             this.btnDatPhong.Size = new System.Drawing.Size(153, 48);
@@ -210,10 +210,10 @@
             // btnTroLai
             // 
             this.btnTroLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnTroLai.Location = new System.Drawing.Point(337, 153);
+            this.btnTroLai.Location = new System.Drawing.Point(13, 207);
             this.btnTroLai.Margin = new System.Windows.Forms.Padding(4);
             this.btnTroLai.Name = "btnTroLai";
-            this.btnTroLai.Size = new System.Drawing.Size(153, 48);
+            this.btnTroLai.Size = new System.Drawing.Size(136, 30);
             this.btnTroLai.TabIndex = 14;
             this.btnTroLai.Text = "Trở lại";
             this.btnTroLai.UseVisualStyleBackColor = true;
@@ -221,7 +221,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(658, 146);
+            this.pictureBox1.Location = new System.Drawing.Point(502, 152);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

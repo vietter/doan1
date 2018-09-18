@@ -85,6 +85,7 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pl_main.SuspendLayout();
             this.pl_DichVuThue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
@@ -112,6 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -127,7 +129,7 @@
             // 
             this.txtTenPhong.Location = new System.Drawing.Point(98, 6);
             this.txtTenPhong.Name = "txtTenPhong";
-            this.txtTenPhong.Size = new System.Drawing.Size(177, 20);
+            this.txtTenPhong.Size = new System.Drawing.Size(218, 20);
             this.txtTenPhong.TabIndex = 3;
             // 
             // pl_main
@@ -136,14 +138,14 @@
             this.pl_main.Controls.Add(this.btnTienIch);
             this.pl_main.Controls.Add(this.btnThucAn);
             this.pl_main.Controls.Add(this.btnThucUong);
-            this.pl_main.Location = new System.Drawing.Point(24, 252);
+            this.pl_main.Location = new System.Drawing.Point(337, 130);
             this.pl_main.Name = "pl_main";
-            this.pl_main.Size = new System.Drawing.Size(834, 128);
+            this.pl_main.Size = new System.Drawing.Size(485, 82);
             this.pl_main.TabIndex = 13;
             // 
             // btnDichVuPhu
             // 
-            this.btnDichVuPhu.Location = new System.Drawing.Point(678, 25);
+            this.btnDichVuPhu.Location = new System.Drawing.Point(366, 3);
             this.btnDichVuPhu.Name = "btnDichVuPhu";
             this.btnDichVuPhu.Size = new System.Drawing.Size(113, 75);
             this.btnDichVuPhu.TabIndex = 0;
@@ -152,7 +154,7 @@
             // 
             // btnTienIch
             // 
-            this.btnTienIch.Location = new System.Drawing.Point(452, 25);
+            this.btnTienIch.Location = new System.Drawing.Point(238, 3);
             this.btnTienIch.Name = "btnTienIch";
             this.btnTienIch.Size = new System.Drawing.Size(122, 75);
             this.btnTienIch.TabIndex = 0;
@@ -161,7 +163,7 @@
             // 
             // btnThucAn
             // 
-            this.btnThucAn.Location = new System.Drawing.Point(231, 25);
+            this.btnThucAn.Location = new System.Drawing.Point(121, 3);
             this.btnThucAn.Name = "btnThucAn";
             this.btnThucAn.Size = new System.Drawing.Size(111, 75);
             this.btnThucAn.TabIndex = 0;
@@ -170,7 +172,7 @@
             // 
             // btnThucUong
             // 
-            this.btnThucUong.Location = new System.Drawing.Point(41, 25);
+            this.btnThucUong.Location = new System.Drawing.Point(7, 3);
             this.btnThucUong.Name = "btnThucUong";
             this.btnThucUong.Size = new System.Drawing.Size(108, 75);
             this.btnThucUong.TabIndex = 0;
@@ -187,7 +189,7 @@
             this.pl_DichVuThue.Controls.Add(this.pictureBox21);
             this.pl_DichVuThue.Controls.Add(this.pictureBox20);
             this.pl_DichVuThue.Controls.Add(this.pictureBox19);
-            this.pl_DichVuThue.Location = new System.Drawing.Point(241, 177);
+            this.pl_DichVuThue.Location = new System.Drawing.Point(426, 230);
             this.pl_DichVuThue.Name = "pl_DichVuThue";
             this.pl_DichVuThue.Size = new System.Drawing.Size(834, 226);
             this.pl_DichVuThue.TabIndex = 15;
@@ -281,7 +283,7 @@
             this.pl_ThucAn.Controls.Add(this.pictureBox11);
             this.pl_ThucAn.Controls.Add(this.pictureBox12);
             this.pl_ThucAn.Controls.Add(this.pictureBox13);
-            this.pl_ThucAn.Location = new System.Drawing.Point(227, 189);
+            this.pl_ThucAn.Location = new System.Drawing.Point(355, 292);
             this.pl_ThucAn.Name = "pl_ThucAn";
             this.pl_ThucAn.Size = new System.Drawing.Size(834, 226);
             this.pl_ThucAn.TabIndex = 15;
@@ -393,7 +395,7 @@
             this.pl_TienIch.Controls.Add(this.pictureBox16);
             this.pl_TienIch.Controls.Add(this.pictureBox17);
             this.pl_TienIch.Controls.Add(this.pictureBox18);
-            this.pl_TienIch.Location = new System.Drawing.Point(206, 210);
+            this.pl_TienIch.Location = new System.Drawing.Point(391, 274);
             this.pl_TienIch.Name = "pl_TienIch";
             this.pl_TienIch.Size = new System.Drawing.Size(834, 226);
             this.pl_TienIch.TabIndex = 16;
@@ -507,7 +509,7 @@
             this.pl_ThucUong.Controls.Add(this.pictureBox3);
             this.pl_ThucUong.Controls.Add(this.pictureBox2);
             this.pl_ThucUong.Controls.Add(this.pictureBox1);
-            this.pl_ThucUong.Location = new System.Drawing.Point(186, 228);
+            this.pl_ThucUong.Location = new System.Drawing.Point(322, 318);
             this.pl_ThucUong.Name = "pl_ThucUong";
             this.pl_ThucUong.Size = new System.Drawing.Size(834, 238);
             this.pl_ThucUong.TabIndex = 15;
@@ -634,7 +636,7 @@
             // btnTrolai
             // 
             this.btnTrolai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnTrolai.Location = new System.Drawing.Point(3, 479);
+            this.btnTrolai.Location = new System.Drawing.Point(3, 511);
             this.btnTrolai.Name = "btnTrolai";
             this.btnTrolai.Size = new System.Drawing.Size(93, 30);
             this.btnTrolai.TabIndex = 17;
@@ -645,7 +647,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(952, 109);
+            this.label11.Location = new System.Drawing.Point(731, 100);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 18);
             this.label11.TabIndex = 21;
@@ -654,7 +656,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(946, 12);
+            this.pictureBox9.Location = new System.Drawing.Point(723, 3);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(98, 94);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -665,7 +667,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(739, 109);
+            this.label24.Location = new System.Drawing.Point(620, 103);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(76, 18);
             this.label24.TabIndex = 19;
@@ -674,18 +676,27 @@
             // pictureBox22
             // 
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(727, 12);
+            this.pictureBox22.Location = new System.Drawing.Point(610, 6);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(98, 94);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 18;
             this.pictureBox22.TabStop = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 32);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(304, 438);
+            this.dataGridView1.TabIndex = 22;
+            // 
             // TuyChonPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 511);
+            this.ClientSize = new System.Drawing.Size(884, 661);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.label24);
@@ -700,6 +711,7 @@
             this.Controls.Add(this.label1);
             this.Name = "TuyChonPhong";
             this.Text = "TuyChonPhong";
+            this.Load += new System.EventHandler(this.TuyChonPhong_Load);
             this.pl_main.ResumeLayout(false);
             this.pl_DichVuThue.ResumeLayout(false);
             this.pl_DichVuThue.PerformLayout();
@@ -731,6 +743,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -793,5 +806,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

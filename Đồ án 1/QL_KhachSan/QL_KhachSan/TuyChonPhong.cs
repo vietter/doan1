@@ -21,5 +21,10 @@ namespace QL_KhachSan
         {
 
         }
+
+        private void TuyChonPhong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

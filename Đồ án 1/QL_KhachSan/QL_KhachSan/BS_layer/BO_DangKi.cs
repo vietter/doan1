@@ -13,7 +13,7 @@ namespace QL_KhachSan.BS_layer
         public int DangKi(DTO_KhachHang dto)
         {
             int result = -1;
-            string sql = @"INSERT INTO KhachHang VALUES (@SDT,@TenKH,@TichLuy,@MatKhau,@CMND,@CauHoiBaoMat,@TraLoi";
+            string sql = @"INSERT INTO KhachHang VALUES (@SDT,@TenKH,@TichLuy,@MatKhau,@CMND,@CauHoiBaoMat,@TraLoi)";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@SDT",dto.SDT),

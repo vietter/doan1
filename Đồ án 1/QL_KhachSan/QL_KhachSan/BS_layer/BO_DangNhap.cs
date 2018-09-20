@@ -10,7 +10,24 @@ namespace QL_KhachSan.BS_layer
 {
     class BO_DangNhap
     {
-        public DataSet KT_DangNhap(DTO_KhachHang dto, ref string TenKH)
+        public DataSet KT_SDT(DTO_KhachHang dto, ref string TenKH)
+        {
+            DataSet result = new DataSet();
+            string sql = @"SELECT * FROM KhachHang WHERE SoDienThoai = @SDT ";
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter ("@SDT",dto.SDT),
+                
+            };
+            DataAccess data = new DataAccess();
+            result = data.getdataset(sql, para);
+            if(result.Tables.Count >0 && result.Tables[0].Rows.Count>0)
+            {
+                TenKH = result.Tables[0].Rows[0][1].ToString();
+            }
+            return result;
+        }
+        public DataSet KT_MatKhau(DTO_KhachHang dto)
         {
             DataSet result = new DataSet();
             string sql = @"SELECT * FROM KhachHang WHERE SoDienThoai = @SDT AND MatKhau = @MatKhau";
@@ -21,11 +38,8 @@ namespace QL_KhachSan.BS_layer
             };
             DataAccess data = new DataAccess();
             result = data.getdataset(sql, para);
-            if(result.Tables.Count >0 && result.Tables[0].Rows.Count>0)
-            {
-                TenKH = result.Tables[0].Rows[0][1].ToString();
-            }
             return result;
+
         }
     }
 }

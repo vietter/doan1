@@ -37,8 +37,8 @@
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnDangKi = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lbSai = new System.Windows.Forms.Label();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -101,6 +101,7 @@
             this.btnDangNhap.TabIndex = 5;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // label4
             // 
@@ -120,24 +121,29 @@
             this.btnDangKi.TabIndex = 7;
             this.btnDangKi.Text = "Đăng kí ";
             this.btnDangKi.UseVisualStyleBackColor = true;
+            this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
             // 
-            // label5
+            // lbSai
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(345, 309);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "label5";
+            this.lbSai.AutoSize = true;
+            this.lbSai.BackColor = System.Drawing.Color.Red;
+            this.lbSai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbSai.Location = new System.Drawing.Point(152, 325);
+            this.lbSai.Name = "lbSai";
+            this.lbSai.Size = new System.Drawing.Size(27, 18);
+            this.lbSai.TabIndex = 8;
+            this.lbSai.Text = "sai";
+            this.lbSai.Click += new System.EventHandler(this.label5_Click);
             // 
-            // button1
+            // btnThoat
             // 
-            this.button1.Location = new System.Drawing.Point(16, 512);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 41);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThoat.Location = new System.Drawing.Point(16, 512);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(107, 41);
+            this.btnThoat.TabIndex = 9;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // DangNhap
             // 
@@ -146,8 +152,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(428, 561);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.lbSai);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDangNhap);
@@ -158,6 +164,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DangNhap";
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.DangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,8 +180,8 @@
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDangKi;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbSai;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
 

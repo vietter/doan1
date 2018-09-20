@@ -425,6 +425,7 @@
             this.Controls.Add(this.label3);
             this.Name = "GiaoDienKhachHang";
             this.Text = "Giao Diện Khách Hàng";
+            this.Load += new System.EventHandler(this.GiaoDienKhachHang_Load);
             this.Click += new System.EventHandler(this.GiaoDienKhachHang_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

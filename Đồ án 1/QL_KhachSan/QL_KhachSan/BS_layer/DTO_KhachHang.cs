@@ -14,6 +14,6 @@ namespace QL_KhachSan.BS_layer
         public int TichLuy;
         public string CauHoiBiMat;
         public string TraLoi;
-        public int CMND;
+        public string CMND;
     }
 }

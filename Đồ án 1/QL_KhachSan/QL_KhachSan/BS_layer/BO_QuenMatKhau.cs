@@ -37,5 +37,20 @@ namespace QL_KhachSan.BS_layer
             result = data.getdataset(sql, para);
             return result;
         }
+        public int DoiMatKhau(DTO_KhachHang dto)
+        {
+            int result = -1;
+            string sql = @"UPDATE KhachHang SET MatKhau =@MatKhau WHERE SoDienThoai =@SDT";
+            SqlParameter[] para = new SqlParameter[]
+                {
+                    new SqlParameter("@MatKhau",dto.MatKhau),
+                    new SqlParameter("@SDT",dto.SDT),
+
+                };
+            DataAccess data = new DataAccess();
+            result = data.Execute(sql, para);
+            return result;
+        }
+
     }
 }

@@ -12,6 +12,15 @@ namespace QL_KhachSan
 {
     public partial class GiaoDienKhachHang : Form
     {
+        private string tenkh;
+        public string TENKH
+        {
+            set
+            {
+                tenkh = value;
+            }
+        }
+
         public GiaoDienKhachHang()
         {
             InitializeComponent();
@@ -28,6 +37,11 @@ namespace QL_KhachSan
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GiaoDienKhachHang_Load(object sender, EventArgs e)
         {
 
         }

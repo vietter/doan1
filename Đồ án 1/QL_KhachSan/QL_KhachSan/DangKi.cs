@@ -12,7 +12,7 @@ namespace QL_KhachSan
 {
     public partial class DangKi : Form
     {
-        bool KT = false;
+        bool KT = false ;
         public DangKi()
         {
             InitializeComponent();
@@ -49,6 +49,8 @@ namespace QL_KhachSan
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
+           
+
             if (KT == false)
             {
                 if(txtTenKH.Text =="")
@@ -101,33 +103,33 @@ namespace QL_KhachSan
                 }
                 if(lbTen.Visible == false && lbSDT.Visible == false && lbMatKhau.Visible == false && lbCauHoi.Visible == false && lbTraLoi.Visible == false && lbCMND.Visible == false)
                 {
-                    KT = true;
-                }
-                if(KT == true)
-                {
-                    DTO_KhachHang khachhang = new DTO_KhachHang();
-                    khachhang.SDT = txtSoDT.Text;
-                    khachhang.MatKhau = txtMatKhau.Text;
-                    khachhang.TenKH = txtTenKH.Text;
-                    khachhang.CMND = txtCMND.Text;
-                    khachhang.CauHoiBiMat = cbbCauHoi.Text;
-                    khachhang.TraLoi = txtTraLoi.Text;
+                   
+                  
+                        DTO_KhachHang khachhang = new DTO_KhachHang();
+                        khachhang.SDT = txtSoDT.Text;
+                        khachhang.MatKhau = txtMatKhau.Text;
+                        khachhang.TenKH = txtTenKH.Text;
+                        khachhang.CMND = txtCMND.Text;
+                        khachhang.CauHoiBiMat = cbbCauHoi.Text;
+                        khachhang.TraLoi = txtTraLoi.Text;
 
-                    BO_DangKi dangki = new BO_DangKi();
-                    if(dangki.DangKi(khachhang) != -1)
-                    {
-                        MessageBox.Show("Bạn đã đăng kí thành công!", "Thông Báo", MessageBoxButtons.OK);
-                        this.Hide();
-                        DangNhap dangnhap = new DangNhap();
-                        dangnhap.ShowDialog();
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Chưa đăng kí thành công vui lòng thử lại", "Thông báo", MessageBoxButtons.OK);
+                        BO_DangKi dangki = new BO_DangKi();
+                        if (dangki.DangKi(khachhang) != -1)
+                        {
+                            MessageBox.Show("Bạn đã đăng kí thành công!", "Thông Báo", MessageBoxButtons.OK);
+                            this.Hide();
+                            DangNhap dangnhap = new DangNhap();
+                            dangnhap.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Chưa đăng kí thành công vui lòng thử lại", "Thông báo", MessageBoxButtons.OK);
 
-                    }
+                        }
+                    
                 }
+               
             }
         }
 

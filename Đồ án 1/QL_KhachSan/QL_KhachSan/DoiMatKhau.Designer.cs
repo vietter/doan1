@@ -35,6 +35,8 @@
             this.txtReMatKhau = new System.Windows.Forms.TextBox();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.btnTroLai = new System.Windows.Forms.Button();
+            this.lbMatKhau = new System.Windows.Forms.Label();
+            this.lbReMatKhau = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -79,7 +81,7 @@
             this.txtReMatKhau.Location = new System.Drawing.Point(223, 106);
             this.txtReMatKhau.Name = "txtReMatKhau";
             this.txtReMatKhau.Size = new System.Drawing.Size(195, 20);
-            this.txtReMatKhau.TabIndex = 3;
+            this.txtReMatKhau.TabIndex = 2;
             // 
             // btnXacNhan
             // 
@@ -87,9 +89,10 @@
             this.btnXacNhan.Location = new System.Drawing.Point(319, 153);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(99, 40);
-            this.btnXacNhan.TabIndex = 14;
+            this.btnXacNhan.TabIndex = 3;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // btnTroLai
             // 
@@ -97,15 +100,38 @@
             this.btnTroLai.Location = new System.Drawing.Point(12, 153);
             this.btnTroLai.Name = "btnTroLai";
             this.btnTroLai.Size = new System.Drawing.Size(99, 40);
-            this.btnTroLai.TabIndex = 13;
+            this.btnTroLai.TabIndex = 4;
             this.btnTroLai.Text = "Trờ lại";
             this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
+            // 
+            // lbMatKhau
+            // 
+            this.lbMatKhau.AutoSize = true;
+            this.lbMatKhau.ForeColor = System.Drawing.Color.Red;
+            this.lbMatKhau.Location = new System.Drawing.Point(220, 48);
+            this.lbMatKhau.Name = "lbMatKhau";
+            this.lbMatKhau.Size = new System.Drawing.Size(127, 13);
+            this.lbMatKhau.TabIndex = 15;
+            this.lbMatKhau.Text = "Bạn chưa nhập mật khẩu";
+            // 
+            // lbReMatKhau
+            // 
+            this.lbReMatKhau.AutoSize = true;
+            this.lbReMatKhau.ForeColor = System.Drawing.Color.Red;
+            this.lbReMatKhau.Location = new System.Drawing.Point(220, 90);
+            this.lbReMatKhau.Name = "lbReMatKhau";
+            this.lbReMatKhau.Size = new System.Drawing.Size(140, 13);
+            this.lbReMatKhau.TabIndex = 16;
+            this.lbReMatKhau.Text = "Bạn chưa nhập lại mật khẩu";
             // 
             // DoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 205);
+            this.Controls.Add(this.lbReMatKhau);
+            this.Controls.Add(this.lbMatKhau);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.btnTroLai);
             this.Controls.Add(this.label3);
@@ -115,6 +141,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DoiMatKhau";
             this.Text = "Đổi Mật Khẩu";
+            this.Load += new System.EventHandler(this.DoiMatKhau_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +156,7 @@
         private System.Windows.Forms.TextBox txtReMatKhau;
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.Button btnTroLai;
+        private System.Windows.Forms.Label lbMatKhau;
+        private System.Windows.Forms.Label lbReMatKhau;
     }
 }

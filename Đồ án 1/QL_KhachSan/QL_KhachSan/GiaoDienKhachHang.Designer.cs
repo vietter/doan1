@@ -29,64 +29,64 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GiaoDienKhachHang));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pQuanLiTK = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pDatPhong = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbKhachHang = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pHoTro = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.p1 = new System.Windows.Forms.PictureBox();
+            this.lb1 = new System.Windows.Forms.Label();
+            this.p2 = new System.Windows.Forms.PictureBox();
+            this.p3 = new System.Windows.Forms.PictureBox();
+            this.p7 = new System.Windows.Forms.PictureBox();
+            this.gbDSPhong = new System.Windows.Forms.GroupBox();
+            this.lb10 = new System.Windows.Forms.Label();
+            this.lb9 = new System.Windows.Forms.Label();
+            this.lb8 = new System.Windows.Forms.Label();
+            this.lb7 = new System.Windows.Forms.Label();
+            this.lb6 = new System.Windows.Forms.Label();
+            this.lb5 = new System.Windows.Forms.Label();
+            this.lb4 = new System.Windows.Forms.Label();
+            this.lb3 = new System.Windows.Forms.Label();
+            this.lb2 = new System.Windows.Forms.Label();
+            this.p10 = new System.Windows.Forms.PictureBox();
+            this.p9 = new System.Windows.Forms.PictureBox();
+            this.p5 = new System.Windows.Forms.PictureBox();
+            this.p8 = new System.Windows.Forms.PictureBox();
+            this.p6 = new System.Windows.Forms.PictureBox();
+            this.p4 = new System.Windows.Forms.PictureBox();
             this.btnTrolai = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pQuanLiTK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDatPhong)).BeginInit();
+            this.gbKhachHang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pHoTro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p7)).BeginInit();
+            this.gbDSPhong.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.p10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p4)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pQuanLiTK
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pQuanLiTK.Image = ((System.Drawing.Image)(resources.GetObject("pQuanLiTK.Image")));
+            this.pQuanLiTK.Location = new System.Drawing.Point(15, 12);
+            this.pQuanLiTK.Name = "pQuanLiTK";
+            this.pQuanLiTK.Size = new System.Drawing.Size(98, 94);
+            this.pQuanLiTK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pQuanLiTK.TabIndex = 0;
+            this.pQuanLiTK.TabStop = false;
+            this.pQuanLiTK.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -98,15 +98,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản lí tài khoản";
             // 
-            // pictureBox2
+            // pDatPhong
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(184, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.pDatPhong.Image = ((System.Drawing.Image)(resources.GetObject("pDatPhong.Image")));
+            this.pDatPhong.Location = new System.Drawing.Point(184, 12);
+            this.pDatPhong.Name = "pDatPhong";
+            this.pDatPhong.Size = new System.Drawing.Size(98, 94);
+            this.pDatPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pDatPhong.TabIndex = 2;
+            this.pDatPhong.TabStop = false;
+            this.pDatPhong.Click += new System.EventHandler(this.pDatPhong_Click);
             // 
             // label2
             // 
@@ -118,20 +119,21 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Đặt phòng";
             // 
-            // groupBox2
+            // gbKhachHang
             // 
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.pictureBox4);
-            this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Location = new System.Drawing.Point(7, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(808, 129);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Khách Hàng";
+            this.gbKhachHang.Controls.Add(this.label4);
+            this.gbKhachHang.Controls.Add(this.pHoTro);
+            this.gbKhachHang.Controls.Add(this.pDatPhong);
+            this.gbKhachHang.Controls.Add(this.label2);
+            this.gbKhachHang.Controls.Add(this.label1);
+            this.gbKhachHang.Controls.Add(this.pQuanLiTK);
+            this.gbKhachHang.Location = new System.Drawing.Point(7, 2);
+            this.gbKhachHang.Name = "gbKhachHang";
+            this.gbKhachHang.Size = new System.Drawing.Size(808, 129);
+            this.gbKhachHang.TabIndex = 5;
+            this.gbKhachHang.TabStop = false;
+            this.gbKhachHang.Text = "Khách Hàng";
+            this.gbKhachHang.Enter += new System.EventHandler(this.gbKhachHang_Enter);
             // 
             // label4
             // 
@@ -143,15 +145,15 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Hỗ trợ";
             // 
-            // pictureBox4
+            // pHoTro
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(704, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
+            this.pHoTro.Image = ((System.Drawing.Image)(resources.GetObject("pHoTro.Image")));
+            this.pHoTro.Location = new System.Drawing.Point(704, 12);
+            this.pHoTro.Name = "pHoTro";
+            this.pHoTro.Size = new System.Drawing.Size(98, 94);
+            this.pHoTro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pHoTro.TabIndex = 6;
+            this.pHoTro.TabStop = false;
             // 
             // label3
             // 
@@ -174,234 +176,234 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "money";
             // 
-            // pictureBox6
+            // p1
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(15, 19);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 6;
-            this.pictureBox6.TabStop = false;
+            this.p1.Image = ((System.Drawing.Image)(resources.GetObject("p1.Image")));
+            this.p1.Location = new System.Drawing.Point(15, 19);
+            this.p1.Name = "p1";
+            this.p1.Size = new System.Drawing.Size(98, 94);
+            this.p1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p1.TabIndex = 6;
+            this.p1.TabStop = false;
             // 
-            // label8
+            // lb1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(36, 116);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 18);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "phòng";
+            this.lb1.AutoSize = true;
+            this.lb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb1.Location = new System.Drawing.Point(36, 116);
+            this.lb1.Name = "lb1";
+            this.lb1.Size = new System.Drawing.Size(49, 18);
+            this.lb1.TabIndex = 7;
+            this.lb1.Text = "phòng";
             // 
-            // pictureBox7
+            // p2
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(184, 19);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 8;
-            this.pictureBox7.TabStop = false;
+            this.p2.Image = ((System.Drawing.Image)(resources.GetObject("p2.Image")));
+            this.p2.Location = new System.Drawing.Point(184, 19);
+            this.p2.Name = "p2";
+            this.p2.Size = new System.Drawing.Size(98, 94);
+            this.p2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p2.TabIndex = 8;
+            this.p2.TabStop = false;
             // 
-            // pictureBox8
+            // p3
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(364, 19);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 10;
-            this.pictureBox8.TabStop = false;
+            this.p3.Image = ((System.Drawing.Image)(resources.GetObject("p3.Image")));
+            this.p3.Location = new System.Drawing.Point(364, 19);
+            this.p3.Name = "p3";
+            this.p3.Size = new System.Drawing.Size(98, 94);
+            this.p3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p3.TabIndex = 10;
+            this.p3.TabStop = false;
             // 
-            // pictureBox12
+            // p7
             // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(184, 160);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 18;
-            this.pictureBox12.TabStop = false;
+            this.p7.Image = ((System.Drawing.Image)(resources.GetObject("p7.Image")));
+            this.p7.Location = new System.Drawing.Point(184, 160);
+            this.p7.Name = "p7";
+            this.p7.Size = new System.Drawing.Size(98, 94);
+            this.p7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p7.TabIndex = 18;
+            this.p7.TabStop = false;
             // 
-            // groupBox1
+            // gbDSPhong
             // 
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.pictureBox15);
-            this.groupBox1.Controls.Add(this.pictureBox14);
-            this.groupBox1.Controls.Add(this.pictureBox13);
-            this.groupBox1.Controls.Add(this.pictureBox11);
-            this.groupBox1.Controls.Add(this.pictureBox10);
-            this.groupBox1.Controls.Add(this.pictureBox12);
-            this.groupBox1.Controls.Add(this.pictureBox9);
-            this.groupBox1.Controls.Add(this.pictureBox8);
-            this.groupBox1.Controls.Add(this.pictureBox7);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.pictureBox6);
-            this.groupBox1.Location = new System.Drawing.Point(7, 137);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(810, 370);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh Sách Phòng đã đặt";
+            this.gbDSPhong.Controls.Add(this.lb10);
+            this.gbDSPhong.Controls.Add(this.lb9);
+            this.gbDSPhong.Controls.Add(this.lb8);
+            this.gbDSPhong.Controls.Add(this.lb7);
+            this.gbDSPhong.Controls.Add(this.lb6);
+            this.gbDSPhong.Controls.Add(this.lb5);
+            this.gbDSPhong.Controls.Add(this.lb4);
+            this.gbDSPhong.Controls.Add(this.lb3);
+            this.gbDSPhong.Controls.Add(this.lb2);
+            this.gbDSPhong.Controls.Add(this.p10);
+            this.gbDSPhong.Controls.Add(this.p9);
+            this.gbDSPhong.Controls.Add(this.p5);
+            this.gbDSPhong.Controls.Add(this.p8);
+            this.gbDSPhong.Controls.Add(this.p6);
+            this.gbDSPhong.Controls.Add(this.p7);
+            this.gbDSPhong.Controls.Add(this.p4);
+            this.gbDSPhong.Controls.Add(this.p3);
+            this.gbDSPhong.Controls.Add(this.p2);
+            this.gbDSPhong.Controls.Add(this.lb1);
+            this.gbDSPhong.Controls.Add(this.p1);
+            this.gbDSPhong.Location = new System.Drawing.Point(7, 137);
+            this.gbDSPhong.Name = "gbDSPhong";
+            this.gbDSPhong.Size = new System.Drawing.Size(810, 370);
+            this.gbDSPhong.TabIndex = 4;
+            this.gbDSPhong.TabStop = false;
+            this.gbDSPhong.Text = "Danh Sách Phòng đã đặt";
             // 
-            // label16
+            // lb10
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(734, 257);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 18);
-            this.label16.TabIndex = 39;
-            this.label16.Text = "phòng";
+            this.lb10.AutoSize = true;
+            this.lb10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb10.Location = new System.Drawing.Point(734, 257);
+            this.lb10.Name = "lb10";
+            this.lb10.Size = new System.Drawing.Size(49, 18);
+            this.lb10.TabIndex = 39;
+            this.lb10.Text = "phòng";
             // 
-            // label15
+            // lb9
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(568, 257);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(49, 18);
-            this.label15.TabIndex = 38;
-            this.label15.Text = "phòng";
+            this.lb9.AutoSize = true;
+            this.lb9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb9.Location = new System.Drawing.Point(568, 257);
+            this.lb9.Name = "lb9";
+            this.lb9.Size = new System.Drawing.Size(49, 18);
+            this.lb9.TabIndex = 38;
+            this.lb9.Text = "phòng";
             // 
-            // label14
+            // lb8
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(388, 257);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 18);
-            this.label14.TabIndex = 37;
-            this.label14.Text = "phòng";
+            this.lb8.AutoSize = true;
+            this.lb8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb8.Location = new System.Drawing.Point(388, 257);
+            this.lb8.Name = "lb8";
+            this.lb8.Size = new System.Drawing.Size(49, 18);
+            this.lb8.TabIndex = 37;
+            this.lb8.Text = "phòng";
             // 
-            // label13
+            // lb7
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(209, 257);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 18);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "phòng";
+            this.lb7.AutoSize = true;
+            this.lb7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb7.Location = new System.Drawing.Point(209, 257);
+            this.lb7.Name = "lb7";
+            this.lb7.Size = new System.Drawing.Size(49, 18);
+            this.lb7.TabIndex = 36;
+            this.lb7.Text = "phòng";
             // 
-            // label12
+            // lb6
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(36, 257);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 18);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "phòng";
+            this.lb6.AutoSize = true;
+            this.lb6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb6.Location = new System.Drawing.Point(36, 257);
+            this.lb6.Name = "lb6";
+            this.lb6.Size = new System.Drawing.Size(49, 18);
+            this.lb6.TabIndex = 35;
+            this.lb6.Text = "phòng";
             // 
-            // label11
+            // lb5
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(734, 116);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 18);
-            this.label11.TabIndex = 34;
-            this.label11.Text = "phòng";
+            this.lb5.AutoSize = true;
+            this.lb5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb5.Location = new System.Drawing.Point(734, 116);
+            this.lb5.Name = "lb5";
+            this.lb5.Size = new System.Drawing.Size(49, 18);
+            this.lb5.TabIndex = 34;
+            this.lb5.Text = "phòng";
             // 
-            // label10
+            // lb4
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(568, 116);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 18);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "phòng";
+            this.lb4.AutoSize = true;
+            this.lb4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb4.Location = new System.Drawing.Point(568, 116);
+            this.lb4.Name = "lb4";
+            this.lb4.Size = new System.Drawing.Size(49, 18);
+            this.lb4.TabIndex = 33;
+            this.lb4.Text = "phòng";
             // 
-            // label9
+            // lb3
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(388, 116);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 18);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "phòng";
+            this.lb3.AutoSize = true;
+            this.lb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb3.Location = new System.Drawing.Point(388, 116);
+            this.lb3.Name = "lb3";
+            this.lb3.Size = new System.Drawing.Size(49, 18);
+            this.lb3.TabIndex = 32;
+            this.lb3.Text = "phòng";
             // 
-            // label18
+            // lb2
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(209, 116);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 18);
-            this.label18.TabIndex = 31;
-            this.label18.Text = "phòng";
+            this.lb2.AutoSize = true;
+            this.lb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb2.Location = new System.Drawing.Point(209, 116);
+            this.lb2.Name = "lb2";
+            this.lb2.Size = new System.Drawing.Size(49, 18);
+            this.lb2.TabIndex = 31;
+            this.lb2.Text = "phòng";
             // 
-            // pictureBox15
+            // p10
             // 
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(704, 160);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 30;
-            this.pictureBox15.TabStop = false;
+            this.p10.Image = ((System.Drawing.Image)(resources.GetObject("p10.Image")));
+            this.p10.Location = new System.Drawing.Point(704, 160);
+            this.p10.Name = "p10";
+            this.p10.Size = new System.Drawing.Size(98, 94);
+            this.p10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p10.TabIndex = 30;
+            this.p10.TabStop = false;
             // 
-            // pictureBox14
+            // p9
             // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(541, 160);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 29;
-            this.pictureBox14.TabStop = false;
+            this.p9.Image = ((System.Drawing.Image)(resources.GetObject("p9.Image")));
+            this.p9.Location = new System.Drawing.Point(541, 160);
+            this.p9.Name = "p9";
+            this.p9.Size = new System.Drawing.Size(98, 94);
+            this.p9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p9.TabIndex = 29;
+            this.p9.TabStop = false;
             // 
-            // pictureBox13
+            // p5
             // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(704, 19);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 28;
-            this.pictureBox13.TabStop = false;
+            this.p5.Image = ((System.Drawing.Image)(resources.GetObject("p5.Image")));
+            this.p5.Location = new System.Drawing.Point(704, 19);
+            this.p5.Name = "p5";
+            this.p5.Size = new System.Drawing.Size(98, 94);
+            this.p5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p5.TabIndex = 28;
+            this.p5.TabStop = false;
             // 
-            // pictureBox11
+            // p8
             // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(364, 160);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 27;
-            this.pictureBox11.TabStop = false;
+            this.p8.Image = ((System.Drawing.Image)(resources.GetObject("p8.Image")));
+            this.p8.Location = new System.Drawing.Point(364, 160);
+            this.p8.Name = "p8";
+            this.p8.Size = new System.Drawing.Size(98, 94);
+            this.p8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p8.TabIndex = 27;
+            this.p8.TabStop = false;
             // 
-            // pictureBox10
+            // p6
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(15, 160);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 26;
-            this.pictureBox10.TabStop = false;
+            this.p6.Image = ((System.Drawing.Image)(resources.GetObject("p6.Image")));
+            this.p6.Location = new System.Drawing.Point(15, 160);
+            this.p6.Name = "p6";
+            this.p6.Size = new System.Drawing.Size(98, 94);
+            this.p6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p6.TabIndex = 26;
+            this.p6.TabStop = false;
             // 
-            // pictureBox9
+            // p4
             // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(541, 19);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 12;
-            this.pictureBox9.TabStop = false;
+            this.p4.Image = ((System.Drawing.Image)(resources.GetObject("p4.Image")));
+            this.p4.Location = new System.Drawing.Point(541, 19);
+            this.p4.Name = "p4";
+            this.p4.Size = new System.Drawing.Size(98, 94);
+            this.p4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p4.TabIndex = 12;
+            this.p4.TabStop = false;
             // 
             // btnTrolai
             // 
@@ -419,31 +421,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 542);
             this.Controls.Add(this.btnTrolai);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbKhachHang);
+            this.Controls.Add(this.gbDSPhong);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Name = "GiaoDienKhachHang";
             this.Text = "Giao Diện Khách Hàng";
             this.Load += new System.EventHandler(this.GiaoDienKhachHang_Load);
             this.Click += new System.EventHandler(this.GiaoDienKhachHang_Click);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pQuanLiTK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDatPhong)).EndInit();
+            this.gbKhachHang.ResumeLayout(false);
+            this.gbKhachHang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pHoTro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p7)).EndInit();
+            this.gbDSPhong.ResumeLayout(false);
+            this.gbDSPhong.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.p10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,36 +453,36 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pQuanLiTK;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pDatPhong;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbKhachHang;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pHoTro;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox p1;
+        private System.Windows.Forms.Label lb1;
+        private System.Windows.Forms.PictureBox p2;
+        private System.Windows.Forms.PictureBox p3;
+        private System.Windows.Forms.PictureBox p7;
+        private System.Windows.Forms.GroupBox gbDSPhong;
+        private System.Windows.Forms.Label lb10;
+        private System.Windows.Forms.Label lb9;
+        private System.Windows.Forms.Label lb8;
+        private System.Windows.Forms.Label lb7;
+        private System.Windows.Forms.Label lb6;
+        private System.Windows.Forms.Label lb5;
+        private System.Windows.Forms.Label lb4;
+        private System.Windows.Forms.Label lb3;
+        private System.Windows.Forms.Label lb2;
+        private System.Windows.Forms.PictureBox p10;
+        private System.Windows.Forms.PictureBox p9;
+        private System.Windows.Forms.PictureBox p5;
+        private System.Windows.Forms.PictureBox p8;
+        private System.Windows.Forms.PictureBox p6;
+        private System.Windows.Forms.PictureBox p4;
         private System.Windows.Forms.Button btnTrolai;
     }
 }

@@ -80,7 +80,7 @@
             this.txtSoDT.Mask = "(+84) 0000000000";
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(97, 20);
-            this.txtSoDT.TabIndex = 3;
+            this.txtSoDT.TabIndex = 1;
             // 
             // linkLabel1
             // 
@@ -89,7 +89,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(392, 512);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(25, 13);
-            this.linkLabel1.TabIndex = 4;
+            this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "đây";
             // 
@@ -98,7 +98,7 @@
             this.btnDangNhap.Location = new System.Drawing.Point(310, 371);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(107, 41);
-            this.btnDangNhap.TabIndex = 5;
+            this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -118,7 +118,7 @@
             this.btnDangKi.Location = new System.Drawing.Point(16, 371);
             this.btnDangKi.Name = "btnDangKi";
             this.btnDangKi.Size = new System.Drawing.Size(107, 41);
-            this.btnDangKi.TabIndex = 7;
+            this.btnDangKi.TabIndex = 3;
             this.btnDangKi.Text = "Đăng kí ";
             this.btnDangKi.UseVisualStyleBackColor = true;
             this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
@@ -140,7 +140,7 @@
             this.btnThoat.Location = new System.Drawing.Point(16, 512);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(107, 41);
-            this.btnThoat.TabIndex = 9;
+            this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);

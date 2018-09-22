@@ -63,29 +63,41 @@ namespace QL_KhachSan
                 if(lbSai.Visible == false)
                 {
                     KT = true;
+                 
+                        DTO_KhachHang khachhang = new DTO_KhachHang();
+                        khachhang.SDT = sdt;
+                        khachhang.MatKhau = txtMatKhau.Text;
+                        BO_DangNhap dangnhap = new BO_DangNhap();
+                        DataSet result = dangnhap.KT_MatKhau(khachhang);
+                        if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
+                        {
+                            MessageBox.Show("Đăng Nhập Thành công", "Thông Báo", MessageBoxButtons.OK);
+                            this.Hide();
+                            GiaoDienKhachHang giaodien = new GiaoDienKhachHang();
+                            giaodien.SDT = sdt;
+                            giaodien.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đăng Nhập Thất bại", "Thông Báo", MessageBoxButtons.OK);
+                            txtMatKhau.ResetText();
+                            txtMatKhau.Focus();
+                        }
+                    
                 }
             }
-            else
-            {
-                DTO_KhachHang khachhang = new DTO_KhachHang();
-                khachhang.SDT = sdt;
-                khachhang.MatKhau = txtMatKhau.Text;
-                BO_DangNhap dangnhap = new BO_DangNhap();
-                DataSet result = dangnhap.KT_MatKhau(khachhang);
-                if(result.Tables.Count >0 && result.Tables[0].Rows.Count >0)
-                {
-                    MessageBox.Show("Đăng Nhập Thành công", "Thông Báo", MessageBoxButtons.OK);
-                    this.Hide();
-                    GiaoDienKhachHang giaodien = new GiaoDienKhachHang();
-                    giaodien.ShowDialog();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Đăng Nhập Thất bại", "Thông Báo", MessageBoxButtons.OK);
-                }
-            }
+          
 
+        }
+
+        private void lbLinkQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            QuenMatKhau quen = new QuenMatKhau();
+            quen.SDT = sdt;
+            quen.ShowDialog();
+            this.Close();
         }
     }
 }

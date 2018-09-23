@@ -33,7 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lbLinkQuenMatKhau = new System.Windows.Forms.LinkLabel();
             this.btnTroLai = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.lbSai = new System.Windows.Forms.Label();
@@ -75,7 +75,7 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(157, 20);
-            this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.TabIndex = 1;
             // 
             // label4
             // 
@@ -87,16 +87,17 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Nếu bạn quên mật khẩu hãy click vào";
             // 
-            // linkLabel1
+            // lbLinkQuenMatKhau
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel1.Location = new System.Drawing.Point(343, 150);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(31, 18);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "đây";
+            this.lbLinkQuenMatKhau.AutoSize = true;
+            this.lbLinkQuenMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbLinkQuenMatKhau.Location = new System.Drawing.Point(343, 150);
+            this.lbLinkQuenMatKhau.Name = "lbLinkQuenMatKhau";
+            this.lbLinkQuenMatKhau.Size = new System.Drawing.Size(31, 18);
+            this.lbLinkQuenMatKhau.TabIndex = 4;
+            this.lbLinkQuenMatKhau.TabStop = true;
+            this.lbLinkQuenMatKhau.Text = "đây";
+            this.lbLinkQuenMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbLinkQuenMatKhau_LinkClicked);
             // 
             // btnTroLai
             // 
@@ -104,7 +105,7 @@
             this.btnTroLai.Location = new System.Drawing.Point(12, 80);
             this.btnTroLai.Name = "btnTroLai";
             this.btnTroLai.Size = new System.Drawing.Size(89, 30);
-            this.btnTroLai.TabIndex = 7;
+            this.btnTroLai.TabIndex = 3;
             this.btnTroLai.Text = "Trờ lại";
             this.btnTroLai.UseVisualStyleBackColor = true;
             this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
@@ -115,7 +116,7 @@
             this.btnDangNhap.Location = new System.Drawing.Point(284, 80);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(89, 30);
-            this.btnDangNhap.TabIndex = 8;
+            this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -123,12 +124,13 @@
             // lbSai
             // 
             this.lbSai.AutoSize = true;
-            this.lbSai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbSai.Location = new System.Drawing.Point(253, 53);
+            this.lbSai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbSai.ForeColor = System.Drawing.Color.Red;
+            this.lbSai.Location = new System.Drawing.Point(253, 55);
             this.lbSai.Name = "lbSai";
-            this.lbSai.Size = new System.Drawing.Size(96, 18);
+            this.lbSai.Size = new System.Drawing.Size(127, 13);
             this.lbSai.TabIndex = 9;
-            this.lbSai.Text = "Sai Mật Khẩu";
+            this.lbSai.Text = "Bạn chưa nhập mật khẩu";
             // 
             // MatKhau
             // 
@@ -138,7 +140,7 @@
             this.Controls.Add(this.lbSai);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.btnTroLai);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lbLinkQuenMatKhau);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.label3);
@@ -159,7 +161,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lbLinkQuenMatKhau;
         private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Label lbSai;

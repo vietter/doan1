@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLichSu = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.txtSoDT = new System.Windows.Forms.TextBox();
+            this.txtCMND = new System.Windows.Forms.TextBox();
+            this.txtTichLuy = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvLichSu
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 123);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(614, 312);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvLichSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLichSu.Location = new System.Drawing.Point(12, 123);
+            this.dgvLichSu.Name = "dgvLichSu";
+            this.dgvLichSu.Size = new System.Drawing.Size(614, 312);
+            this.dgvLichSu.TabIndex = 0;
             // 
             // label1
             // 
@@ -63,15 +63,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Lịch sử giao dịch";
             // 
-            // button1
+            // btnDoiMatKhau
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(12, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 31);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Đổi mật khẩu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(12, 65);
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(118, 31);
+            this.btnDoiMatKhau.TabIndex = 2;
+            this.btnDoiMatKhau.Text = "Đổi mật khẩu";
+            this.btnDoiMatKhau.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -113,37 +113,37 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Tích lũy:";
             // 
-            // textBox1
+            // txtTenKH
             // 
-            this.textBox1.Location = new System.Drawing.Point(111, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(290, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtTenKH.Location = new System.Drawing.Point(111, 10);
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.ReadOnly = true;
+            this.txtTenKH.Size = new System.Drawing.Size(290, 20);
+            this.txtTenKH.TabIndex = 7;
             // 
-            // textBox2
+            // txtSoDT
             // 
-            this.textBox2.Location = new System.Drawing.Point(111, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(290, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtSoDT.Location = new System.Drawing.Point(111, 39);
+            this.txtSoDT.Name = "txtSoDT";
+            this.txtSoDT.ReadOnly = true;
+            this.txtSoDT.Size = new System.Drawing.Size(290, 20);
+            this.txtSoDT.TabIndex = 8;
             // 
-            // textBox3
+            // txtCMND
             // 
-            this.textBox3.Location = new System.Drawing.Point(462, 9);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(164, 20);
-            this.textBox3.TabIndex = 9;
+            this.txtCMND.Location = new System.Drawing.Point(462, 9);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.ReadOnly = true;
+            this.txtCMND.Size = new System.Drawing.Size(164, 20);
+            this.txtCMND.TabIndex = 9;
             // 
-            // textBox4
+            // txtTichLuy
             // 
-            this.textBox4.Location = new System.Drawing.Point(462, 39);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(164, 20);
-            this.textBox4.TabIndex = 10;
+            this.txtTichLuy.Location = new System.Drawing.Point(462, 39);
+            this.txtTichLuy.Name = "txtTichLuy";
+            this.txtTichLuy.ReadOnly = true;
+            this.txtTichLuy.Size = new System.Drawing.Size(164, 20);
+            this.txtTichLuy.TabIndex = 10;
             // 
             // label6
             // 
@@ -166,38 +166,39 @@
             this.button2.Text = "Trờ lại";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnDangXuat
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(508, 65);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 31);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Đăng xuất";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDangXuat.Location = new System.Drawing.Point(508, 65);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(118, 31);
+            this.btnDangXuat.TabIndex = 13;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
             // 
             // QuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 466);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTichLuy);
+            this.Controls.Add(this.txtCMND);
+            this.Controls.Add(this.txtSoDT);
+            this.Controls.Add(this.txtTenKH);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDoiMatKhau);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvLichSu);
             this.Name = "QuanLyTaiKhoan";
             this.Text = "Cài Đặt Tài Khoản Của Bạn";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.QuanLyTaiKhoan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,19 +206,19 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLichSu;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDoiMatKhau;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTenKH;
+        private System.Windows.Forms.TextBox txtSoDT;
+        private System.Windows.Forms.TextBox txtCMND;
+        private System.Windows.Forms.TextBox txtTichLuy;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDangXuat;
     }
 }

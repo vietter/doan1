@@ -37,7 +37,9 @@
             this.txtCMND = new System.Windows.Forms.MaskedTextBox();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.btnTroLai = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbCauHoi = new System.Windows.Forms.Label();
+            this.lbTraLoi = new System.Windows.Forms.Label();
+            this.lbCMND = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +56,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(-1, 55);
+            this.label2.Location = new System.Drawing.Point(-1, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(254, 18);
             this.label2.TabIndex = 1;
@@ -62,6 +64,7 @@
             // 
             // cbbCauHoi
             // 
+            this.cbbCauHoi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCauHoi.FormattingEnabled = true;
             this.cbbCauHoi.Items.AddRange(new object[] {
             "Tên ở nhà của bạn ?",
@@ -69,7 +72,7 @@
             "Tên ba của bạn ?",
             "Tên mẹ của bạn ?",
             "Ngày kỉ niệm của bạn ?"});
-            this.cbbCauHoi.Location = new System.Drawing.Point(259, 55);
+            this.cbbCauHoi.Location = new System.Drawing.Point(259, 69);
             this.cbbCauHoi.Name = "cbbCauHoi";
             this.cbbCauHoi.Size = new System.Drawing.Size(288, 21);
             this.cbbCauHoi.TabIndex = 2;
@@ -78,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(198, 89);
+            this.label3.Location = new System.Drawing.Point(200, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 3;
@@ -86,7 +89,7 @@
             // 
             // txtTraLoi
             // 
-            this.txtTraLoi.Location = new System.Drawing.Point(259, 89);
+            this.txtTraLoi.Location = new System.Drawing.Point(259, 119);
             this.txtTraLoi.Multiline = true;
             this.txtTraLoi.Name = "txtTraLoi";
             this.txtTraLoi.Size = new System.Drawing.Size(288, 56);
@@ -96,7 +99,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(193, 162);
+            this.label4.Location = new System.Drawing.Point(195, 198);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 18);
             this.label4.TabIndex = 5;
@@ -104,7 +107,7 @@
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(259, 160);
+            this.txtCMND.Location = new System.Drawing.Point(259, 196);
             this.txtCMND.Mask = "000000000";
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(61, 20);
@@ -120,6 +123,7 @@
             this.btnXacNhan.TabIndex = 10;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // btnTroLai
             // 
@@ -130,23 +134,49 @@
             this.btnTroLai.TabIndex = 9;
             this.btnTroLai.Text = "Trờ lại";
             this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
-            // label5
+            // lbCauHoi
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(256, 202);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 20);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "label5";
+            this.lbCauHoi.AutoSize = true;
+            this.lbCauHoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbCauHoi.ForeColor = System.Drawing.Color.Red;
+            this.lbCauHoi.Location = new System.Drawing.Point(256, 51);
+            this.lbCauHoi.Name = "lbCauHoi";
+            this.lbCauHoi.Size = new System.Drawing.Size(132, 15);
+            this.lbCauHoi.TabIndex = 11;
+            this.lbCauHoi.Text = "Bạn chưa chọn câu hỏi";
+            // 
+            // lbTraLoi
+            // 
+            this.lbTraLoi.AutoSize = true;
+            this.lbTraLoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbTraLoi.ForeColor = System.Drawing.Color.Red;
+            this.lbTraLoi.Location = new System.Drawing.Point(256, 101);
+            this.lbTraLoi.Name = "lbTraLoi";
+            this.lbTraLoi.Size = new System.Drawing.Size(142, 15);
+            this.lbTraLoi.TabIndex = 12;
+            this.lbTraLoi.Text = "Bạn chưa điền câu trả lời";
+            // 
+            // lbCMND
+            // 
+            this.lbCMND.AutoSize = true;
+            this.lbCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbCMND.ForeColor = System.Drawing.Color.Red;
+            this.lbCMND.Location = new System.Drawing.Point(256, 178);
+            this.lbCMND.Name = "lbCMND";
+            this.lbCMND.Size = new System.Drawing.Size(126, 15);
+            this.lbCMND.TabIndex = 13;
+            this.lbCMND.Text = "Bạn chưa điền CMND";
             // 
             // QuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 289);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbCMND);
+            this.Controls.Add(this.lbTraLoi);
+            this.Controls.Add(this.lbCauHoi);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.btnTroLai);
             this.Controls.Add(this.txtCMND);
@@ -175,6 +205,8 @@
         private System.Windows.Forms.MaskedTextBox txtCMND;
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.Button btnTroLai;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbCauHoi;
+        private System.Windows.Forms.Label lbTraLoi;
+        private System.Windows.Forms.Label lbCMND;
     }
 }

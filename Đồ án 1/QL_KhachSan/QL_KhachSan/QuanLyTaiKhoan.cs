@@ -12,9 +12,23 @@ namespace QL_KhachSan
 {
     public partial class QuanLyTaiKhoan : Form
     {
+        private string sdt;
+        public string SDT
+        {
+            set
+            {
+                sdt = value;
+
+            }
+        }
         public QuanLyTaiKhoan()
         {
             InitializeComponent();
+        }
+
+        private void QuanLyTaiKhoan_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

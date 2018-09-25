@@ -30,5 +30,10 @@ namespace QL_KhachSan
         {
 
         }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GiaoDienQuanLi));
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbTen = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -120,15 +120,16 @@
             this.button2.Text = "Report";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnDangXuat
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(7, 510);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 29);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Đăng Xuất";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDangXuat.Location = new System.Drawing.Point(7, 510);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(114, 29);
+            this.btnDangXuat.TabIndex = 0;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
@@ -369,15 +370,15 @@
             this.pictureBox6.TabIndex = 40;
             this.pictureBox6.TabStop = false;
             // 
-            // label3
+            // lbTen
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(135, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Tên QL";
+            this.lbTen.AutoSize = true;
+            this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbTen.Location = new System.Drawing.Point(135, 51);
+            this.lbTen.Name = "lbTen";
+            this.lbTen.Size = new System.Drawing.Size(61, 20);
+            this.lbTen.TabIndex = 5;
+            this.lbTen.Text = "Tên QL";
             // 
             // groupBox2
             // 
@@ -614,14 +615,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1078, 598);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbTen);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.button2);
             this.Name = "GiaoDienQuanLi";
             this.Text = "Yêu cầu";
+            this.Load += new System.EventHandler(this.GiaoDienQuanLi_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -654,7 +656,7 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label16;
@@ -677,7 +679,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbTen;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

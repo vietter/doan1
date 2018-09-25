@@ -80,6 +80,13 @@ namespace QL_KhachSan
             lbSai.Hide();
             txtSoDT.Focus();
         }
-        
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            DangNhapNhanVien dnnv = new DangNhapNhanVien();
+            dnnv.ShowDialog();
+            this.Close();
+        }
     }
 }

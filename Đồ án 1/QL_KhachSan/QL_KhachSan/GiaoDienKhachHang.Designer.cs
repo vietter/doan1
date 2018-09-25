@@ -414,6 +414,7 @@
             this.btnTrolai.TabIndex = 6;
             this.btnTrolai.Text = "Trở lại";
             this.btnTrolai.UseVisualStyleBackColor = true;
+            this.btnTrolai.Click += new System.EventHandler(this.btnTrolai_Click);
             // 
             // GiaoDienKhachHang
             // 

@@ -59,5 +59,13 @@ namespace QL_KhachSan
             datphong.ShowDialog();
             this.Close();
         }
+
+        private void btnTrolai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DangNhap dn = new DangNhap();
+            dn.ShowDialog();
+            this.Close();
+        }
     }
 }

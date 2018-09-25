@@ -4,3 +4,9 @@ C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\DataAccessLayer
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\New folder\Đồ án 1\QL_KhachSan\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\New folder\Đồ án 1\QL_KhachSan\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\New folder\Đồ án 1\QL_KhachSan\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+D:\New folder\Đồ án 1\QL_KhachSan\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\New folder\Đồ án 1\QL_KhachSan\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\New folder\Đồ án 1\QL_KhachSan\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

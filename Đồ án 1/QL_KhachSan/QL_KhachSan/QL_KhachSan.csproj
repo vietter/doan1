@@ -51,9 +51,11 @@
   <ItemGroup>
     <Compile Include="BS_layer\BO_DangKi.cs" />
     <Compile Include="BS_layer\BO_DangNhap.cs" />
+    <Compile Include="BS_layer\BO_DangNhapNhanVien.cs" />
     <Compile Include="BS_layer\BO_DatPhong.cs" />
     <Compile Include="BS_layer\BO_QuenMatKhau.cs" />
     <Compile Include="BS_layer\DTO_HoaDon.cs" />
+    <Compile Include="BS_layer\DTO_NhanVien.cs" />
     <Compile Include="BS_layer\DTO_Phong.cs" />
     <Compile Include="BS_layer\DTO_KhachHang.cs" />
     <Compile Include="DangKi.cs">
@@ -67,6 +69,12 @@
     </Compile>
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhapNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhapNhanVien.Designer.cs">
+      <DependentUpon>DangNhapNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="DatPhong.cs">
       <SubType>Form</SubType>
@@ -135,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhapNhanVien.resx">
+      <DependentUpon>DangNhapNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DatPhong.resx">
       <DependentUpon>DatPhong.cs</DependentUpon>

@@ -16,5 +16,11 @@ namespace QL_KhachSan
         {
             InitializeComponent();
         }
+
+        private void btnTrolai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+        }
     }
 }

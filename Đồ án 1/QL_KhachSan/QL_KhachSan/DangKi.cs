@@ -142,5 +142,17 @@ namespace QL_KhachSan
         {
 
         }
+
+        private void txtSoDT_Click(object sender, EventArgs e)
+        {
+            txtSoDT.ResetText();
+            txtSoDT.Focus();
+        }
+
+        private void txtCMND_Click(object sender, EventArgs e)
+        {
+            txtCMND.ResetText();
+            txtCMND.Focus();
+        }
     }
 }

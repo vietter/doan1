@@ -79,8 +79,10 @@
             this.txtSoDT.Location = new System.Drawing.Point(242, 305);
             this.txtSoDT.Mask = "(+84) 0000000000";
             this.txtSoDT.Name = "txtSoDT";
+            this.txtSoDT.PromptChar = ' ';
             this.txtSoDT.Size = new System.Drawing.Size(97, 20);
             this.txtSoDT.TabIndex = 1;
+            this.txtSoDT.Click += new System.EventHandler(this.txtSoDT_Click);
             // 
             // linkLabel1
             // 

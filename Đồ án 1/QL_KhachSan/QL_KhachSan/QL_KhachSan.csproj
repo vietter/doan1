@@ -53,6 +53,7 @@
     <Compile Include="BS_layer\BO_DangNhap.cs" />
     <Compile Include="BS_layer\BO_DatPhong.cs" />
     <Compile Include="BS_layer\BO_QuenMatKhau.cs" />
+    <Compile Include="BS_layer\DTO_DatPhong.cs" />
     <Compile Include="BS_layer\DTO_HoaDon.cs" />
     <Compile Include="BS_layer\DTO_Phong.cs" />
     <Compile Include="BS_layer\DTO_KhachHang.cs" />

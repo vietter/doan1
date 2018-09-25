@@ -80,6 +80,11 @@ namespace QL_KhachSan
             lbSai.Hide();
             txtSoDT.Focus();
         }
-        
+
+        private void txtSoDT_Click(object sender, EventArgs e)
+        {
+            txtSoDT.ResetText();
+            txtSoDT.Focus();
+        }
     }
 }

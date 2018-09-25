@@ -103,5 +103,11 @@ namespace QL_KhachSan
             matkhau.ShowDialog();
             this.Close();
         }
+
+        private void txtCMND_Click(object sender, EventArgs e)
+        {
+            txtCMND.ResetText();
+            txtCMND.Focus();
+        }
     }
 }

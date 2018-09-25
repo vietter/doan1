@@ -110,9 +110,11 @@
             this.txtCMND.Location = new System.Drawing.Point(259, 196);
             this.txtCMND.Mask = "000000000";
             this.txtCMND.Name = "txtCMND";
+            this.txtCMND.PromptChar = ' ';
             this.txtCMND.Size = new System.Drawing.Size(61, 20);
             this.txtCMND.TabIndex = 6;
             this.txtCMND.ValidatingType = typeof(int);
+            this.txtCMND.Click += new System.EventHandler(this.txtCMND_Click);
             // 
             // btnXacNhan
             // 

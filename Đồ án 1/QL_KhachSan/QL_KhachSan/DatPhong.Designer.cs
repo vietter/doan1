@@ -178,7 +178,7 @@
             this.lbKetQua.AutoSize = true;
             this.lbKetQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbKetQua.ForeColor = System.Drawing.Color.Red;
-            this.lbKetQua.Location = new System.Drawing.Point(810, 209);
+            this.lbKetQua.Location = new System.Drawing.Point(677, 212);
             this.lbKetQua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbKetQua.Name = "lbKetQua";
             this.lbKetQua.Size = new System.Drawing.Size(38, 18);
@@ -235,9 +235,12 @@
             this.txtGioDatPhong.Location = new System.Drawing.Point(473, 116);
             this.txtGioDatPhong.Mask = "00:00";
             this.txtGioDatPhong.Name = "txtGioDatPhong";
+            this.txtGioDatPhong.PromptChar = ' ';
             this.txtGioDatPhong.Size = new System.Drawing.Size(42, 24);
             this.txtGioDatPhong.TabIndex = 17;
             this.txtGioDatPhong.ValidatingType = typeof(System.DateTime);
+            this.txtGioDatPhong.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtGioDatPhong_MaskInputRejected);
+            this.txtGioDatPhong.Click += new System.EventHandler(this.txtGioDatPhong_Click);
             // 
             // label5
             // 
@@ -267,9 +270,11 @@
             this.txtGioTraPhong.Location = new System.Drawing.Point(473, 155);
             this.txtGioTraPhong.Mask = "00:00";
             this.txtGioTraPhong.Name = "txtGioTraPhong";
+            this.txtGioTraPhong.PromptChar = ' ';
             this.txtGioTraPhong.Size = new System.Drawing.Size(42, 24);
             this.txtGioTraPhong.TabIndex = 20;
             this.txtGioTraPhong.ValidatingType = typeof(System.DateTime);
+            this.txtGioTraPhong.Click += new System.EventHandler(this.txtGioTraPhong_Click);
             // 
             // lbThoiGianDatPhong
             // 

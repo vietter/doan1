@@ -82,9 +82,11 @@
             this.txtSoDT.Location = new System.Drawing.Point(138, 71);
             this.txtSoDT.Mask = "(+84) 0000000000";
             this.txtSoDT.Name = "txtSoDT";
+            this.txtSoDT.PromptChar = ' ';
             this.txtSoDT.Size = new System.Drawing.Size(97, 20);
             this.txtSoDT.TabIndex = 2;
             this.txtSoDT.Tag = "";
+            this.txtSoDT.Click += new System.EventHandler(this.txtSoDT_Click);
             // 
             // label2
             // 
@@ -121,11 +123,13 @@
             this.txtCMND.Location = new System.Drawing.Point(137, 125);
             this.txtCMND.Mask = "000000000";
             this.txtCMND.Name = "txtCMND";
+            this.txtCMND.PromptChar = ' ';
             this.txtCMND.Size = new System.Drawing.Size(97, 20);
             this.txtCMND.TabIndex = 4;
             this.txtCMND.Tag = "";
             this.txtCMND.ValidatingType = typeof(int);
             this.txtCMND.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCMND_MaskInputRejected);
+            this.txtCMND.Click += new System.EventHandler(this.txtCMND_Click);
             // 
             // txtTraLoi
             // 

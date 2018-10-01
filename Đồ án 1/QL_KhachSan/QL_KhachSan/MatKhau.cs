@@ -12,7 +12,7 @@ namespace QL_KhachSan
 {
     public partial class MatKhau : Form
     {
-        bool KT = false;
+
         private string tenkh;
         public string TENKH
         {
@@ -50,46 +50,45 @@ namespace QL_KhachSan
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (KT == false)
+
+            if (txtMatKhau.Text == "")
             {
-                if(txtMatKhau.Text == "")
+                lbSai.Visible = true;
+            }
+            else
+            {
+                lbSai.Visible = false;
+            }
+            if (lbSai.Visible == false)
+            {
+
+
+                DTO_KhachHang khachhang = new DTO_KhachHang();
+                khachhang.SDT = sdt;
+                khachhang.MatKhau = txtMatKhau.Text;
+                BO_DangNhap dangnhap = new BO_DangNhap();
+                DataSet result = dangnhap.KT_MatKhau(khachhang);
+                if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
                 {
-                    lbSai.Visible = true;
+                    MessageBox.Show("Đăng Nhập Thành công", "Thông Báo", MessageBoxButtons.OK);
+                    this.Hide();
+                    GiaoDienKhachHang giaodien = new GiaoDienKhachHang();
+                    giaodien.SDT = sdt;
+                    giaodien.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
-                    lbSai.Visible = false;
+                    MessageBox.Show("Đăng Nhập Thất bại", "Thông Báo", MessageBoxButtons.OK);
+                    txtMatKhau.ResetText();
+                    txtMatKhau.Focus();
                 }
-                if(lbSai.Visible == false)
-                {
-                    KT = true;
-                 
-                        DTO_KhachHang khachhang = new DTO_KhachHang();
-                        khachhang.SDT = sdt;
-                        khachhang.MatKhau = txtMatKhau.Text;
-                        BO_DangNhap dangnhap = new BO_DangNhap();
-                        DataSet result = dangnhap.KT_MatKhau(khachhang);
-                        if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
-                        {
-                            MessageBox.Show("Đăng Nhập Thành công", "Thông Báo", MessageBoxButtons.OK);
-                            this.Hide();
-                            GiaoDienKhachHang giaodien = new GiaoDienKhachHang();
-                            giaodien.SDT = sdt;
-                            giaodien.ShowDialog();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Đăng Nhập Thất bại", "Thông Báo", MessageBoxButtons.OK);
-                            txtMatKhau.ResetText();
-                            txtMatKhau.Focus();
-                        }
-                    
-                }
-            }
-          
 
+            }
         }
+
+
+   
 
         private void lbLinkQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSoDT = new System.Windows.Forms.MaskedTextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lbClickHere = new System.Windows.Forms.LinkLabel();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnDangKi = new System.Windows.Forms.Button();
@@ -84,17 +84,17 @@
             this.txtSoDT.TabIndex = 1;
             this.txtSoDT.Click += new System.EventHandler(this.txtSoDT_Click);
             // 
-            // linkLabel1
+            // lbClickHere
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Yellow;
-            this.linkLabel1.Location = new System.Drawing.Point(392, 512);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(25, 13);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "đây";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lbClickHere.AutoSize = true;
+            this.lbClickHere.BackColor = System.Drawing.Color.Yellow;
+            this.lbClickHere.Location = new System.Drawing.Point(392, 512);
+            this.lbClickHere.Name = "lbClickHere";
+            this.lbClickHere.Size = new System.Drawing.Size(25, 13);
+            this.lbClickHere.TabIndex = 5;
+            this.lbClickHere.TabStop = true;
+            this.lbClickHere.Text = "đây";
+            this.lbClickHere.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // btnDangNhap
             // 
@@ -160,7 +160,7 @@
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lbClickHere);
             this.Controls.Add(this.txtSoDT);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -179,7 +179,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox txtSoDT;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lbClickHere;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDangKi;

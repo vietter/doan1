@@ -81,19 +81,21 @@ namespace QL_KhachSan
             txtSoDT.Focus();
         }
 
-<<<<<<< HEAD
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             DangNhapNhanVien dnnv = new DangNhapNhanVien();
             dnnv.ShowDialog();
             this.Close();
-=======
+        }
         private void txtSoDT_Click(object sender, EventArgs e)
         {
             txtSoDT.ResetText();
             txtSoDT.Focus();
->>>>>>> 84b1750b03e06dd7d2fa907831b5e23d7a6fb072
+
         }
+
+        
     }
 }

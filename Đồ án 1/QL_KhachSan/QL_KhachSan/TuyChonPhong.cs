@@ -12,6 +12,23 @@ namespace QL_KhachSan
 {
     public partial class TuyChonPhong : Form
     {
+        private string sdt;
+        public string SDT
+        {
+            set
+            {
+                sdt = value;
+            }
+        }
+        private string maphong;
+        public string MAPHONG
+        {
+            set
+            {
+                maphong = value;
+            }
+        }
+
         public TuyChonPhong()
         {
             InitializeComponent();
@@ -24,7 +41,7 @@ namespace QL_KhachSan
 
         private void TuyChonPhong_Load(object sender, EventArgs e)
         {
-
+            txtTenPhong.Text = maphong;
         }
     }
 }

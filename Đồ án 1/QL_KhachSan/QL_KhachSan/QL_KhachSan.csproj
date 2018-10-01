@@ -54,6 +54,7 @@
     <Compile Include="BS_layer\BO_DangNhap.cs" />
     <Compile Include="BS_layer\BO_DangNhapNhanVien.cs" />
     <Compile Include="BS_layer\BO_DatPhong.cs" />
+    <Compile Include="BS_layer\BO_DSPhongDaDat.cs" />
     <Compile Include="BS_layer\BO_QuenMatKhau.cs" />
     <Compile Include="BS_layer\DTO_HoaDon.cs" />
     <Compile Include="BS_layer\DTO_NhanVien.cs" />
@@ -113,6 +114,12 @@
     <Compile Include="MatKhau.Designer.cs">
       <DependentUpon>MatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="pPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pPhong.Designer.cs">
+      <DependentUpon>pPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyTaiKhoan.cs">
@@ -165,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MatKhau.resx">
       <DependentUpon>MatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pPhong.resx">
+      <DependentUpon>pPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

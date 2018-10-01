@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QL_KhachSan.BS_layer;
 namespace QL_KhachSan
 {
     public partial class GiaoDienKhachHang : Form
     {
+        private int SoPhongDaDat;
         private string sdt;
         public string SDT
         {
@@ -43,9 +44,40 @@ namespace QL_KhachSan
 
         private void GiaoDienKhachHang_Load(object sender, EventArgs e)
         {
-
+                        DS_Phong_Load();
         }
+        private void DS_Phong_Load()
+        {
+            DTO_Phong phong = new DTO_Phong();
+            phong.SDT = sdt;
+            BO_DSPhongDaDat ds = new BO_DSPhongDaDat();
+            DataSet result = ds.DSPhong(phong);
+            //gán vị trị khởi tạo user control
+            
+            if (result.Tables.Count >0 && result.Tables[0].Rows.Count >0)
+            {
+                Point vitribandau = new Point(20, 20);
+                SoPhongDaDat = result.Tables[0].Rows.Count;
+                for(int i =0;i<SoPhongDaDat;i++)
+                {
+                    //tạo vị trí phòng đầu tiên
+                
+                        pPhong hienthi = new pPhong();
+                        hienthi.TenPhong(result.Tables[0].Rows[i][0].ToString(), result.Tables[0].Rows[i][0].ToString());
+                        hienthi.Location = vitribandau;
+                        gbDSPhong.Controls.Add(hienthi);
+                        vitribandau.X = vitribandau.X + 180;
+                    
+             
 
+                }
+
+            }
+            else
+            {
+
+            }
+        }
         private void gbKhachHang_Enter(object sender, EventArgs e)
         {
 

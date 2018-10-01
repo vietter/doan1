@@ -12,6 +12,5 @@ namespace QL_KhachSan.BS_layer
         public string MaChiNhanh;
         public string TenPhong;
         public string SDT;
-        public string DatPhong;
     }
 }

@@ -100,6 +100,8 @@ namespace QL_KhachSan
         }
         private void load()
         {
+            btnDatPhong.Visible = false;
+            btnKiemTra.Visible = true;
             txtGioTraPhong.ResetText();
             dtpNgayDat.ResetText();
             dtpNgayTra.ResetText();

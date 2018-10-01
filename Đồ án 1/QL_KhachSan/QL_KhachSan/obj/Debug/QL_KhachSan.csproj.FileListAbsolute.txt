@@ -48,3 +48,4 @@ D:\New folder\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.exe
 D:\New folder\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.pdb
 D:\New folder\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DangNhapNhanVien.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DangNhapNhanVien.resources
+C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.pPhong.resources

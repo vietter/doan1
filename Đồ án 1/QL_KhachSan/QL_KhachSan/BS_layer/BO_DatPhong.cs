@@ -79,7 +79,7 @@ namespace QL_KhachSan.BS_layer
         public DataSet KiemTraMaHD(DTO_HoaDon hoadon)
         {
             DataSet result = new DataSet();
-            string sql = "SELECT TOP 1 (MaHD) FROM HoaDon WHERE MaHD LIKE @MaHD + '%' ORDER BY MaHD ASC ";
+            string sql = "SELECT TOP 1 (MaHD) FROM HoaDon WHERE MaHD LIKE @MaHD + '%' ORDER BY MaHD DESC ";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@MaHD",hoadon.MaHD),

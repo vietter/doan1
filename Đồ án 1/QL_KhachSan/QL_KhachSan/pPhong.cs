@@ -12,6 +12,31 @@ namespace QL_KhachSan
 {
     public partial class pPhong : UserControl
     {
+        private string tenphong;
+        public string TENPHONG
+        {
+            set
+            {
+                tenphong = value;
+            }
+        }
+        private string machinhanh;
+        public string MACHINHANH
+        {
+            set
+            {
+                machinhanh = value;
+            }
+        }
+        private string maphong;
+        public string MAPHONG
+        {
+            set
+            {
+                maphong = value;
+            }
+        }
+
         public pPhong()
         {
             InitializeComponent();
@@ -19,18 +44,20 @@ namespace QL_KhachSan
 
         private void pPhong_Load(object sender, EventArgs e)
         {
-            
+
         }
-        public void TenPhong(string TenPhong, string MaPhong)
+        public void TenPhong(string TenPhong)
         {
             label.Text = TenPhong;
-            picture.Name = MaPhong;
         }
+        
 
         private void picture_Click(object sender, EventArgs e)
         {
             TuyChonPhong chon = new TuyChonPhong();
-            chon.MAPHONG = picture.Name;
+            chon.MACHINHANH = machinhanh;
+            chon.MAPHONG = maphong;
+            chon.MAPHONG = tenphong;
             chon.ShowDialog();
             
         }

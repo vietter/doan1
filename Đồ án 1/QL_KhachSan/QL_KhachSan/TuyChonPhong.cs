@@ -12,6 +12,14 @@ namespace QL_KhachSan
 {
     public partial class TuyChonPhong : Form
     {
+        private string machinhanh;
+        public string MACHINHANH
+        {
+            set
+            {
+                machinhanh = value;
+            }
+        }
         private string sdt;
         public string SDT
         {
@@ -42,6 +50,16 @@ namespace QL_KhachSan
         private void TuyChonPhong_Load(object sender, EventArgs e)
         {
             txtTenPhong.Text = maphong;
+            pl_DichVuThue.Visible = false;
+            pl_ThucAn.Visible = false;
+            pl_ThucUong.Visible = false;
+            pl_TienIch.Visible = false;
+            
+            
+        }
+        private void load()
+        {
+            
         }
     }
 }

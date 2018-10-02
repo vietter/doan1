@@ -170,8 +170,8 @@ namespace QL_KhachSan
             TimeSpan ts = new TimeSpan();
             ts =  NgayTraPhong1 - NgayDatPhong1;
             phong.STT = 1;
-            string count = ts.TotalDays.ToString();
-            phong.SoLuong = int.Parse(count)+1;
+            double count = ts.TotalDays;
+            phong.SoLuong = (int)count+1;
             phong.ThanhTien = 400000 * phong.SoLuong;
             BO_DatPhong datphong = new BO_DatPhong();
             if(datphong.DatPhong(phong) != -1)

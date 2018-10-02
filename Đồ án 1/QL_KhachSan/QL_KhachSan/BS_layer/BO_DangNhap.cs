@@ -27,7 +27,7 @@ namespace QL_KhachSan.BS_layer
             }
             return result;
         }
-        public DataSet KT_MatKhau(DTO_KhachHang dto, ref string cmnd, ref string tenkh, ref string tichluy)
+        public DataSet KT_MatKhau(DTO_KhachHang dto)
         {
             DataSet result = new DataSet();
             string sql = @"SELECT * FROM KhachHang WHERE SoDienThoai = @SDT AND MatKhau = @MatKhau";
@@ -38,9 +38,6 @@ namespace QL_KhachSan.BS_layer
             };
             DataAccess data = new DataAccess();
             result = data.getdataset(sql, para);
-            cmnd = result.Tables[0].Rows[0][4].ToString();
-            tenkh = result.Tables[0].Rows[0][1].ToString();
-            tichluy = result.Tables[0].Rows[0][2].ToString();
             return result;
 
         }

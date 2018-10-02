@@ -13,36 +13,12 @@ namespace QL_KhachSan
     public partial class DoiMatKhau : Form
     {
         bool KT = false;
-        private string tenkh;
-        public string TENKH
-        {
-            set
-            {
-                tenkh = value;
-            }
-        }
         private string sdt;
         public string SDT
         {
             set
             {
                 sdt = value;
-            }
-        }
-        private string cmnd;
-        public string CMND
-        {
-            set
-            {
-                cmnd = value;
-            }
-        }
-        private string tichluy;
-        public string TICHLUY
-        {
-            set
-            {
-                tichluy = value;
             }
         }
         public DoiMatKhau()
@@ -58,12 +34,9 @@ namespace QL_KhachSan
         private void btnTroLai_Click(object sender, EventArgs e)
         {
             this.Hide();
-            QuanLyTaiKhoan quanLyTaiKhoan = new QuanLyTaiKhoan();
-            quanLyTaiKhoan.CMND = cmnd;
-            quanLyTaiKhoan.SDT = sdt;
-            quanLyTaiKhoan.TENKH = tenkh;
-            quanLyTaiKhoan.TICHLUY = tichluy;
-            quanLyTaiKhoan.ShowDialog();
+            QuenMatKhau quen = new QuenMatKhau();
+            quen.SDT = sdt;
+            quen.ShowDialog();
             this.Close();
         }
         private void load()

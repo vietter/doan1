@@ -44,7 +44,7 @@ namespace QL_KhachSan
 
         private void GiaoDienKhachHang_Load(object sender, EventArgs e)
         {
-         DS_Phong_Load();
+                        DS_Phong_Load();
         }
         private void DS_Phong_Load()
         {
@@ -60,31 +60,15 @@ namespace QL_KhachSan
                 SoPhongDaDat = result.Tables[0].Rows.Count;
                 for(int i =0;i<SoPhongDaDat;i++)
                 {
-                    //nếu vượt quá 5 phòng trên 1 hàng sẽ xuống dòng
-                    if (i == 5)
-                    {
+                    //tạo vị trí phòng đầu tiên
+                
                         pPhong hienthi = new pPhong();
-                        hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
-                        hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
-                        hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
-                        hienthi.TenPhong(result.Tables[0].Rows[i][2].ToString());
-                        gbDSPhong.Controls.Add(hienthi);
-                        vitribandau.X = 20;
-                        vitribandau.Y = 150;
+                        hienthi.TenPhong(result.Tables[0].Rows[i][0].ToString(), result.Tables[0].Rows[i][0].ToString());
                         hienthi.Location = vitribandau;
-                        vitribandau.X = vitribandau.X + 165;
-                    }
-                    else
-                    {
-                        pPhong hienthi = new pPhong();
-                        hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
-                        hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
-                        hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
-                        hienthi.TenPhong(result.Tables[0].Rows[i][2].ToString());
                         gbDSPhong.Controls.Add(hienthi);
-                        hienthi.Location = vitribandau;
-                        vitribandau.X = vitribandau.X + 165;
-                    }
+                        vitribandau.X = vitribandau.X + 180;
+                    
+             
 
                 }
 

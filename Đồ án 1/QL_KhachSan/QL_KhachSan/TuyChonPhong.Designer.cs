@@ -189,7 +189,7 @@
             this.pl_DichVuThue.Controls.Add(this.pictureBox21);
             this.pl_DichVuThue.Controls.Add(this.pictureBox20);
             this.pl_DichVuThue.Controls.Add(this.pictureBox19);
-            this.pl_DichVuThue.Location = new System.Drawing.Point(450, 244);
+            this.pl_DichVuThue.Location = new System.Drawing.Point(426, 230);
             this.pl_DichVuThue.Name = "pl_DichVuThue";
             this.pl_DichVuThue.Size = new System.Drawing.Size(834, 226);
             this.pl_DichVuThue.TabIndex = 15;

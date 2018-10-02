@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BS_layer\BO_ChiTietHoaDon.cs" />
     <Compile Include="BS_layer\BO_DangKi.cs" />
     <Compile Include="BS_layer\BO_DangNhap.cs" />
     <Compile Include="BS_layer\BO_DangNhapNhanVien.cs" />

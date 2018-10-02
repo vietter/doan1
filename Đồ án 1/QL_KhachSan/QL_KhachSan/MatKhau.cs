@@ -29,6 +29,9 @@ namespace QL_KhachSan
                 sdt = value;
             }
         }
+        private string cmnd;
+        private string tichluy;
+
         public MatKhau()
         {
             InitializeComponent();
@@ -67,13 +70,18 @@ namespace QL_KhachSan
                 khachhang.SDT = sdt;
                 khachhang.MatKhau = txtMatKhau.Text;
                 BO_DangNhap dangnhap = new BO_DangNhap();
-                DataSet result = dangnhap.KT_MatKhau(khachhang);
+                DataSet result = dangnhap.KT_MatKhau(khachhang,ref cmnd, ref tenkh, ref tichluy);
+                khachhang.CMND = cmnd;
+                khachhang.TenKH = tenkh;
                 if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
                 {
                     MessageBox.Show("Đăng Nhập Thành công", "Thông Báo", MessageBoxButtons.OK);
                     this.Hide();
                     GiaoDienKhachHang giaodien = new GiaoDienKhachHang();
                     giaodien.SDT = sdt;
+                    giaodien.CMND = cmnd;
+                    giaodien.TENKH = tenkh;
+                    giaodien.TICHLUY = tichluy;
                     giaodien.ShowDialog();
                     this.Close();
                 }

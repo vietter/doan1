@@ -55,7 +55,7 @@
             this.pQuanLiTK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pQuanLiTK.TabIndex = 0;
             this.pQuanLiTK.TabStop = false;
-            this.pQuanLiTK.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pQuanLiTK.Click += new System.EventHandler(this.pQuanLiTK_Click);
             // 
             // label1
             // 
@@ -123,6 +123,7 @@
             this.pHoTro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pHoTro.TabIndex = 6;
             this.pHoTro.TabStop = false;
+            this.pHoTro.Click += new System.EventHandler(this.pHoTro_Click);
             // 
             // label3
             // 

@@ -40,7 +40,7 @@
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.txtTichLuy = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnTroLai = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).BeginInit();
             this.SuspendLayout();
@@ -157,15 +157,16 @@
             this.label6.Text = "*Note: Nếu bạn muốn thay đổi thông tin cá nhân hãy liên hệ với nhân viên khách sạ" +
     "n";
             // 
-            // button2
+            // btnTroLai
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(12, 441);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 25);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Trờ lại";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnTroLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnTroLai.Location = new System.Drawing.Point(12, 441);
+            this.btnTroLai.Name = "btnTroLai";
+            this.btnTroLai.Size = new System.Drawing.Size(113, 25);
+            this.btnTroLai.TabIndex = 12;
+            this.btnTroLai.Text = "Trờ lại";
+            this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
             // btnDangXuat
             // 
@@ -176,6 +177,7 @@
             this.btnDangXuat.TabIndex = 13;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // QuanLyTaiKhoan
             // 
@@ -183,7 +185,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 466);
             this.Controls.Add(this.btnDangXuat);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnTroLai);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTichLuy);
             this.Controls.Add(this.txtCMND);
@@ -219,7 +221,7 @@
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.TextBox txtTichLuy;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.Button btnDangXuat;
     }
 }

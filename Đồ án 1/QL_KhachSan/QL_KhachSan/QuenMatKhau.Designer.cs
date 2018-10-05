@@ -45,10 +45,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DeepPink;
             this.label1.Location = new System.Drawing.Point(196, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 25);
+            this.label1.Size = new System.Drawing.Size(181, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUÊN MẬT KHẨU";
             // 
@@ -118,24 +119,26 @@
             // 
             // btnXacNhan
             // 
+            this.btnXacNhan.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnXacNhan.Location = new System.Drawing.Point(448, 237);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(99, 40);
             this.btnXacNhan.TabIndex = 10;
             this.btnXacNhan.Text = "Xác nhận";
-            this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.UseVisualStyleBackColor = false;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // btnTroLai
             // 
+            this.btnTroLai.BackColor = System.Drawing.Color.PeachPuff;
             this.btnTroLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnTroLai.Location = new System.Drawing.Point(12, 237);
             this.btnTroLai.Name = "btnTroLai";
             this.btnTroLai.Size = new System.Drawing.Size(107, 40);
             this.btnTroLai.TabIndex = 9;
             this.btnTroLai.Text = "Trờ lại";
-            this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.UseVisualStyleBackColor = false;
             this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
             // lbCauHoi
@@ -173,9 +176,12 @@
             // 
             // QuenMatKhau
             // 
+            this.AcceptButton = this.btnXacNhan;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(570, 289);
+            this.ControlBox = false;
             this.Controls.Add(this.lbCMND);
             this.Controls.Add(this.lbTraLoi);
             this.Controls.Add(this.lbCauHoi);
@@ -189,7 +195,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "QuenMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quên Mật Khẩu";
+            this.TransparencyKey = System.Drawing.Color.Red;
             this.Load += new System.EventHandler(this.QuenMatKhau_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

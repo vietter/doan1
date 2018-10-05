@@ -43,6 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.DeepPink;
             this.label1.Location = new System.Drawing.Point(140, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 24);
@@ -85,24 +86,26 @@
             // 
             // btnXacNhan
             // 
+            this.btnXacNhan.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnXacNhan.Location = new System.Drawing.Point(319, 153);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(99, 40);
             this.btnXacNhan.TabIndex = 3;
             this.btnXacNhan.Text = "Xác nhận";
-            this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.UseVisualStyleBackColor = false;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // btnTroLai
             // 
+            this.btnTroLai.BackColor = System.Drawing.Color.PeachPuff;
             this.btnTroLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnTroLai.Location = new System.Drawing.Point(12, 153);
             this.btnTroLai.Name = "btnTroLai";
             this.btnTroLai.Size = new System.Drawing.Size(99, 40);
             this.btnTroLai.TabIndex = 4;
             this.btnTroLai.Text = "Trờ lại";
-            this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.UseVisualStyleBackColor = false;
             this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
             // lbMatKhau
@@ -127,9 +130,12 @@
             // 
             // DoiMatKhau
             // 
+            this.AcceptButton = this.btnXacNhan;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(444, 205);
+            this.ControlBox = false;
             this.Controls.Add(this.lbReMatKhau);
             this.Controls.Add(this.lbMatKhau);
             this.Controls.Add(this.btnXacNhan);
@@ -140,6 +146,7 @@
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.label1);
             this.Name = "DoiMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi Mật Khẩu";
             this.Load += new System.EventHandler(this.DoiMatKhau_Load);
             this.ResumeLayout(false);

@@ -58,11 +58,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.DeepPink;
             this.label1.Location = new System.Drawing.Point(473, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 24);
+            this.label1.Size = new System.Drawing.Size(137, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐẶT PHÒNG ";
             // 
@@ -143,6 +144,7 @@
             // 
             // btnKiemTra
             // 
+            this.btnKiemTra.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnKiemTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnKiemTra.Location = new System.Drawing.Point(437, 205);
             this.btnKiemTra.Margin = new System.Windows.Forms.Padding(4);
@@ -150,7 +152,7 @@
             this.btnKiemTra.Size = new System.Drawing.Size(205, 58);
             this.btnKiemTra.TabIndex = 9;
             this.btnKiemTra.Text = "Kiểm tra";
-            this.btnKiemTra.UseVisualStyleBackColor = true;
+            this.btnKiemTra.UseVisualStyleBackColor = false;
             this.btnKiemTra.Click += new System.EventHandler(this.btnKiemTra_Click);
             // 
             // pCheck
@@ -187,6 +189,7 @@
             // 
             // btnDatPhong
             // 
+            this.btnDatPhong.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDatPhong.Location = new System.Drawing.Point(437, 205);
             this.btnDatPhong.Margin = new System.Windows.Forms.Padding(4);
@@ -194,11 +197,12 @@
             this.btnDatPhong.Size = new System.Drawing.Size(205, 58);
             this.btnDatPhong.TabIndex = 13;
             this.btnDatPhong.Text = "Đặt Phòng";
-            this.btnDatPhong.UseVisualStyleBackColor = true;
+            this.btnDatPhong.UseVisualStyleBackColor = false;
             this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
             // 
             // btnTroLai
             // 
+            this.btnTroLai.BackColor = System.Drawing.Color.PeachPuff;
             this.btnTroLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnTroLai.Location = new System.Drawing.Point(4, 306);
             this.btnTroLai.Margin = new System.Windows.Forms.Padding(4);
@@ -206,7 +210,7 @@
             this.btnTroLai.Size = new System.Drawing.Size(136, 30);
             this.btnTroLai.TabIndex = 14;
             this.btnTroLai.Text = "Trở lại";
-            this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.UseVisualStyleBackColor = false;
             this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
             // pTimKiem
@@ -306,7 +310,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(981, 339);
+            this.ControlBox = false;
             this.Controls.Add(this.lbThoiGianTraPhong);
             this.Controls.Add(this.lbThoiGianDatPhong);
             this.Controls.Add(this.label6);
@@ -331,6 +337,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DatPhong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đặt Phòng";
             this.Load += new System.EventHandler(this.DatPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pCheck)).EndInit();

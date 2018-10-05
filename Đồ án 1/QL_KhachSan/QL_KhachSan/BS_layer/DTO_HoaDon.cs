@@ -8,6 +8,7 @@ namespace QL_KhachSan.BS_layer
 {
     class DTO_HoaDon
     {
+        public string TenDichVu;
         public string MaHD;
         public int STT;
         public string MaChiNhanh;

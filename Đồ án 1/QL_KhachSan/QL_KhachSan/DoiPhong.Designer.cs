@@ -71,13 +71,14 @@
             // 
             // btnTrolai
             // 
+            this.btnTrolai.BackColor = System.Drawing.Color.PeachPuff;
             this.btnTrolai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnTrolai.Location = new System.Drawing.Point(7, 478);
             this.btnTrolai.Name = "btnTrolai";
             this.btnTrolai.Size = new System.Drawing.Size(93, 30);
             this.btnTrolai.TabIndex = 0;
             this.btnTrolai.Text = "Trở lại";
-            this.btnTrolai.UseVisualStyleBackColor = true;
+            this.btnTrolai.UseVisualStyleBackColor = false;
             this.btnTrolai.Click += new System.EventHandler(this.btnTrolai_Click);
             // 
             // txtSoPhong
@@ -99,13 +100,14 @@
             // 
             // btnDoiPhong
             // 
+            this.btnDoiPhong.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnDoiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDoiPhong.Location = new System.Drawing.Point(710, 86);
             this.btnDoiPhong.Name = "btnDoiPhong";
             this.btnDoiPhong.Size = new System.Drawing.Size(95, 39);
             this.btnDoiPhong.TabIndex = 0;
             this.btnDoiPhong.Text = "Đổi phòng";
-            this.btnDoiPhong.UseVisualStyleBackColor = true;
+            this.btnDoiPhong.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
@@ -362,14 +364,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(812, 511);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSoPhong);
             this.Controls.Add(this.btnDoiPhong);
             this.Controls.Add(this.btnTrolai);
             this.Name = "DoiPhong";
-            this.Text = "DoiPhong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đổi Phòng";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();

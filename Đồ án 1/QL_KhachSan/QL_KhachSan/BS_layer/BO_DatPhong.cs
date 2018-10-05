@@ -29,9 +29,12 @@ namespace QL_KhachSan.BS_layer
        public int DatPhong(DTO_HoaDon thongtin)
         {
             int result = -1;
-            string sql = "INSERT INTO HoaDon VALUES(@MaHD,@STT,@MaChiNhanh,@MaPhong,@SDT,@NgayDat,@NgayTra,@MaDV,@SoLuong,@ThanhTien)";
+            string sql = "INSERT INTO HoaDon VALUES(@TenDichVu,@SoLuong,@ThanhTien,@MaHD,@STT,@MaChiNhanh,@MaPhong,@SDT,@NgayDat,@NgayTra,@MaDV)";
             SqlParameter[] para = new SqlParameter[]
             {
+                new SqlParameter("@TenDichVu",thongtin.TenDichVu),
+                new SqlParameter("@SoLuong",thongtin.SoLuong),
+                new SqlParameter("@ThanhTien",thongtin.ThanhTien),
                 new SqlParameter ("@MaHD",thongtin.MaHD),
                 new SqlParameter ("@STT",thongtin.STT),
                 new SqlParameter("@MaChiNhanh",thongtin.MaChiNhanh),
@@ -40,8 +43,6 @@ namespace QL_KhachSan.BS_layer
                 new SqlParameter("@NgayDat",thongtin.NgayDatPhong),
                 new SqlParameter("@NgayTra",thongtin.NgayTraPhong),
                 new SqlParameter("@MaDV",thongtin.MaDV),
-                new SqlParameter("@SoLuong",thongtin.SoLuong),
-                new SqlParameter("@ThanhTien",thongtin.ThanhTien),
             };
             DataAccess data = new DataAccess();
             result = data.Execute(sql, para);

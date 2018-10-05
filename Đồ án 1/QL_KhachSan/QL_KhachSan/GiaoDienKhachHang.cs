@@ -61,13 +61,46 @@ namespace QL_KhachSan
                 for(int i =0;i<SoPhongDaDat;i++)
                 {
                     //tạo vị trí phòng đầu tiên
-                
+                    if (i == 5)
+                    {
                         pPhong hienthi = new pPhong();
-                        hienthi.TenPhong(result.Tables[0].Rows[i][0].ToString(), result.Tables[0].Rows[i][0].ToString());
+                        hienthi.SDT = sdt;
+                        hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
+                        hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
+                        hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
+                        hienthi.TenPhong(result.Tables[0].Rows[i][2].ToString());
+                        DTO_HoaDon hoadon = new DTO_HoaDon();
+                        hoadon.MaPhong = result.Tables[0].Rows[i][0].ToString();
+                        hoadon.MaChiNhanh = result.Tables[0].Rows[i][1].ToString();
+                        hoadon.SoDienThoai = sdt;
+                        BO_DSPhongDaDat laymahoadon = new BO_DSPhongDaDat();
+                        DataSet KQ = laymahoadon.LayMaHD(hoadon);
+                        hienthi.MAHD = KQ.Tables[0].Rows[0][0].ToString();
+                        vitribandau.X = 20;
+                        vitribandau.Y = 150;
                         hienthi.Location = vitribandau;
                         gbDSPhong.Controls.Add(hienthi);
-                        vitribandau.X = vitribandau.X + 180;
-                    
+                        vitribandau.X = vitribandau.X + 165;
+                    }
+                    else
+                    {
+                        pPhong hienthi = new pPhong();
+                        hienthi.SDT = sdt;
+                        hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
+                        hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
+                        hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
+                        hienthi.TenPhong(result.Tables[0].Rows[i][2].ToString());
+                        DTO_HoaDon hoadon = new DTO_HoaDon();
+                        hoadon.MaPhong = result.Tables[0].Rows[i][0].ToString();
+                        hoadon.MaChiNhanh = result.Tables[0].Rows[i][1].ToString();
+                        hoadon.SoDienThoai = sdt;
+                        BO_DSPhongDaDat laymahoadon = new BO_DSPhongDaDat();
+                        DataSet KQ = laymahoadon.LayMaHD(hoadon);
+                        hienthi.MAHD = KQ.Tables[0].Rows[0][0].ToString();
+                        hienthi.Location = vitribandau;
+                        gbDSPhong.Controls.Add(hienthi);
+                        vitribandau.X = vitribandau.X + 165;
+                    }
              
 
                 }

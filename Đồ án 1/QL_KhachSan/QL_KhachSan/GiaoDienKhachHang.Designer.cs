@@ -49,7 +49,7 @@
             // pQuanLiTK
             // 
             this.pQuanLiTK.Image = ((System.Drawing.Image)(resources.GetObject("pQuanLiTK.Image")));
-            this.pQuanLiTK.Location = new System.Drawing.Point(15, 12);
+            this.pQuanLiTK.Location = new System.Drawing.Point(20, 12);
             this.pQuanLiTK.Name = "pQuanLiTK";
             this.pQuanLiTK.Size = new System.Drawing.Size(98, 94);
             this.pQuanLiTK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -60,17 +60,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.DeepPink;
             this.label1.Location = new System.Drawing.Point(12, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 18);
+            this.label1.Size = new System.Drawing.Size(127, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản lí tài khoản";
             // 
             // pDatPhong
             // 
             this.pDatPhong.Image = ((System.Drawing.Image)(resources.GetObject("pDatPhong.Image")));
-            this.pDatPhong.Location = new System.Drawing.Point(184, 12);
+            this.pDatPhong.Location = new System.Drawing.Point(190, 12);
             this.pDatPhong.Name = "pDatPhong";
             this.pDatPhong.Size = new System.Drawing.Size(98, 94);
             this.pDatPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -81,10 +82,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.DeepPink;
             this.label2.Location = new System.Drawing.Point(200, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 18);
+            this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Đặt phòng";
             // 
@@ -107,10 +109,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.DeepPink;
             this.label4.Location = new System.Drawing.Point(733, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 18);
+            this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Hỗ trợ";
             // 
@@ -147,6 +150,8 @@
             // 
             // gbDSPhong
             // 
+            this.gbDSPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbDSPhong.ForeColor = System.Drawing.Color.DarkBlue;
             this.gbDSPhong.Location = new System.Drawing.Point(7, 137);
             this.gbDSPhong.Name = "gbDSPhong";
             this.gbDSPhong.Size = new System.Drawing.Size(810, 370);
@@ -156,26 +161,30 @@
             // 
             // btnTrolai
             // 
+            this.btnTrolai.BackColor = System.Drawing.Color.PeachPuff;
             this.btnTrolai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnTrolai.Location = new System.Drawing.Point(7, 513);
             this.btnTrolai.Name = "btnTrolai";
             this.btnTrolai.Size = new System.Drawing.Size(93, 30);
             this.btnTrolai.TabIndex = 6;
             this.btnTrolai.Text = "Trở lại";
-            this.btnTrolai.UseVisualStyleBackColor = true;
+            this.btnTrolai.UseVisualStyleBackColor = false;
             this.btnTrolai.Click += new System.EventHandler(this.btnTrolai_Click);
             // 
             // GiaoDienKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(827, 542);
+            this.ControlBox = false;
             this.Controls.Add(this.btnTrolai);
             this.Controls.Add(this.gbKhachHang);
             this.Controls.Add(this.gbDSPhong);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Name = "GiaoDienKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giao Diện Khách Hàng";
             this.Load += new System.EventHandler(this.GiaoDienKhachHang_Load);
             this.Click += new System.EventHandler(this.GiaoDienKhachHang_Click);

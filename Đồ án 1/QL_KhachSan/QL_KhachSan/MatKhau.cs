@@ -95,6 +95,7 @@ namespace QL_KhachSan
             this.Hide();
             QuenMatKhau quen = new QuenMatKhau();
             quen.SDT = sdt;
+            quen.TENKH = tenkh;
             quen.ShowDialog();
             this.Close();
         }

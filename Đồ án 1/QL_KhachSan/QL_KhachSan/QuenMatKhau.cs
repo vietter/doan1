@@ -21,7 +21,14 @@ namespace QL_KhachSan
             }
         }
         private string sdt;
-       
+        private string tenkh;
+        public string TENKH
+        {
+            set
+            {
+                tenkh = value;
+            }
+        }
         public QuenMatKhau()
         {
             InitializeComponent();
@@ -100,6 +107,7 @@ namespace QL_KhachSan
             this.Hide();
             MatKhau matkhau = new MatKhau();
             matkhau.SDT = sdt;
+            matkhau.TENKH = tenkh;
             matkhau.ShowDialog();
             this.Close();
         }

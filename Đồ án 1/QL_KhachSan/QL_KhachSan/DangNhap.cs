@@ -27,7 +27,7 @@ namespace QL_KhachSan
         {
             if (txtSoDT.Text == "(+84) ")
             {
-                lbSai.Text = "Bạn chưa nhập số điện thoại";
+                lbSai.Text = "Bạn chưa nhập  số điện thoại";
                 lbSai.Show();
                 txtSoDT.Focus();
             }

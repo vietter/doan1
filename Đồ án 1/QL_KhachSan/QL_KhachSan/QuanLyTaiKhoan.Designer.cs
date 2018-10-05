@@ -166,6 +166,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Trờ lại";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnDangXuat
             // 
@@ -176,6 +177,7 @@
             this.btnDangXuat.TabIndex = 13;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // QuanLyTaiKhoan
             // 

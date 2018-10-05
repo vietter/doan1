@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QL_KhachSan.BS_layer;
+using System.Globalization;
 namespace QL_KhachSan
 {
     public partial class TuyChonPhong : Form
@@ -101,13 +102,15 @@ namespace QL_KhachSan
                 }
             }
             txtTong.Text = total.ToString();
-            
+
         }
 
         private void btnTrolai_Click(object sender, EventArgs e)
         {
+            this.Hide();
             GiaoDienKhachHang khachhang = new GiaoDienKhachHang();
             khachhang.SDT = sdt;
+            khachhang.ShowDialog();
             this.Close();
         }
 
@@ -675,6 +678,15 @@ namespace QL_KhachSan
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtTong_TextChanged(object sender, EventArgs e)
+        {
+
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = decimal.Parse(txtTong.Text, System.Globalization.NumberStyles.AllowThousands);
+            txtTong.Text = String.Format(culture, "{0:N0}", value);
+            txtTong.Select(txtTong.Text.Length, 0);
         }
     }
 }

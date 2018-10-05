@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QL_KhachSan.BS_layer;
+using System.Globalization;
 namespace QL_KhachSan
 {
     public partial class GiaoDienKhachHang : Form
     {
+        private int tongtien =0;
         private int SoPhongDaDat;
         private string sdt;
         public string SDT
@@ -29,6 +31,11 @@ namespace QL_KhachSan
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            QuanLyTaiKhoan quanli = new QuanLyTaiKhoan();
+            quanli.SDT = sdt;
+            quanli.ShowDialog();
+            this.Close();
 
         }
 
@@ -48,6 +55,15 @@ namespace QL_KhachSan
         }
         private void DS_Phong_Load()
         {
+            DTO_HoaDon thanhtien = new DTO_HoaDon();
+            thanhtien.SoDienThoai = sdt;
+            BO_DSPhongDaDat Tong = new BO_DSPhongDaDat();
+            DataSet tong = Tong.TongTien(thanhtien);
+            for(int i =0;i<tong.Tables[0].Rows.Count  ;i++)
+            {
+                tongtien += int.Parse(tong.Tables[0].Rows[i][0].ToString());
+            }
+            txtTongTien.Text = tongtien.ToString();
             DTO_Phong phong = new DTO_Phong();
             phong.SDT = sdt;
             BO_DSPhongDaDat ds = new BO_DSPhongDaDat();
@@ -106,10 +122,7 @@ namespace QL_KhachSan
                 }
 
             }
-            else
-            {
-
-            }
+           
         }
         private void gbKhachHang_Enter(object sender, EventArgs e)
         {
@@ -131,6 +144,15 @@ namespace QL_KhachSan
             DangNhap dn = new DangNhap();
             dn.ShowDialog();
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = decimal.Parse(txtTongTien.Text, System.Globalization.NumberStyles.AllowThousands);
+            txtTongTien.Text = String.Format(culture, "{0:N0}", value);
+            txtTongTien.Select(txtTongTien.Text.Length, 0);
         }
     }
 }

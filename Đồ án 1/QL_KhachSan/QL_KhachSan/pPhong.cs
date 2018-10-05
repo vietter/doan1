@@ -69,6 +69,7 @@ namespace QL_KhachSan
 
         private void picture_Click(object sender, EventArgs e)
         {
+            this.Parent.Hide();
             TuyChonPhong chon = new TuyChonPhong();
             chon.MAPHONG = maphong;
             chon.TENPHONG = tenphong;
@@ -76,6 +77,9 @@ namespace QL_KhachSan
             chon.SDT = sdt;
             chon.MAHD = mahd;
             chon.ShowDialog();
+            this.ParentForm.Close();
+
+            
             
         }
     }

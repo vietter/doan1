@@ -37,9 +37,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pHoTro = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.gbDSPhong = new System.Windows.Forms.GroupBox();
             this.btnTrolai = new System.Windows.Forms.Button();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pQuanLiTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pDatPhong)).BeginInit();
             this.gbKhachHang.SuspendLayout();
@@ -131,22 +131,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(670, 519);
+            this.label3.Location = new System.Drawing.Point(589, 515);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Thành tiền:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(756, 519);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 18);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "money";
             // 
             // gbDSPhong
             // 
@@ -171,6 +161,15 @@
             this.btnTrolai.UseVisualStyleBackColor = false;
             this.btnTrolai.Click += new System.EventHandler(this.btnTrolai_Click);
             // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(675, 513);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.Size = new System.Drawing.Size(142, 20);
+            this.txtTongTien.TabIndex = 7;
+            this.txtTongTien.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // GiaoDienKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,10 +177,10 @@
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(827, 542);
             this.ControlBox = false;
+            this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.btnTrolai);
             this.Controls.Add(this.gbKhachHang);
             this.Controls.Add(this.gbDSPhong);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Name = "GiaoDienKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -208,8 +207,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pHoTro;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox gbDSPhong;
         private System.Windows.Forms.Button btnTrolai;
+        private System.Windows.Forms.TextBox txtTongTien;
     }
 }

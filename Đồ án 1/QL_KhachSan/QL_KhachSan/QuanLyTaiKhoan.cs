@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QL_KhachSan.BS_layer;
 
 namespace QL_KhachSan
 {
@@ -28,12 +29,43 @@ namespace QL_KhachSan
 
         private void QuanLyTaiKhoan_Load(object sender, EventArgs e)
         {
-
+            DTO_KhachHang khachhang = new DTO_KhachHang();
+            khachhang.SDT = sdt;
+            BO_ThongTinKhachHang khach = new BO_ThongTinKhachHang();
+            DataSet table = khach.ThongTinKhachHang(khachhang);
+            txtSoDT.Text= table.Tables[0].Rows[0][0].ToString();
+            txtTenKH.Text = table.Tables[0].Rows[0][1].ToString();
+            txtTichLuy.Text = table.Tables[0].Rows[0][2].ToString();
+            txtCMND.Text = table.Tables[0].Rows[0][4].ToString();
+            
         }
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            DoiMatKhau doi = new DoiMatKhau();
+            doi.SDT = sdt;
+            doi.KIEMTRA = "QUANLI";
+            doi.ShowDialog();
+            this.Close();
 
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DangNhap dangnhap = new DangNhap();
+            dangnhap.ShowDialog();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GiaoDienKhachHang khachhang = new GiaoDienKhachHang();
+            khachhang.SDT = sdt;
+            khachhang.ShowDialog();
+            this.Close();
         }
     }
 }

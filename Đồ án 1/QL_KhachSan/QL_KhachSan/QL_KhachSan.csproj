@@ -57,6 +57,7 @@
     <Compile Include="BS_layer\BO_DatPhong.cs" />
     <Compile Include="BS_layer\BO_DSPhongDaDat.cs" />
     <Compile Include="BS_layer\BO_QuenMatKhau.cs" />
+    <Compile Include="BS_layer\BO_ThongTinKhachHang.cs" />
     <Compile Include="BS_layer\DTO_HoaDon.cs" />
     <Compile Include="BS_layer\DTO_NhanVien.cs" />
     <Compile Include="BS_layer\DTO_Phong.cs" />

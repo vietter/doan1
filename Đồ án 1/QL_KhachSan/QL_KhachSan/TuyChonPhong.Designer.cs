@@ -774,6 +774,7 @@
             this.txtTong.ReadOnly = true;
             this.txtTong.Size = new System.Drawing.Size(154, 29);
             this.txtTong.TabIndex = 23;
+            this.txtTong.TextChanged += new System.EventHandler(this.txtTong_TextChanged);
             // 
             // label7
             // 

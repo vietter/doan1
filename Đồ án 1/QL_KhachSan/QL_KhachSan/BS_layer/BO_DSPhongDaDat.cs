@@ -10,6 +10,18 @@ namespace QL_KhachSan.BS_layer
 {
     class BO_DSPhongDaDat
     {
+        public DataSet TongTien(DTO_HoaDon hoadon)
+        {
+            DataSet result = new DataSet();
+            string sql = "SELECT ThanhTien FROM HoaDon WHERE SoDienThoai = @SDT";
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@SDT",hoadon.SoDienThoai),
+            };
+            DataAccess data = new DataAccess();
+            result = data.getdataset(sql, para);
+            return result;
+        }
         public DataSet LayMaHD(DTO_HoaDon hoadon)
         {
             DataSet result = new DataSet();

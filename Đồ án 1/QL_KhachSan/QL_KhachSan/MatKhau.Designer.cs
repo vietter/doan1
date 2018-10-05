@@ -141,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(382, 178);
+            this.ClientSize = new System.Drawing.Size(382, 163);
             this.ControlBox = false;
             this.Controls.Add(this.lbSai);
             this.Controls.Add(this.btnDangNhap);

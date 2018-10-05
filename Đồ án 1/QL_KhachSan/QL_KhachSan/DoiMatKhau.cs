@@ -12,7 +12,15 @@ namespace QL_KhachSan
 {
     public partial class DoiMatKhau : Form
     {
-        bool KT = false;
+        private string kiemtra;
+        public string KIEMTRA
+        {
+            set
+            {
+                kiemtra = value;
+            }
+        }
+
         private string sdt;
         public string SDT
         {
@@ -33,11 +41,22 @@ namespace QL_KhachSan
 
         private void btnTroLai_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            QuenMatKhau quen = new QuenMatKhau();
-            quen.SDT = sdt;
-            quen.ShowDialog();
-            this.Close();
+            if (kiemtra == "QUENMATKHAU")
+            {
+                this.Hide();
+                QuenMatKhau quen = new QuenMatKhau();
+                quen.SDT = sdt;
+                quen.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+                QuanLyTaiKhoan khachhang = new QuanLyTaiKhoan();
+                khachhang.SDT = sdt;
+                khachhang.ShowDialog();
+                this.Close();
+            }
         }
         private void load()
         {
@@ -46,8 +65,7 @@ namespace QL_KhachSan
         }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            if (KT == false)
-            {
+       
                 if (txtMatKhau.Text == "")
                 {
                     lbMatKhau.Visible = true;
@@ -102,4 +120,4 @@ namespace QL_KhachSan
             }
         }
     }
-}
+

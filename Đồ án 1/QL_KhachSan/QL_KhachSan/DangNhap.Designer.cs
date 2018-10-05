@@ -140,7 +140,7 @@
             this.lbSai.AutoSize = true;
             this.lbSai.BackColor = System.Drawing.Color.Red;
             this.lbSai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbSai.Location = new System.Drawing.Point(199, 259);
+            this.lbSai.Location = new System.Drawing.Point(42, 264);
             this.lbSai.Name = "lbSai";
             this.lbSai.Size = new System.Drawing.Size(27, 18);
             this.lbSai.TabIndex = 8;

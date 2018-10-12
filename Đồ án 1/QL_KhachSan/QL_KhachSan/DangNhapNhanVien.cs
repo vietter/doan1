@@ -13,8 +13,10 @@ namespace QL_KhachSan
 {
     public partial class DangNhapNhanVien : Form
     {
-
         private string tennv;
+        private string manv;
+
+        
 
 
         public DangNhapNhanVien()
@@ -42,7 +44,7 @@ namespace QL_KhachSan
             nhanvien.MaNhanVien = txtMaNV.Text;
             nhanvien.MatKhau = txtMatKhau.Text;
             BO_DangNhapNhanVien dangnhap = new BO_DangNhapNhanVien();
-            DataSet result = dangnhap.KT_DangNhap(nhanvien, ref tennv);
+            DataSet result = dangnhap.KT_DangNhap(nhanvien, ref tennv, ref manv);
             if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
             {
 
@@ -50,6 +52,7 @@ namespace QL_KhachSan
                 this.Hide();
                 GiaoDienQuanLi giaodien = new GiaoDienQuanLi();
                 giaodien.TENNV = tennv;
+                giaodien.MANV = manv;
                 giaodien.ShowDialog();
                 this.Close();
             }

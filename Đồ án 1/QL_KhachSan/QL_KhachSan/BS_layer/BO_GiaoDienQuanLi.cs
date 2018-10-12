@@ -9,24 +9,23 @@ using System.Threading.Tasks;
 
 namespace QL_KhachSan.BS_layer
 {
-    public class BO_DangNhapNhanVien
+    class BO_GiaoDienQuanLi
     {
-        public DataSet KT_DangNhap(DTO_NhanVien dto, ref string Ten, ref string Ma)
+        public DataSet KT_QuyenQL(DTO_ChiNhanh dto, ref string TenCn)
         {
             DataSet result = new DataSet();
-            string sql = @"SELECT * FROM NhanVien WHERE MaNV = @MaNV and MatKhau =@MatKhau ";
+            string sql = @"SELECT * FROM ChiNhanh WHERE MaNguoiQuanLy = @MaNV and MaChiNhanh =@MaCN ";
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter ("@MaNV",dto.MaNhanVien),
-                new SqlParameter("@MatKhau",dto.MatKhau),
+                new SqlParameter ("@MaNV",dto.MaNguoiQuanLy),
+                new SqlParameter("@MaCN",dto.MaChiNhanh),
 
             };
             DataAccess data = new DataAccess();
             result = data.getdataset(sql, para);
             if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
             {
-                Ten = result.Tables[0].Rows[0][1].ToString();
-                Ma = result.Tables[0].Rows[0][0].ToString();
+                TenCn = result.Tables[0].Rows[0][1].ToString();
             }
             return result;
         }

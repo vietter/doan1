@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -76,6 +75,11 @@
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.lbTenChiNhanh = new System.Windows.Forms.Label();
+            this.btnTruyCap = new System.Windows.Forms.Button();
+            this.cbbDiaChi = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -104,7 +108,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(8, 51);
+            this.label1.Location = new System.Drawing.Point(20, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 20);
             this.label1.TabIndex = 1;
@@ -130,16 +134,6 @@
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.UseVisualStyleBackColor = true;
             this.btnDangXuat.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(497, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "tên chi nhánh";
             // 
             // groupBox1
             // 
@@ -374,7 +368,7 @@
             // 
             this.lbTen.AutoSize = true;
             this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbTen.Location = new System.Drawing.Point(135, 51);
+            this.lbTen.Location = new System.Drawing.Point(156, 12);
             this.lbTen.Name = "lbTen";
             this.lbTen.Size = new System.Drawing.Size(61, 20);
             this.lbTen.TabIndex = 5;
@@ -609,15 +603,83 @@
             this.pictureBox20.TabIndex = 40;
             this.pictureBox20.TabStop = false;
             // 
+            // lbTenChiNhanh
+            // 
+            this.lbTenChiNhanh.AutoSize = true;
+            this.lbTenChiNhanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbTenChiNhanh.ForeColor = System.Drawing.Color.DeepPink;
+            this.lbTenChiNhanh.Location = new System.Drawing.Point(613, 9);
+            this.lbTenChiNhanh.Name = "lbTenChiNhanh";
+            this.lbTenChiNhanh.Size = new System.Drawing.Size(103, 24);
+            this.lbTenChiNhanh.TabIndex = 14;
+            this.lbTenChiNhanh.Text = "chi nhánh";
+            this.lbTenChiNhanh.Click += new System.EventHandler(this.lbTenChiNhanh_Click);
+            // 
+            // btnTruyCap
+            // 
+            this.btnTruyCap.Location = new System.Drawing.Point(336, 54);
+            this.btnTruyCap.Name = "btnTruyCap";
+            this.btnTruyCap.Size = new System.Drawing.Size(75, 23);
+            this.btnTruyCap.TabIndex = 13;
+            this.btnTruyCap.Text = "Truy Cập";
+            this.btnTruyCap.UseVisualStyleBackColor = true;
+            this.btnTruyCap.Click += new System.EventHandler(this.btnTruyCap_Click);
+            // 
+            // cbbDiaChi
+            // 
+            this.cbbDiaChi.FormattingEnabled = true;
+            this.cbbDiaChi.Items.AddRange(new object[] {
+            "Đà Lạt- Khách sạn The New Star 1- địa chỉ: 69 Hồ Tùng Mậu, Phường 1, Thành Phố Đà" +
+                " Lạt, tỉnh Lâm Đồng",
+            "Hồ Chí Minh - Khách sạn The New Star 2- địa chỉ :1 Đồng Khởi, Bến Nghé, Quận 1, T" +
+                "hành Phố Hồ Chí Minh",
+            "Đà Nẵng - Khách sạn The New Star 3- địa chỉ: 99 Võ Nguyên Giáp, Bắc Mỹ An, Ngũ Hà" +
+                "nh Sơn, Thành Phố Đà Nẵng",
+            "Nha Trang- Khách sạn The New Star 4- địa chỉ: 50 Trần Phú, Lộc Thọ, Thành phố Nha" +
+                " Trang, Khánh Hòa",
+            "Phú Quốc- Khách sạn The New Star 5- địa chỉ: Hamlet 8 Chuồng Víc, Phú Quốc, tỉnh " +
+                "Kiên Giang"});
+            this.cbbDiaChi.Location = new System.Drawing.Point(160, 54);
+            this.cbbDiaChi.Name = "cbbDiaChi";
+            this.cbbDiaChi.Size = new System.Drawing.Size(159, 21);
+            this.cbbDiaChi.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label3.Location = new System.Drawing.Point(16, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Chọn Chi Nhánh";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label24.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label24.Location = new System.Drawing.Point(481, 12);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(114, 20);
+            this.label24.TabIndex = 11;
+            this.label24.Text = "Tên Chi Nhánh";
+            // 
             // GiaoDienQuanLi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1078, 598);
+            this.Controls.Add(this.lbTenChiNhanh);
+            this.Controls.Add(this.btnTruyCap);
+            this.Controls.Add(this.cbbDiaChi);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lbTen);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.button2);
@@ -657,7 +719,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -701,5 +762,10 @@
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.Label lbTenChiNhanh;
+        private System.Windows.Forms.Button btnTruyCap;
+        private System.Windows.Forms.ComboBox cbbDiaChi;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label24;
     }
 }

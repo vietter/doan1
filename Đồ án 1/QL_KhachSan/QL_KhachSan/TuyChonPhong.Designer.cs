@@ -83,9 +83,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTrolai = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pHuyPhong = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pDoiPhong = new System.Windows.Forms.PictureBox();
             this.dgvHienThi = new System.Windows.Forms.DataGridView();
             this.txtTong = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -100,7 +100,7 @@
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pXoaDichVu = new System.Windows.Forms.PictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.pl_main.SuspendLayout();
             this.pl_DichVuThue.SuspendLayout();
@@ -127,10 +127,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHuyPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDoiPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHienThi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pXoaDichVu)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -724,15 +724,16 @@
             this.label11.Text = "Hủy phòng";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // pictureBox9
+            // pHuyPhong
             // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(891, 6);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 20;
-            this.pictureBox9.TabStop = false;
+            this.pHuyPhong.Image = ((System.Drawing.Image)(resources.GetObject("pHuyPhong.Image")));
+            this.pHuyPhong.Location = new System.Drawing.Point(891, 6);
+            this.pHuyPhong.Name = "pHuyPhong";
+            this.pHuyPhong.Size = new System.Drawing.Size(98, 94);
+            this.pHuyPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pHuyPhong.TabIndex = 20;
+            this.pHuyPhong.TabStop = false;
+            this.pHuyPhong.Click += new System.EventHandler(this.pHuyPhong_Click);
             // 
             // label24
             // 
@@ -746,15 +747,16 @@
             this.label24.Text = "Đổi phòng";
             this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
-            // pictureBox22
+            // pDoiPhong
             // 
-            this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(778, 9);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox22.TabIndex = 18;
-            this.pictureBox22.TabStop = false;
+            this.pDoiPhong.Image = ((System.Drawing.Image)(resources.GetObject("pDoiPhong.Image")));
+            this.pDoiPhong.Location = new System.Drawing.Point(778, 9);
+            this.pDoiPhong.Name = "pDoiPhong";
+            this.pDoiPhong.Size = new System.Drawing.Size(98, 94);
+            this.pDoiPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pDoiPhong.TabIndex = 18;
+            this.pDoiPhong.TabStop = false;
+            this.pDoiPhong.Click += new System.EventHandler(this.pDoiPhong_Click);
             // 
             // dgvHienThi
             // 
@@ -767,7 +769,8 @@
             // 
             // txtTong
             // 
-            this.txtTong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtTong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtTong.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtTong.Location = new System.Drawing.Point(161, 616);
             this.txtTong.Multiline = true;
             this.txtTong.Name = "txtTong";
@@ -906,16 +909,16 @@
             this.label25.TabIndex = 35;
             this.label25.Text = "Danh sách dịch vụ";
             // 
-            // pictureBox5
+            // pXoaDichVu
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(392, 9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(98, 94);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 36;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pXoaDichVu.Image = ((System.Drawing.Image)(resources.GetObject("pXoaDichVu.Image")));
+            this.pXoaDichVu.Location = new System.Drawing.Point(392, 9);
+            this.pXoaDichVu.Name = "pXoaDichVu";
+            this.pXoaDichVu.Size = new System.Drawing.Size(98, 94);
+            this.pXoaDichVu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pXoaDichVu.TabIndex = 36;
+            this.pXoaDichVu.TabStop = false;
+            this.pXoaDichVu.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label27
             // 
@@ -937,7 +940,7 @@
             this.ClientSize = new System.Drawing.Size(1001, 688);
             this.ControlBox = false;
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pXoaDichVu);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.btn10);
             this.Controls.Add(this.btn9);
@@ -946,19 +949,19 @@
             this.Controls.Add(this.btn6);
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn4);
+            this.Controls.Add(this.pl_TienIch);
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pl_ThucAn);
-            this.Controls.Add(this.pl_TienIch);
             this.Controls.Add(this.txtTong);
             this.Controls.Add(this.pl_DichVuThue);
             this.Controls.Add(this.dgvHienThi);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.pHuyPhong);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.pictureBox22);
+            this.Controls.Add(this.pDoiPhong);
             this.Controls.Add(this.btnTrolai);
             this.Controls.Add(this.pl_ThucUong);
             this.Controls.Add(this.pl_main);
@@ -997,10 +1000,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHuyPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDoiPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHienThi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pXoaDichVu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1060,9 +1063,9 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button btnTrolai;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pHuyPhong;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.PictureBox pDoiPhong;
         private System.Windows.Forms.DataGridView dgvHienThi;
         private System.Windows.Forms.TextBox txtTong;
         private System.Windows.Forms.Label label7;
@@ -1078,7 +1081,7 @@
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pXoaDichVu;
         private System.Windows.Forms.Label label27;
     }
 }

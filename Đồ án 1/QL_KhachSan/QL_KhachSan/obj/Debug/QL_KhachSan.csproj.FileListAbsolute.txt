@@ -50,3 +50,4 @@ D:\New folder\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DangNhap
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DangNhapNhanVien.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.pPhong.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.SoLuong.resources
+C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.FreeRoom.resources

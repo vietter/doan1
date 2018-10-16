@@ -69,7 +69,7 @@ namespace QL_KhachSan
 
         private void picture_Click(object sender, EventArgs e)
         {
-            this.Parent.Hide();
+            this.ParentForm.Hide();
             TuyChonPhong chon = new TuyChonPhong();
             chon.MAPHONG = maphong;
             chon.TENPHONG = tenphong;

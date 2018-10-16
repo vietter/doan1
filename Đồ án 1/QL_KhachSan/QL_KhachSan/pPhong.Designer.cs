@@ -49,7 +49,7 @@
             this.picture.Image = ((System.Drawing.Image)(resources.GetObject("picture.Image")));
             this.picture.Location = new System.Drawing.Point(3, 3);
             this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(98, 94);
+            this.picture.Size = new System.Drawing.Size(100, 95);
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picture.TabIndex = 8;
             this.picture.TabStop = false;
@@ -62,7 +62,7 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.picture);
             this.Name = "pPhong";
-            this.Size = new System.Drawing.Size(103, 121);
+            this.Size = new System.Drawing.Size(105, 120);
             this.Load += new System.EventHandler(this.pPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);

@@ -131,7 +131,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(589, 515);
+            this.label3.Location = new System.Drawing.Point(590, 515);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 18);
             this.label3.TabIndex = 4;
@@ -163,10 +163,12 @@
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(675, 513);
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtTongTien.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtTongTien.Location = new System.Drawing.Point(686, 513);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(142, 20);
+            this.txtTongTien.Size = new System.Drawing.Size(131, 24);
             this.txtTongTien.TabIndex = 7;
             this.txtTongTien.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 

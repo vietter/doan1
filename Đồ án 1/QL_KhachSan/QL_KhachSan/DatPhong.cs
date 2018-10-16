@@ -118,6 +118,7 @@ namespace QL_KhachSan
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
+
             DTO_HoaDon phong = new DTO_HoaDon();
             TaoMaHD(MaHD, ref MaHDMoi);
             phong.MaHD = MaHDMoi;

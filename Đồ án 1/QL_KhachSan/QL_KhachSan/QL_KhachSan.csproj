@@ -55,7 +55,9 @@
     <Compile Include="BS_layer\BO_DangNhap.cs" />
     <Compile Include="BS_layer\BO_DangNhapNhanVien.cs" />
     <Compile Include="BS_layer\BO_DatPhong.cs" />
+    <Compile Include="BS_layer\BO_DoiPhong.cs" />
     <Compile Include="BS_layer\BO_DSPhongDaDat.cs" />
+    <Compile Include="BS_layer\BO_HuyPhong.cs" />
     <Compile Include="BS_layer\BO_QuenMatKhau.cs" />
     <Compile Include="BS_layer\BO_ThongTinKhachHang.cs" />
     <Compile Include="BS_layer\DTO_HoaDon.cs" />
@@ -97,6 +99,12 @@
     </Compile>
     <Compile Include="DoiPhong.Designer.cs">
       <DependentUpon>DoiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FreeRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FreeRoom.Designer.cs">
+      <DependentUpon>FreeRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoDienKhachHang.cs">
       <SubType>Form</SubType>
@@ -171,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoiPhong.resx">
       <DependentUpon>DoiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FreeRoom.resx">
+      <DependentUpon>FreeRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDienKhachHang.resx">
       <DependentUpon>GiaoDienKhachHang.cs</DependentUpon>

@@ -10,26 +10,37 @@ namespace QL_KhachSan.BS_layer
 {
     class BO_DatPhong
     { 
-       public DataSet KiemTraPhongTrong (DTO_HoaDon MaChiNhanh, ref string GiaTriMaPhong)
+       public DataSet KiemTraPhongTrong (DTO_Phong phong)
         {
             DataSet result = new DataSet();
-            string sql = "SELECT TOP 1 (MaPhong) FROM Phong WHERE MaChiNhanh LIKE @MaChiNhanh + '%' AND NguoiSuDung = 'Free'";
+            string sql = "SELECT * FROM Phong WHERE MaChiNhanh LIKE @MaChiNhanh + '%' AND NguoiSuDung = 'Free' AND SoNguoi = @SoNguoi AND LoaiPhong = @LoaiPhong";
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter ("@MaChiNhanh",MaChiNhanh.MaChiNhanh),
+                new SqlParameter ("@MaChiNhanh",phong.MaChiNhanh),
+                new SqlParameter("@SoNguoi",phong.SoNguoi),
+                new SqlParameter("@LoaiPhong",phong.LoaiPhong),
             };
             DataAccess data = new DataAccess();
             result = data.getdataset(sql, para);
-            if(result.Tables.Count >0 && result.Tables[0].Rows.Count > 0)
+            return result;
+        }
+        public DataSet showall(DTO_Phong phong)
+        {
+            DataSet result;
+            string sql = "SELECT * FROM Phong WHERE MaChiNhanh LIKE @MaChiNhanh + '%' AND NguoiSuDung = @SDT";
+            SqlParameter[] para = new SqlParameter[]
             {
-                GiaTriMaPhong = result.Tables[0].Rows[0][0].ToString();
-            }
+                new SqlParameter("@MaChiNhanh",phong.MaChiNhanh),
+                new SqlParameter("@SDT",phong.SDT),
+            };
+            DataAccess data = new DataAccess();
+            result = data.getdataset(sql, para);
             return result;
         }
        public int DatPhong(DTO_HoaDon thongtin)
         {
             int result = -1;
-            string sql = "INSERT INTO HoaDon VALUES(@TenDichVu,@SoLuong,@ThanhTien,@MaHD,@STT,@MaChiNhanh,@MaPhong,@SDT,@NgayDat,@NgayTra,@MaDV)";
+            string sql = "INSERT INTO HoaDon VALUES(@TenDichVu,@SoLuong,@ThanhTien,@MaHD,@STT,@MaChiNhanh,@MaPhong,@SDT,@NgayDat,@NgayTra,@MaDV,@DapUng)";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@TenDichVu",thongtin.TenDichVu),
@@ -43,6 +54,7 @@ namespace QL_KhachSan.BS_layer
                 new SqlParameter("@NgayDat",thongtin.NgayDatPhong),
                 new SqlParameter("@NgayTra",thongtin.NgayTraPhong),
                 new SqlParameter("@MaDV",thongtin.MaDV),
+                new SqlParameter("@DapUng",thongtin.DapUng),
             };
             DataAccess data = new DataAccess();
             result = data.Execute(sql, para);

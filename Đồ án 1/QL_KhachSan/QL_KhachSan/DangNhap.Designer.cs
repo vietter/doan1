@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtSoDT = new System.Windows.Forms.MaskedTextBox();
             this.lbClickHere = new System.Windows.Forms.LinkLabel();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnDangKi = new System.Windows.Forms.Button();
             this.lbSai = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.txtSoDT = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -75,17 +75,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Quản lí bấm vào ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // txtSoDT
-            // 
-            this.txtSoDT.BackColor = System.Drawing.Color.DeepPink;
-            this.txtSoDT.Location = new System.Drawing.Point(198, 236);
-            this.txtSoDT.Mask = "(+84) 0000000000";
-            this.txtSoDT.Name = "txtSoDT";
-            this.txtSoDT.PromptChar = ' ';
-            this.txtSoDT.Size = new System.Drawing.Size(97, 20);
-            this.txtSoDT.TabIndex = 1;
-            this.txtSoDT.Click += new System.EventHandler(this.txtSoDT_Click);
             // 
             // lbClickHere
             // 
@@ -158,6 +147,17 @@
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // txtSoDT
+            // 
+            this.txtSoDT.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSoDT.Location = new System.Drawing.Point(185, 237);
+            this.txtSoDT.Mask = "(+84) 0000000000";
+            this.txtSoDT.Name = "txtSoDT";
+            this.txtSoDT.PromptChar = ' ';
+            this.txtSoDT.Size = new System.Drawing.Size(97, 20);
+            this.txtSoDT.TabIndex = 11;
+            this.txtSoDT.Click += new System.EventHandler(this.txtSoDT_Click_1);
+            // 
             // DangNhap
             // 
             this.AcceptButton = this.btnDangNhap;
@@ -168,16 +168,17 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(366, 447);
             this.ControlBox = false;
+            this.Controls.Add(this.txtSoDT);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.lbSai);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.lbClickHere);
-            this.Controls.Add(this.txtSoDT);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(0, 300);
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
@@ -192,13 +193,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox txtSoDT;
         private System.Windows.Forms.LinkLabel lbClickHere;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDangKi;
         private System.Windows.Forms.Label lbSai;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.MaskedTextBox txtSoDT;
     }
 }
 

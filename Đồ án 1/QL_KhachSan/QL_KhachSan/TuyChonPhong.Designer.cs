@@ -102,6 +102,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.pXoaDichVu = new System.Windows.Forms.PictureBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.lbThanhToan = new System.Windows.Forms.Label();
+            this.pThanhToan = new System.Windows.Forms.PictureBox();
             this.pl_main.SuspendLayout();
             this.pl_DichVuThue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
@@ -131,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pDoiPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHienThi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pXoaDichVu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pThanhToan)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -932,6 +935,28 @@
             this.label27.Text = "Xóa Dịch Vụ";
             this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
+            // lbThanhToan
+            // 
+            this.lbThanhToan.AutoSize = true;
+            this.lbThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbThanhToan.ForeColor = System.Drawing.Color.DeepPink;
+            this.lbThanhToan.Location = new System.Drawing.Point(537, 109);
+            this.lbThanhToan.Name = "lbThanhToan";
+            this.lbThanhToan.Size = new System.Drawing.Size(87, 18);
+            this.lbThanhToan.TabIndex = 39;
+            this.lbThanhToan.Text = "Thanh Toán";
+            // 
+            // pThanhToan
+            // 
+            this.pThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("pThanhToan.Image")));
+            this.pThanhToan.Location = new System.Drawing.Point(532, 12);
+            this.pThanhToan.Name = "pThanhToan";
+            this.pThanhToan.Size = new System.Drawing.Size(98, 94);
+            this.pThanhToan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pThanhToan.TabIndex = 38;
+            this.pThanhToan.TabStop = false;
+            this.pThanhToan.Click += new System.EventHandler(this.pThanhToan_Click);
+            // 
             // TuyChonPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -939,6 +964,8 @@
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1001, 688);
             this.ControlBox = false;
+            this.Controls.Add(this.lbThanhToan);
+            this.Controls.Add(this.pThanhToan);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.pXoaDichVu);
             this.Controls.Add(this.label25);
@@ -1004,6 +1031,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pDoiPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHienThi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pXoaDichVu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pThanhToan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1083,5 +1111,7 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.PictureBox pXoaDichVu;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lbThanhToan;
+        private System.Windows.Forms.PictureBox pThanhToan;
     }
 }

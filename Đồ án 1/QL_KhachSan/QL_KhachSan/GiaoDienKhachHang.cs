@@ -23,7 +23,14 @@ namespace QL_KhachSan
                 sdt = value;
             }
         }
-
+        private int options;
+        public int OPTIONS
+        {
+          set
+            {
+                options = value;
+            }
+        }
         public GiaoDienKhachHang()
         {
             InitializeComponent();
@@ -139,9 +146,10 @@ namespace QL_KhachSan
         }
 
         private void btnTrolai_Click(object sender, EventArgs e)
-        {
+        { 
             this.Hide();
             DangNhap dn = new DangNhap();
+            dn.OPTIONS = options;
             dn.ShowDialog();
             this.Close();
         }
@@ -153,6 +161,16 @@ namespace QL_KhachSan
             decimal value = decimal.Parse(txtTongTien.Text, System.Globalization.NumberStyles.AllowThousands);
             txtTongTien.Text = String.Format(culture, "{0:N0}", value);
             txtTongTien.Select(txtTongTien.Text.Length, 0);
+        }
+
+        private void pHoTro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbDSPhong_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

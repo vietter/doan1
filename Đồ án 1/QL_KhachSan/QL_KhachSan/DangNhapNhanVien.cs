@@ -15,7 +15,7 @@ namespace QL_KhachSan
     {
         private string tennv;
         private string manv;
-
+       
         
 
 
@@ -49,10 +49,17 @@ namespace QL_KhachSan
             {
 
                 MessageBox.Show("Đăng Nhập Thành công", "Thông Báo", MessageBoxButtons.OK);
+                DTO_ChiNhanh chinhanh = new DTO_ChiNhanh();
+                chinhanh.MaNguoiQuanLy = manv;
+                DataSet table = new DataSet();
+                BO_DangNhapNhanVien quanli = new BO_DangNhapNhanVien();
+                table = quanli.LayMaChiNhanh(chinhanh) ;
                 this.Hide();
                 GiaoDienQuanLi giaodien = new GiaoDienQuanLi();
                 giaodien.TENNV = tennv;
                 giaodien.MANV = manv;
+                giaodien.MACHINHANH = table.Tables[0].Rows[0][0].ToString();
+                giaodien.TENCHINHANH = table.Tables[0].Rows[0][1].ToString();
                 giaodien.ShowDialog();
                 this.Close();
             }

@@ -13,6 +13,31 @@ namespace QL_KhachSan
 
     public partial class DoiPhong : Form
     {
+        private string tennv;
+        public string TENNV
+        {
+            set
+            {
+                tennv = value;
+            }
+        }
+        private string manv;
+        public string MANV
+        {
+            set
+            {
+                manv = value;
+            }
+        }
+
+        private string tenchinhanh;
+        public string TENCHINHANH
+        {
+            set
+            {
+                tenchinhanh = value;
+            }
+        }
         private string mahd;
         public string MAHD
         {
@@ -68,6 +93,10 @@ namespace QL_KhachSan
             tuychon.MACHINHANH = machinhanh;
             tuychon.TENPHONG = tenphong;
             tuychon.MAPHONG = maphong;
+            tuychon.MANV = manv;
+            tuychon.TENCHINHANH = tenchinhanh;
+            tuychon.TENNV = tennv;
+            tuychon.ShowDialog();
             this.Close();
         }
 
@@ -94,6 +123,9 @@ namespace QL_KhachSan
                         phong.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                         phong.SetTenPhong(table.Tables[0].Rows[i][2].ToString());
                         phong.MAHD = mahd;
+                        phong.MANV = manv;
+                        phong.TENCHINHANH = tenchinhanh;
+                        phong.TENNV = tennv;
                         vitridau.X = 20;
                         vitridau.Y = 150;
                         phong.Location = vitridau;
@@ -111,6 +143,9 @@ namespace QL_KhachSan
                         phong.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                         phong.SetTenPhong(table.Tables[0].Rows[i][2].ToString());
                         phong.MAHD = mahd;
+                        phong.MANV = manv;
+                        phong.TENCHINHANH = tenchinhanh;
+                        phong.TENNV = tennv;
                         phong.Location = vitridau;
                         gbDSPhongTrong.Controls.Add(phong);
                         vitridau.X += 165;

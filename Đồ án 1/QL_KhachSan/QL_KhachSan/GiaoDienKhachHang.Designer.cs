@@ -126,6 +126,7 @@
             this.pHoTro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pHoTro.TabIndex = 6;
             this.pHoTro.TabStop = false;
+            this.pHoTro.Click += new System.EventHandler(this.pHoTro_Click);
             // 
             // label3
             // 
@@ -148,6 +149,7 @@
             this.gbDSPhong.TabIndex = 4;
             this.gbDSPhong.TabStop = false;
             this.gbDSPhong.Text = "Danh Sách Phòng đã đặt";
+            this.gbDSPhong.Enter += new System.EventHandler(this.gbDSPhong_Enter);
             // 
             // btnTrolai
             // 

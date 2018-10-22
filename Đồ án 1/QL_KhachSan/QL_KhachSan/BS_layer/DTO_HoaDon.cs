@@ -19,5 +19,6 @@ namespace QL_KhachSan.BS_layer
         public string MaDV;
         public int SoLuong;
         public int ThanhTien;
+        public string DapUng;
     }
 }

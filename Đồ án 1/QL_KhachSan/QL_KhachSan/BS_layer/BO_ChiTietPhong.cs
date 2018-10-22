@@ -13,7 +13,7 @@ namespace QL_KhachSan.BS_layer
         public DataSet HienThi(DTO_HoaDon hoadon)
         {
             DataSet result = new DataSet();
-            string sql = "SELECT * FROM HoaDon WHERE MaHD = @MaHD";
+            string sql = "SELECT * FROM HoaDon WHERE MaHD = @MaHD ";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter ("@MaHD",hoadon.MaHD),
@@ -27,7 +27,7 @@ namespace QL_KhachSan.BS_layer
         public int ThemDV(DTO_HoaDon hoadon)
         {
             int result = -1;
-            string sql = "INSERT INTO HoaDon VALUES (@TenDichVu,@SoLuong,@ThanhTien,@MaHD,@STT,@MaChiNhanh,@MaPhong,@SoDienThoai,@NgayDatPhong,@NgayTraPhong,@MaDV)";
+            string sql = "INSERT INTO HoaDon VALUES (@TenDichVu,@SoLuong,@ThanhTien,@MaHD,@STT,@MaChiNhanh,@MaPhong,@SoDienThoai,@NgayDatPhong,@NgayTraPhong,@MaDV,@DapUng)";
             SqlParameter[] para = new SqlParameter[]
             {   
                 new SqlParameter("@TenDichVu",hoadon.TenDichVu),
@@ -41,6 +41,7 @@ namespace QL_KhachSan.BS_layer
                 new SqlParameter("@NgayDatPhong",hoadon.NgayDatPhong),
                 new SqlParameter("@NgayTraPhong",hoadon.NgayTraPhong),
                 new SqlParameter("@MaDV",hoadon.MaDV),
+                new SqlParameter("@DapUng",hoadon.DapUng),
             };
             DataAccess data = new DataAccess();
             result = data.Execute(sql, para);

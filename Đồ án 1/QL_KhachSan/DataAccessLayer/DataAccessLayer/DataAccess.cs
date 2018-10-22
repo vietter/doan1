@@ -13,7 +13,7 @@ namespace DataAccessLayer
         Exception error;
         public DataAccess()
         {
-            string connectString = @"Data Source=Hai;Initial Catalog=TheNewStarHotel_DB;Integrated Security=True ";
+            string connectString = @"Data Source=DESKTOP-SJULKJC;Initial Catalog=TheNewStarHotel_DB;Integrated Security=True ";
             connect = new SqlConnection(connectString);
 
         }
@@ -63,6 +63,7 @@ namespace DataAccessLayer
                     connect.Close();
                 }
             }
+
             return result;
 
             }

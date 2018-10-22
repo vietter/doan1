@@ -58,12 +58,26 @@
     <Compile Include="BS_layer\BO_DoiPhong.cs" />
     <Compile Include="BS_layer\BO_DSPhongDaDat.cs" />
     <Compile Include="BS_layer\BO_HuyPhong.cs" />
+    <Compile Include="BS_layer\BO_QuanLiChiNhanh.cs" />
     <Compile Include="BS_layer\BO_QuenMatKhau.cs" />
     <Compile Include="BS_layer\BO_ThongTinKhachHang.cs" />
+    <Compile Include="BS_layer\DTO_ChiNhanh.cs" />
     <Compile Include="BS_layer\DTO_HoaDon.cs" />
     <Compile Include="BS_layer\DTO_NhanVien.cs" />
     <Compile Include="BS_layer\DTO_Phong.cs" />
     <Compile Include="BS_layer\DTO_KhachHang.cs" />
+    <Compile Include="DatPhongNhanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatPhongNhanh.Designer.cs">
+      <DependentUpon>DatPhongNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giuongdon2nguoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="giuongdon2nguoi.Designer.cs">
+      <DependentUpon>giuongdon2nguoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangKi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,11 +132,41 @@
     <Compile Include="GiaoDienQuanLi.Designer.cs">
       <DependentUpon>GiaoDienQuanLi.cs</DependentUpon>
     </Compile>
+    <Compile Include="giuongdoi2nguoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="giuongdoi2nguoi.Designer.cs">
+      <DependentUpon>giuongdoi2nguoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giuongdoi4nguoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="giuongdoi4nguoi.Designer.cs">
+      <DependentUpon>giuongdoi4nguoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giuongdoi6nguoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="giuongdoi6nguoi.Designer.cs">
+      <DependentUpon>giuongdoi6nguoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giuongdon4nguoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="giuongdon4nguoi.Designer.cs">
+      <DependentUpon>giuongdon4nguoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="MatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MatKhau.Designer.cs">
       <DependentUpon>MatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhongCuaKhach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhongCuaKhach.Designer.cs">
+      <DependentUpon>PhongCuaKhach.cs</DependentUpon>
     </Compile>
     <Compile Include="pPhong.cs">
       <SubType>UserControl</SubType>
@@ -132,6 +176,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiPhong.Designer.cs">
+      <DependentUpon>QuanLiPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +212,18 @@
     <Compile Include="TuyChonPhong.Designer.cs">
       <DependentUpon>TuyChonPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="XacNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XacNhan.Designer.cs">
+      <DependentUpon>XacNhan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DatPhongNhanh.resx">
+      <DependentUpon>DatPhongNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giuongdon2nguoi.resx">
+      <DependentUpon>giuongdon2nguoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangKi.resx">
       <DependentUpon>DangKi.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,8 +251,23 @@
     <EmbeddedResource Include="GiaoDienQuanLi.resx">
       <DependentUpon>GiaoDienQuanLi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="giuongdoi2nguoi.resx">
+      <DependentUpon>giuongdoi2nguoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giuongdoi4nguoi.resx">
+      <DependentUpon>giuongdoi4nguoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giuongdoi6nguoi.resx">
+      <DependentUpon>giuongdoi6nguoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giuongdon4nguoi.resx">
+      <DependentUpon>giuongdon4nguoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MatKhau.resx">
       <DependentUpon>MatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhongCuaKhach.resx">
+      <DependentUpon>PhongCuaKhach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pPhong.resx">
       <DependentUpon>pPhong.cs</DependentUpon>
@@ -204,6 +281,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLiPhong.resx">
+      <DependentUpon>QuanLiPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTaiKhoan.resx">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TuyChonPhong.resx">
       <DependentUpon>TuyChonPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XacNhan.resx">
+      <DependentUpon>XacNhan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

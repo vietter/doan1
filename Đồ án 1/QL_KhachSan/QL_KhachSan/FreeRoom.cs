@@ -12,6 +12,32 @@ namespace QL_KhachSan
 {
     public partial class FreeRoom : UserControl
     {
+        private string tennv;
+        public string TENNV
+        {
+            set
+            {
+                tennv = value;
+            }
+        }
+        private string manv;
+        public string MANV
+        {
+            set
+            {
+                manv = value;
+            }
+        }
+
+        private string tenchinhanh;
+        public string TENCHINHANH
+        {
+            set
+            {
+                tenchinhanh = value;
+            }
+        }
+
         private string maphongcu;
         public string MAPHONGCU
         {
@@ -96,11 +122,26 @@ namespace QL_KhachSan
                         hoadon2.MaHD = mahd;
                         if(doihoadon.DoiHoaDon(hoadon2) != -1)
                         {
-                            this.ParentForm.Hide();
-                            GiaoDienKhachHang khachhang = new GiaoDienKhachHang();
-                            khachhang.SDT = sdt;
-                            khachhang.ShowDialog();
-                            this.ParentForm.Close();
+                            if(manv != null)
+                            {
+                                this.ParentForm.Hide();
+                                GiaoDienQuanLi quanli = new GiaoDienQuanLi();
+                                quanli.MANV = manv;
+                                quanli.TENNV = tennv;
+                                quanli.TENCHINHANH = tenchinhanh;
+                                quanli.MACHINHANH = machinhanh;
+                                quanli.ShowDialog();
+                                this.ParentForm.Close();
+                            }
+                            else
+                            {
+                                this.ParentForm.Hide();
+                                GiaoDienKhachHang khachhang = new GiaoDienKhachHang();
+                                khachhang.SDT = sdt;
+                                khachhang.ShowDialog();
+                                this.ParentForm.Close();
+                            }
+                           
 
                         }
                         else

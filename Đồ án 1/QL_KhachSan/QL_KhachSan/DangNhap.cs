@@ -12,6 +12,114 @@ namespace QL_KhachSan
 {
     public partial class DangNhap : Form
     {
+        private string tendv;
+        public string TENDV
+        {
+            set
+            {
+                tendv = value;
+            }
+        }
+        private string chuoiMaHD;
+        private string chinhanh;
+        public string CHINHANH
+        {
+            set
+            {
+                chinhanh = value;
+            }
+        }
+        private string ngaydatphong;
+        public string NGAYDATPHONG
+        {
+            set
+            {
+                ngaydatphong = value;
+            }
+        }
+        private string ngaytraphong;
+        public string NGAYTRAPHONG
+        {
+            set
+            {
+                ngaytraphong = value;
+            }
+        }
+        private string tennv;
+        public string TENNV
+        {
+            set
+            {
+                tennv = value;
+            }
+        }
+        private string manv;
+        public string MANV
+        {
+            set
+            {
+                manv = value;
+            }
+        }
+
+        private string tenchinhanh;
+        public string TENCHINHANH
+        {
+            set
+            {
+                tenchinhanh = value;
+            }
+        }
+
+        private string mahd;
+        public string MAHD
+        {
+            set
+            {
+                mahd = value;
+            }
+        }
+
+        private string sdt;
+        public string SDT
+        {
+            set
+            {
+                sdt = value;
+            }
+        }
+        private string maphong;
+        public string MAPHONG
+        {
+            set
+            {
+                maphong = value;
+            }
+        }
+        private string machinhanh;
+        public string MACHINHANH
+        {
+            set
+            {
+                machinhanh = value;
+            }
+        }
+        private string tenphong;
+        public string TENPHONG
+        {
+            set
+            {
+                tenphong = value;
+            }
+        }
+        private int options;
+        public int OPTIONS
+        {
+            set
+            {
+                options = value;
+            }
+        }
         string TenKH;   
         public DangNhap()
         {
@@ -39,12 +147,38 @@ namespace QL_KhachSan
                 DataSet result = dangnhap.KT_SDT(dto, ref TenKH);
                 if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
                 {
-                    this.Hide();
-                    MatKhau matkhau = new MatKhau();
-                    matkhau.TENKH = TenKH;
-                    matkhau.SDT = txtSoDT.Text;
-                    matkhau.ShowDialog();
-                    this.Close();
+
+                    if (options == 2)
+                    {
+                        this.Hide();
+                        MatKhau matkhau = new MatKhau();
+                        matkhau.TENKH = TenKH;
+                        matkhau.SDT = txtSoDT.Text;
+                        matkhau.OPTIONS = options;
+                        matkhau.ShowDialog();
+
+                        this.Close();
+                    }
+                    else
+                    {
+                        this.Hide();
+                        MatKhau matkhau = new MatKhau();
+                        matkhau.TENDV = tendv;
+                        matkhau.MADV = madv;
+                        matkhau.GIATIEN = giatien;
+                        matkhau.SDT = txtSoDT.Text;
+                        matkhau.TENKH = TenKH;
+                        matkhau.TENCHINHANH = tenchinhanh;
+                        matkhau.MACHINHANH = machinhanh;
+                        matkhau.MAPHONG = maphong;
+                        matkhau.TENPHONG = tenphong;
+                        matkhau.NGAYDATPHONG = ngaydatphong;
+                        matkhau.NGAYTRAPHONG = ngaytraphong;
+                        matkhau.OPTIONS = options;
+                        matkhau.TENVTCHINHANH = tenvtchinhanh;
+                        matkhau.ShowDialog();
+                        this.Close();
+                    }
                 }
                 else
                 {
@@ -56,7 +190,14 @@ namespace QL_KhachSan
                 }
             }
         }
-        
+        private string tenvtchinhanh;
+        public string TENVTCHINHANH
+        {
+            set
+            {
+                tenvtchinhanh = value;
+            }
+        }
         private void btnDangKi_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -67,14 +208,55 @@ namespace QL_KhachSan
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(options == 2)
+            {
+                this.Hide();
+                DatPhong datphong = new DatPhong();
+                datphong.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+                DatPhongNhanh dat = new DatPhongNhanh();
+                dat.TENVTCHINHANH = tenvtchinhanh;
+                dat.TENDV = tendv;
+                dat.MADV = madv;
+                dat.GIATIEN = giatien;
+                dat.NGAYDATPHONG = ngaydatphong;
+                dat.NGAYTRAPHONG = ngaytraphong;
+                dat.MACHINHANH = machinhanh;
+                dat.MAPHONG = maphong;
+                dat.TENCHINHANH = tenchinhanh;
+                dat.TENPHONG = tenphong;
+                dat.OPTIONS = 0;
+                dat.ShowDialog();
+                
+                this.Close();
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
-
+        private string madv;
+        public string MADV
+        {
+            set
+            {
+                madv = value;
+            }
+        }
+        private int giatien;
+        public int GIATIEN
+        {
+            set
+            {
+                giatien = value;
+            }
+        }
+ 
         private void DangNhap_Load(object sender, EventArgs e)
         {
             lbSai.Hide();
@@ -104,6 +286,11 @@ namespace QL_KhachSan
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtSoDT_Click_1(object sender, EventArgs e)
+        {
+            txtSoDT.Text = "";
         }
     }
 }

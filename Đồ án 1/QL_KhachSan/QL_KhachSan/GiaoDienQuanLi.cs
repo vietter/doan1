@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QL_KhachSan.BS_layer;
+
 
 namespace QL_KhachSan
 {
@@ -16,14 +18,35 @@ namespace QL_KhachSan
         private string tennv;
         public string TENNV
         {
-            set { tennv = value; }
+            set
+            {
+                tennv = value;
+            }
         }
         private string manv;
         public string MANV
         {
-            set { manv = value; }
+            set
+            {
+                manv = value;
+            }
         }
-        private string tencn;
+        private string machinhanh;
+        public string MACHINHANH
+        {
+            set
+            {
+                machinhanh = value;
+            }
+        }
+        private string tenchinhanh;
+        public string TENCHINHANH
+        {
+            set
+            {
+                tenchinhanh = value;
+            }
+        }
 
 
         public GiaoDienQuanLi()
@@ -33,77 +56,82 @@ namespace QL_KhachSan
 
         private void GiaoDienQuanLi_Load(object sender, EventArgs e)
         {
+            load();
+        }
+
+        private void load()
+        {
             lbTen.Text = tennv;
-            lbTenChiNhanh.Visible = false;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            DangNhap dn = new DangNhap();
-            dn.ShowDialog();
-            this.Close();
-        }
-
-        private void btnTruyCap_Click(object sender, EventArgs e)
-        {
-
-            DTO_ChiNhanh phong = new DTO_ChiNhanh();
-            phong.MaNguoiQuanLy = manv;
-            if (cbbDiaChi.Text == "Đà Lạt- Khách sạn The New Star 1- địa chỉ: 69 Hồ Tùng Mậu, Phường 1, Thành Phố Đà Lạt, tỉnh Lâm Đồng")
+            lbTenChiNhanh.Text = tenchinhanh;
+            DTO_Phong phong = new DTO_Phong();
+            phong.MaChiNhanh = machinhanh;
+            BO_QuanLiChiNhanh quanli = new BO_QuanLiChiNhanh();
+            DataSet table = new DataSet();
+            table = quanli.HienThiDSPhongDaDatCuaKhachHang(phong);
+            if (table.Tables.Count >0 && table.Tables[0].Rows.Count >0)
             {
-                phong.MaChiNhanh = "DL_TNS1";
-            }
-            else
-            {
-                if (cbbDiaChi.Text == "Hồ Chí Minh - Khách sạn The New Star 2- địa chỉ :1 Đồng Khởi, Bến Nghé, Quận 1, Thành Phố Hồ Chí Minh")
+                Point vitridau = new Point(20, 20);
+                for (int i = 0; i < table.Tables[0].Rows.Count; i++)
                 {
-                    phong.MaChiNhanh = "DN_TNS3";
-                }
-                else
-                {
-                    if (cbbDiaChi.Text == "Đà Nẵng - Khách sạn The New Star 3- địa chỉ: 99 Võ Nguyên Giáp, Bắc Mỹ An, Ngũ Hành Sơn, Thành Phố Đà Nẵng")
+                    if (i == 5)
                     {
-                        phong.MaChiNhanh = "HCM_TNS2";
+                        PhongCuaKhach dsphong = new PhongCuaKhach();
+                        dsphong.MACHINHANH = machinhanh;
+                        dsphong.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                        dsphong.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                        dsphong.SDT = table.Tables[0].Rows[0][3].ToString();
+                        dsphong.settenphong(table.Tables[0].Rows[i][2].ToString());
+                        dsphong.TENCHINHANH = tenchinhanh;
+                        dsphong.TENNV = tennv;
+                        dsphong.MANV = manv;
+                        DTO_HoaDon hoadon = new DTO_HoaDon();
+                        hoadon.SoDienThoai = table.Tables[0].Rows[0][3].ToString();
+                        hoadon.MaPhong = table.Tables[0].Rows[i][0].ToString();
+                        hoadon.MaChiNhanh = machinhanh;
+                        BO_DSPhongDaDat laymahd = new BO_DSPhongDaDat();
+                        DataSet result = laymahd.LayMaHD(hoadon);
+                        dsphong.MAHD = result.Tables[0].Rows[0][0].ToString();
+                        vitridau.X = 20;
+                        vitridau.Y = 150;
+                        dsphong.Location = vitridau;
+                        gbDSPhong.Controls.Add(dsphong);
+                        vitridau.X += 165;
                     }
                     else
                     {
-                        if (cbbDiaChi.Text == "Nha Trang- Khách sạn The New Star 4- địa chỉ: 50 Trần Phú, Lộc Thọ, Thành phố Nha Trang, Khánh Hòa")
-                        {
-                            phong.MaChiNhanh = "NT_TNS4";
-                        }
-                        else
-                        {
-                            phong.MaChiNhanh = "PQ_TNS5";
-                        }
+                        PhongCuaKhach dsphong = new PhongCuaKhach();
+                        dsphong.MACHINHANH = machinhanh;
+                        dsphong.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                        dsphong.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                        dsphong.SDT = table.Tables[0].Rows[0][3].ToString();
+                        dsphong.settenphong(table.Tables[0].Rows[i][2].ToString());
+                        dsphong.TENCHINHANH = tenchinhanh;
+                        dsphong.TENNV = tennv;
+                        dsphong.MANV = manv;
+                        DTO_HoaDon hoadon = new DTO_HoaDon();
+                        hoadon.SoDienThoai = table.Tables[0].Rows[0][3].ToString();
+                        hoadon.MaPhong = table.Tables[0].Rows[i][0].ToString();
+                        hoadon.MaChiNhanh = machinhanh;
+                        BO_DSPhongDaDat laymahd = new BO_DSPhongDaDat();
+                        DataSet result = laymahd.LayMaHD(hoadon);
+                        dsphong.MAHD = result.Tables[0].Rows[0][0].ToString();
+                        dsphong.Location = vitridau;
+                        gbDSPhong.Controls.Add(dsphong);
+                        vitridau.X += 165;
                     }
                 }
             }
-            BO_GiaoDienQuanLi giaoDienQuanLi = new BO_GiaoDienQuanLi();
+           
 
-            DataSet result = giaoDienQuanLi.KT_QuyenQL(phong, ref tencn);
-            if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
-            {
-                MessageBox.Show("Chào quản lí chi nhánh ");
-
-                lbTenChiNhanh.Text = tencn;
-                lbTenChiNhanh.Visible = true;
-            }
-            else
-            {
-                MessageBox.Show("Bạn không có quyền quản lí chi nhánh này");
-                lbTenChiNhanh.Visible = false;
-
-
-            }
-            cbbDiaChi.ResetText();
 
         }
 
-        private void lbTenChiNhanh_Click(object sender, EventArgs e)
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            DangNhap dangNhap = new DangNhap();
+            dangNhap.ShowDialog();
+            this.Close();
         }
     }
-    
 }

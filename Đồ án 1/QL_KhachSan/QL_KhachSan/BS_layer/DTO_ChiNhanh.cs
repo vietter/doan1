@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QL_KhachSan.BS_layer
 {
-    class DTO_ChiNhanh
+        public class DTO_ChiNhanh
     {
         public string MaChiNhanh;
         public string TenChiNhanh;

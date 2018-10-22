@@ -11,10 +11,10 @@ namespace QL_KhachSan.BS_layer
 {
     public class BO_DangNhapNhanVien
     {
-        public DataSet KT_DangNhap(DTO_NhanVien dto, ref string Ten, ref string Ma)
+        public DataSet KT_DangNhap(DTO_NhanVien dto, ref string tennv, ref string manv)
         {
             DataSet result = new DataSet();
-            string sql = @"SELECT * FROM NhanVien WHERE MaNV = @MaNV and MatKhau =@MatKhau ";
+            string sql = "SELECT * FROM NhanVien WHERE MaNV = @MaNV and MatKhau =@MatKhau ";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter ("@MaNV",dto.MaNhanVien),
@@ -25,9 +25,21 @@ namespace QL_KhachSan.BS_layer
             result = data.getdataset(sql, para);
             if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
             {
-                Ten = result.Tables[0].Rows[0][1].ToString();
-                Ma = result.Tables[0].Rows[0][0].ToString();
+                tennv = result.Tables[0].Rows[0][1].ToString();
+                manv = result.Tables[0].Rows[0][0].ToString();
             }
+            return result;
+        }
+        public DataSet LayMaChiNhanh(DTO_ChiNhanh chinhanh)
+        {
+            DataSet result = new DataSet();
+            string sql = "SELECT  * FROM ChiNhanh WHERE MaNguoiQuanLy = @MaNguoiQuanLy";
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@MaNguoiQuanLy",chinhanh.MaNguoiQuanLy),
+            };
+            DataAccess data = new DataAccess();
+            result = data.getdataset(sql, para);
             return result;
         }
     }

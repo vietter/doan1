@@ -157,6 +157,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ThanhToan";
             this.Text = "ThanhToan";
+            this.Load += new System.EventHandler(this.ThanhToan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

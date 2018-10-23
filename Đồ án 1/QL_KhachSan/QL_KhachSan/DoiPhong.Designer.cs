@@ -77,6 +77,7 @@
             this.gbDSPhongTrong.TabIndex = 5;
             this.gbDSPhongTrong.TabStop = false;
             this.gbDSPhongTrong.Text = "Danh Sách Phòng Còn Trống";
+            this.gbDSPhongTrong.Enter += new System.EventHandler(this.gbDSPhongTrong_Enter);
             // 
             // label5
             // 

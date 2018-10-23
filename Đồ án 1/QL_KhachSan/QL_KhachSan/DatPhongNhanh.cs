@@ -12,8 +12,8 @@ namespace QL_KhachSan
 {
     public partial class DatPhongNhanh : Form
     {
-        private int options;
-        public int OPTIONS
+        private string options;
+        public string OPTIONS
         {
             set
             {
@@ -177,7 +177,7 @@ namespace QL_KhachSan
 
         private void DatPhongNhanh_Load(object sender, EventArgs e)
         {
-            if (options == 1)
+            if (sdt != null)
             {
                 pl_dangnhap.Visible = false;
                 txtSoDT.Text = sdt;
@@ -209,23 +209,25 @@ namespace QL_KhachSan
             }
             else
             {
-                int NgayDat = int.Parse(ngaydatphong.Substring(0, 2));
-                int ThangDat = int.Parse(ngaydatphong.Substring(3, 2));
-                int NamDat = int.Parse(ngaydatphong.Substring(6, 4));
-                int GioDatPhong = 12;
-                int PhutDatPhong = 00;
-                int NgayTra = int.Parse(ngaytraphong.Substring(0, 2));
-                int ThangTra = int.Parse(ngaytraphong.Substring(3, 2));
-                int NamTra = int.Parse(ngaytraphong.Substring(6, 4));
-                int GioTraPhong = 12;
-                int PhutTraPhong = 00;
-                DateTime NgayDatPhong1 = new DateTime(NamDat, ThangDat, NgayDat, GioDatPhong, PhutDatPhong, 0);
-                DateTime NgayTraPhong1 = new DateTime(NamTra, ThangTra, NgayTra, GioTraPhong, PhutTraPhong, 0);
-                dtpNgayDat.Value = NgayDatPhong1;
-                dtpNgayTra.Value = NgayTraPhong1;
-                lb_LoiSDT.Visible = false;
-                lb_LoiTen.Visible = false;
-                lb_Ten.Text = tenphong;
+                    int NgayDat = int.Parse(ngaydatphong.Substring(0, 2));
+                    int ThangDat = int.Parse(ngaydatphong.Substring(3, 2));
+                    int NamDat = int.Parse(ngaydatphong.Substring(6, 4));
+                    int GioDatPhong = 12;
+                    int PhutDatPhong = 00;
+                    int NgayTra = int.Parse(ngaytraphong.Substring(0, 2));
+                    int ThangTra = int.Parse(ngaytraphong.Substring(3, 2));
+                    int NamTra = int.Parse(ngaytraphong.Substring(6, 4));
+                    int GioTraPhong = 12;
+                    int PhutTraPhong = 00;
+                    DateTime NgayDatPhong1 = new DateTime(NamDat, ThangDat, NgayDat, GioDatPhong, PhutDatPhong, 0);
+                    DateTime NgayTraPhong1 = new DateTime(NamTra, ThangTra, NgayTra, GioTraPhong, PhutTraPhong, 0);
+                    dtpNgayDat.Value = NgayDatPhong1;
+                    dtpNgayTra.Value = NgayTraPhong1;
+                    lb_LoiSDT.Visible = false;
+                    lb_LoiTen.Visible = false;
+                    lb_Ten.Text = tenphong;
+                
+               
             }
         }
         private void TaoMaHD(string NhapMaChiNhanhVao, ref string MaHDmoi)
@@ -404,18 +406,7 @@ namespace QL_KhachSan
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            DangNhap dangnhap = new DangNhap();
-            dangnhap.OPTIONS = 1;
-            dangnhap.MACHINHANH = machinhanh;
-            dangnhap.MAPHONG = maphong;
-            dangnhap.MADV = madv;
-            dangnhap.GIATIEN = giatien;
-            dangnhap.TENDV = tendv;
-            dangnhap.NGAYDATPHONG = ngaydatphong;
-            dangnhap.NGAYTRAPHONG = ngaytraphong;
-            dangnhap.TENCHINHANH = tenchinhanh;
-            dangnhap.TENPHONG = tenphong;
-            dangnhap.TENVTCHINHANH = tenvtchinhanh;
+            DangNhap dangnhap = new DangNhap();            
             dangnhap.ShowDialog();
             this.Close();
             
@@ -424,6 +415,14 @@ namespace QL_KhachSan
         private void txt_Ten_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            DangKi dangki = new DangKi();           
+            dangki.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -47,7 +47,14 @@ namespace QL_KhachSan
                 tenchinhanh = value;
             }
         }
-
+        private string options;
+        public string OPTIONS
+        {
+            set
+            {
+                options = value;
+            }
+        }
 
         public GiaoDienQuanLi()
         {
@@ -94,7 +101,7 @@ namespace QL_KhachSan
                         vitridau.X = 20;
                         vitridau.Y = 150;
                         dsphong.Location = vitridau;
-                        gbDSPhong.Controls.Add(dsphong);
+                        pl_phong.Controls.Add(dsphong);
                         vitridau.X += 165;
                     }
                     else
@@ -109,14 +116,14 @@ namespace QL_KhachSan
                         dsphong.TENNV = tennv;
                         dsphong.MANV = manv;
                         DTO_HoaDon hoadon = new DTO_HoaDon();
-                        hoadon.SoDienThoai = table.Tables[0].Rows[0][3].ToString();
+                        hoadon.SoDienThoai = table.Tables[0].Rows[i][3].ToString();
                         hoadon.MaPhong = table.Tables[0].Rows[i][0].ToString();
                         hoadon.MaChiNhanh = machinhanh;
                         BO_DSPhongDaDat laymahd = new BO_DSPhongDaDat();
                         DataSet result = laymahd.LayMaHD(hoadon);
                         dsphong.MAHD = result.Tables[0].Rows[0][0].ToString();
                         dsphong.Location = vitridau;
-                        gbDSPhong.Controls.Add(dsphong);
+                        pl_phong.Controls.Add(dsphong);
                         vitridau.X += 165;
                     }
                 }
@@ -132,6 +139,11 @@ namespace QL_KhachSan
             DangNhap dangNhap = new DangNhap();
             dangNhap.ShowDialog();
             this.Close();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

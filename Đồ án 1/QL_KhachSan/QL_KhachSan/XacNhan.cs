@@ -119,7 +119,7 @@ namespace QL_KhachSan
             datphong.ShowDialog();
             this.Close();
         }
-
+        
         private void txtTien_TextChanged(object sender, EventArgs e)
         {
             System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");

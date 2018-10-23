@@ -16,5 +16,10 @@ namespace QL_KhachSan
         {
             InitializeComponent();
         }
+      
+        private void ThanhToan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

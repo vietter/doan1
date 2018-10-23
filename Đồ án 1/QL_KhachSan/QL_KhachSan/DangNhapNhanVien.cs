@@ -24,6 +24,122 @@ namespace QL_KhachSan
             InitializeComponent();
         }
 
+        private string tendv;
+        public string TENDV
+        {
+            set
+            {
+                tendv = value;
+            }
+        }
+        private string chuoiMaHD;
+        private string chinhanh;
+        public string CHINHANH
+        {
+            set
+            {
+                chinhanh = value;
+            }
+        }
+        private string ngaydatphong;
+        public string NGAYDATPHONG
+        {
+            set
+            {
+                ngaydatphong = value;
+            }
+        }
+        private string ngaytraphong;
+        public string NGAYTRAPHONG
+        {
+            set
+            {
+                ngaytraphong = value;
+            }
+        }
+        
+        private string tenchinhanh;
+        public string TENCHINHANH
+        {
+            set
+            {
+                tenchinhanh = value;
+            }
+        }
+
+        private string mahd;
+        public string MAHD
+        {
+            set
+            {
+                mahd = value;
+            }
+        }
+
+        private string sdt;
+        public string SDT
+        {
+            set
+            {
+                sdt = value;
+            }
+        }
+        private string maphong;
+        public string MAPHONG
+        {
+            set
+            {
+                maphong = value;
+            }
+        }
+        private string machinhanh;
+        public string MACHINHANH
+        {
+            set
+            {
+                machinhanh = value;
+            }
+        }
+        private string tenphong;
+        public string TENPHONG
+        {
+            set
+            {
+                tenphong = value;
+            }
+        }
+        private string options;
+        public string OPTIONS
+        {
+            set
+            {
+                options = value;
+            }
+        }
+        private string tenvtchinhanh;
+        public string TENVTCHINHANH
+        {
+            set
+            {
+                tenvtchinhanh = value;
+            }
+        }
+        private string madv;
+        public string MADV
+        {
+            set
+            {
+                madv = value;
+            }
+        }
+        private int giatien;
+        public int GIATIEN
+        {
+            set
+            {
+                giatien = value;
+            }
+        }   
         private void DangNhapNhanVien_Load(object sender, EventArgs e)
         {
 
@@ -43,8 +159,8 @@ namespace QL_KhachSan
             DTO_NhanVien nhanvien = new DTO_NhanVien();
             nhanvien.MaNhanVien = txtMaNV.Text;
             nhanvien.MatKhau = txtMatKhau.Text;
-            BO_DangNhapNhanVien dangnhap = new BO_DangNhapNhanVien();
-            DataSet result = dangnhap.KT_DangNhap(nhanvien, ref tennv, ref manv);
+            BO_DangNhapNhanVien dangnhapnv = new BO_DangNhapNhanVien();
+            DataSet result = dangnhapnv.KT_DangNhap(nhanvien, ref tennv, ref manv);
             if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
             {
 
@@ -73,11 +189,12 @@ namespace QL_KhachSan
         }
 
         private void btnTroLai_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            DangNhap dangnhap = new DangNhap();
-            dangnhap.ShowDialog();
-            this.Close();
+        { 
+                this.Hide();
+                DangNhap dangnhap = new DangNhap();               
+                dangnhap.ShowDialog();
+                this.Close();
+           
         }
     }
 }

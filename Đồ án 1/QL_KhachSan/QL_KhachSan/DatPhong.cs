@@ -17,6 +17,14 @@ namespace QL_KhachSan
         private string MaHD;
         private string MaPhong;
         private string sdt;
+        private string options;
+        public string OPTIONS
+        {
+            set
+            {
+                options = value;
+            }
+        }
         public string SDT
         {
             set
@@ -189,8 +197,7 @@ namespace QL_KhachSan
                                         {
                                             giuongdoi2nguoi hienthi = new giuongdoi2nguoi();
                                             hienthi.Location = vitribandau;
-                                            hienthi.Location = vitribandau;
-                                            
+                                            hienthi.Location = vitribandau;                                            
                                             hienthi.TENVTCHINHANH = MaHD;
                                             hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
                                             hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
@@ -210,7 +217,6 @@ namespace QL_KhachSan
                                                 hienthi.Location = vitribandau;
                                                 hienthi.Location = vitribandau;
                                                 hienthi.TENVTCHINHANH = MaHD;
-
                                                 hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
                                                 hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                                 hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
@@ -229,7 +235,6 @@ namespace QL_KhachSan
                                                     hienthi.Location = vitribandau;
                                                     hienthi.Location = vitribandau;
                                                     hienthi.TENVTCHINHANH = MaHD;
-
                                                     hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
                                                     hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                                     hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
@@ -248,7 +253,6 @@ namespace QL_KhachSan
                                                         hienthi.Location = vitribandau;
                                                         hienthi.Location = vitribandau;
                                                         hienthi.TENVTCHINHANH = MaHD;
-
                                                         hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
                                                         hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                                         hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
@@ -265,7 +269,6 @@ namespace QL_KhachSan
                                                         hienthi.Location = vitribandau;
                                                         hienthi.Location = vitribandau;
                                                         hienthi.TENVTCHINHANH = MaHD;
-
                                                         hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
                                                         hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                                         hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
@@ -297,7 +300,6 @@ namespace QL_KhachSan
                                             giuongdon2nguoi hienthi = new giuongdon2nguoi();
                                             hienthi.Location = vitribandau;
                                             hienthi.TENVTCHINHANH = MaHD;
-
                                             hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
                                             hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
                                             hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
@@ -319,7 +321,6 @@ namespace QL_KhachSan
                                                 hienthi.Location = vitribandau;
                                                 hienthi.Location = vitribandau;
                                                 hienthi.TENVTCHINHANH = MaHD;
-
                                                 hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
                                                 hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
                                                 hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
@@ -342,7 +343,6 @@ namespace QL_KhachSan
                                                     hienthi.Location = vitribandau;
                                                     hienthi.Location = vitribandau;
                                                     hienthi.TENVTCHINHANH = MaHD;
-
                                                     hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
                                                     hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
                                                     hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
@@ -364,7 +364,6 @@ namespace QL_KhachSan
                                                         hienthi.Location = vitribandau;
                                                         hienthi.Location = vitribandau;
                                                         hienthi.TENVTCHINHANH = MaHD;
-
                                                         hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
                                                         hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
                                                         hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
@@ -386,7 +385,6 @@ namespace QL_KhachSan
                                                             giuongdoi6nguoi hienthi = new giuongdoi6nguoi();
                                                             hienthi.Location = vitribandau;
                                                             hienthi.TENVTCHINHANH = MaHD;
-
                                                             hienthi.Location = vitribandau;
                                                             hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
                                                             hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
@@ -435,7 +433,6 @@ namespace QL_KhachSan
         {
             this.Hide();
             DangNhap dangNhap = new DangNhap();
-            dangNhap.OPTIONS = 2;
             dangNhap.ShowDialog();
             this.Close();
         }
@@ -451,6 +448,11 @@ namespace QL_KhachSan
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pl_phong_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

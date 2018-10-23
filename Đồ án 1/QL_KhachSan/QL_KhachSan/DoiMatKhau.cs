@@ -29,6 +29,14 @@ namespace QL_KhachSan
                 sdt = value;
             }
         }
+        private string options;
+        public string OPTIONS
+        {
+            set
+            {
+                options = value;
+            }
+        }
         public DoiMatKhau()
         {
             InitializeComponent();
@@ -51,6 +59,7 @@ namespace QL_KhachSan
             }
             else
             {
+                
                 this.Hide();
                 QuanLyTaiKhoan khachhang = new QuanLyTaiKhoan();
                 khachhang.SDT = sdt;
@@ -104,6 +113,7 @@ namespace QL_KhachSan
                             MessageBox.Show("Bạn đã đổi mật khẩu thành công", "Thông Báo", MessageBoxButtons.OK);
                             this.Hide();
                             DangNhap dangnhap = new DangNhap();
+                            dangnhap.OPTIONS = options;
                             dangnhap.ShowDialog();
                             this.Close();
                         }

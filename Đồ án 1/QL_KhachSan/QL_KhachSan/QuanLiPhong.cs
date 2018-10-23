@@ -14,7 +14,7 @@ namespace QL_KhachSan
     {
         public QuanLiPhong()
         {
-            Options = 2;
+            OPTIONS = "QuanLi";
             InitializeComponent();
         }
 

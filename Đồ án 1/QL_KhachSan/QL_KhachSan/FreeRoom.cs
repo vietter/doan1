@@ -95,6 +95,14 @@ namespace QL_KhachSan
         {
             label1.Text = tenphong;
         }
+        private string options;
+        public string OPTIONS
+        {
+            set
+            {
+                options = value;
+            }
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             DialogResult answer;

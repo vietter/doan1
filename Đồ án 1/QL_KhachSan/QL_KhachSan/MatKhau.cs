@@ -113,8 +113,8 @@ namespace QL_KhachSan
                 tenphong = value;
             }
         }
-        private int options;
-        public int OPTIONS
+        private string options;
+        public string OPTIONS
         {
             set
             {
@@ -125,30 +125,7 @@ namespace QL_KhachSan
         {
             InitializeComponent();
         }
-        private string madv;
-        public string MADV
-        {
-            set
-            {
-                madv = value;
-            }
-        }
-        private int giatien;
-        public int GIATIEN
-        {
-            set
-            {
-                giatien = value;
-            }
-        }
-        private string tendv;
-        public string TENDV
-        {
-            set
-            {
-                tendv = value;
-            }
-        }
+        
         private void MatKhau_Load(object sender, EventArgs e)
         {
             lbSai.Visible = false;
@@ -164,26 +141,17 @@ namespace QL_KhachSan
         }
         private void btnTroLai_Click(object sender, EventArgs e)
         {
-            this.Hide();
             
-            DangNhap dangnhap = new DangNhap();
-            dangnhap.TENVTCHINHANH = tenvtchinhanh;
-            dangnhap.TENDV = tendv;
-            dangnhap.MADV = madv;
-            dangnhap.GIATIEN = giatien;
-            dangnhap.MACHINHANH = machinhanh;
-            dangnhap.TENCHINHANH = tenchinhanh;
-            dangnhap.MAPHONG = maphong;
-            dangnhap.TENPHONG = tenphong;
-            dangnhap.NGAYDATPHONG = ngaydatphong;
-            dangnhap.NGAYTRAPHONG = ngaytraphong;
-            dangnhap.OPTIONS = options;
-            dangnhap.TENVTCHINHANH = tenvtchinhanh;
-            dangnhap.ShowDialog();
-            this.Close();
+                this.Hide();
+                DangNhap dangnhap = new DangNhap();
+                dangnhap.ShowDialog();
+                this.Close();
+            
+            
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
+
         {
 
             if (txtMatKhau.Text == "")
@@ -206,36 +174,11 @@ namespace QL_KhachSan
                 if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
                 {
                     MessageBox.Show("Đăng Nhập Thành công", "Thông Báo", MessageBoxButtons.OK);
-                    if (options == 1)
-                    {
-                        this.Hide();
-                        DatPhongNhanh datphong = new DatPhongNhanh();
-                        datphong.SDT = sdt;
-                        datphong.TENDV = tendv;
-                        datphong.MADV = madv;
-                        datphong.GIATIEN = giatien;
-                        datphong.TENCHINHANH = tenchinhanh;
-                        datphong.MACHINHANH = machinhanh;
-                        datphong.MAPHONG = maphong;
-                        datphong.TENPHONG = tenphong;
-                        datphong.NGAYDATPHONG = ngaydatphong;
-                        datphong.NGAYTRAPHONG = ngaytraphong;
-                        datphong.OPTIONS = options;
-                        datphong.TENVTCHINHANH = tenvtchinhanh;
-                        datphong.ShowDialog();
-                        this.Close();
-                       
-                    }
-                    else
-                    {
-                        this.Hide();
-                        GiaoDienKhachHang giaodien = new GiaoDienKhachHang();
-                        giaodien.SDT = sdt;
-                        giaodien.OPTIONS = options;
-                        giaodien.ShowDialog();
-                        
-                        this.Close();
-                    }
+                    this.Hide();
+                    GiaoDienKhachHang giaodien = new GiaoDienKhachHang();
+                    giaodien.SDT = sdt;
+                    giaodien.ShowDialog();                        
+                    this.Close();                   
                 }
                 else
                 {

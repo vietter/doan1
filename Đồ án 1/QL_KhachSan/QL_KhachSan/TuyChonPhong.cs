@@ -88,11 +88,18 @@ namespace QL_KhachSan
                 tenphong = value;
             }
         }
-        public int Options;
+        private string options;
+        public string OPTIONS
+        {
+            set
+            {
+                options = value;
+            }
+        }
 
         public TuyChonPhong()
         {
-            Options = 1;
+            OPTIONS = "TuyChon";
             InitializeComponent();
         }
 
@@ -103,7 +110,7 @@ namespace QL_KhachSan
 
         public void TuyChonPhong_Load(object sender, EventArgs e)
         {
-            if (Options == 1)
+            if (options == "TuyChon"  )
             {
                 lbThanhToan.Visible = false;
                 pThanhToan.Visible = false;
@@ -150,24 +157,25 @@ namespace QL_KhachSan
 
         public void btnTrolai_Click(object sender, EventArgs e)
         {
-            if (Options == 1)
-            {
+            if(options =="TuyChon")
+            { 
                 this.Hide();
                 GiaoDienKhachHang khachhang = new GiaoDienKhachHang();
-                khachhang.SDT = sdt;
+                khachhang.SDT = sdt;              
                 khachhang.ShowDialog();
                 this.Close();
             }
             else
             {
-                this.Hide();
-                GiaoDienQuanLi quanli = new GiaoDienQuanLi();
-                quanli.MANV = manv;
-                quanli.TENCHINHANH = tenchinhanh;
-                quanli.TENNV = tennv;
-                quanli.MACHINHANH = machinhanh;
-                quanli.ShowDialog();
-                this.Close();
+                    this.Hide();
+                    GiaoDienQuanLi quanli = new GiaoDienQuanLi();
+                    quanli.MANV = manv;
+                    quanli.TENCHINHANH = tenchinhanh;
+                    quanli.TENNV = tennv;
+                    quanli.MACHINHANH = machinhanh;
+                    quanli.ShowDialog();
+                    this.Close();
+                
             }
         }
 
@@ -792,7 +800,7 @@ namespace QL_KhachSan
 
         public void pDoiPhong_Click(object sender, EventArgs e)
         {
-            if(Options == 1)
+            if(options == "TuyChon")
             {
                 this.Hide();
                 DoiPhong doi = new DoiPhong();
@@ -825,7 +833,7 @@ namespace QL_KhachSan
 
         public void pHuyPhong_Click(object sender, EventArgs e)
         {
-            if (Options == 1)
+            if (options == "TuyChon")
             {
                 DialogResult answer;
                 answer = MessageBox.Show("Bạn có muốn hủy phòng chứ ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -873,15 +881,16 @@ namespace QL_KhachSan
                                 MessageBox.Show("Lỗi khi giải phóng phòng, vui lòng thử lại !!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-
                     }
                     else
                     {
                         MessageBox.Show("Vui lòng thanh toán hết dịch vụ của bạn trước khi hủy phòng !!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                        }
 
-                }
-            }
+                    }
+                
+            
             else
             {
                 DialogResult answer;
@@ -923,12 +932,12 @@ namespace QL_KhachSan
                                 MessageBox.Show("Lỗi khi giải phóng phòng, vui lòng thử lại !!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-
-                    }
                     else
                     {
                         MessageBox.Show("Vui lòng thanh toán hết dịch vụ của bạn trước khi hủy phòng !!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                }
+                    
 
                 
             }

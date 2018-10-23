@@ -37,7 +37,7 @@ namespace QL_KhachSan
                 tenchinhanh = value;
             }
         }
-      
+
         private string mahd;
         public string MAHD
         {
@@ -96,10 +96,24 @@ namespace QL_KhachSan
                 chinhanh = value;
             }
         }
+        
         private void giuongdon4nguoi_Load(object sender, EventArgs e)
         {
             settenphong();
+            if (options == "TuyChon")
+            {
+                btn_DatPhong.Text = "Tùy chọn";
+            }
         }
+        private string options;
+        public string OPTIONS
+        {
+            set
+            {
+                options = value;
+            }
+        }
+
         private string tenvtchinhanh;
         public string TENVTCHINHANH
         {
@@ -131,29 +145,43 @@ namespace QL_KhachSan
 
         private void btn_DatPhong_Click(object sender, EventArgs e)
         {
-            if(sdt==null)
+            if (options == "TuyChon")
             {
                 this.ParentForm.Hide();
-                DatPhongNhanh datphong = new DatPhongNhanh();
-                datphong.MACHINHANH = machinhanh;
-                datphong.MAHD = mahd;
-                datphong.MAPHONG = maphong;
-                datphong.TENVTCHINHANH = tenvtchinhanh;
-                datphong.MADV = "DV_THUEPHONGDON_4NGUOI";
-                datphong.GIATIEN = 500000;
-                datphong.TENDV = "Thuê phòng đơn 4 người";
-                datphong.TENCHINHANH = tenchinhanh;
-                datphong.TENPHONG = tenphong;
-                datphong.CHINHANH = chinhanh;
-                datphong.SDT = sdt;
-                datphong.NGAYDATPHONG = ngaydatphong;
-                datphong.NGAYTRAPHONG = ngaytraphong;
-                datphong.ShowDialog();
+                TuyChonPhong tuychon = new TuyChonPhong();
+                tuychon.MAHD = mahd;
+                tuychon.MAPHONG = maphong;
+                tuychon.MACHINHANH = machinhanh;
+                tuychon.TENPHONG = tenphong;
+                tuychon.SDT = sdt;
+                tuychon.ShowDialog();
                 this.ParentForm.Close();
+            }
+            else
+            {
+               
+                    this.ParentForm.Hide();
+                    DatPhongNhanh datphong = new DatPhongNhanh();
+                    datphong.MACHINHANH = machinhanh;
+                    datphong.MAHD = mahd;
+                    datphong.MAPHONG = maphong;
+                    datphong.TENVTCHINHANH = tenvtchinhanh;
+                    datphong.MADV = "DV_THUEPHONGDON_4NGUOI";
+                    datphong.GIATIEN = 500000;
+                    datphong.TENDV = "Thuê phòng đơn 4 người";
+                    datphong.TENCHINHANH = tenchinhanh;
+                    datphong.TENPHONG = tenphong;
+                    datphong.CHINHANH = chinhanh;
+                    datphong.SDT = sdt;
+                    datphong.NGAYDATPHONG = ngaydatphong;
+                    datphong.NGAYTRAPHONG = ngaytraphong;
+                    datphong.ShowDialog();
+                    this.ParentForm.Close();
+            
+                
 
             }
+        }
 
-       }
     }
-    
 }

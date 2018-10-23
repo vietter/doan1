@@ -37,9 +37,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pHoTro = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.gbDSPhong = new System.Windows.Forms.GroupBox();
             this.btnTrolai = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.pl_phong = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pQuanLiTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pDatPhong)).BeginInit();
             this.gbKhachHang.SuspendLayout();
@@ -139,18 +139,6 @@
             this.label3.Text = "Thành tiền:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // gbDSPhong
-            // 
-            this.gbDSPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbDSPhong.ForeColor = System.Drawing.Color.DarkBlue;
-            this.gbDSPhong.Location = new System.Drawing.Point(7, 137);
-            this.gbDSPhong.Name = "gbDSPhong";
-            this.gbDSPhong.Size = new System.Drawing.Size(810, 370);
-            this.gbDSPhong.TabIndex = 4;
-            this.gbDSPhong.TabStop = false;
-            this.gbDSPhong.Text = "Danh Sách Phòng đã đặt";
-            this.gbDSPhong.Enter += new System.EventHandler(this.gbDSPhong_Enter);
-            // 
             // btnTrolai
             // 
             this.btnTrolai.BackColor = System.Drawing.Color.PeachPuff;
@@ -174,6 +162,13 @@
             this.txtTongTien.TabIndex = 7;
             this.txtTongTien.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // pl_phong
+            // 
+            this.pl_phong.Location = new System.Drawing.Point(7, 137);
+            this.pl_phong.Name = "pl_phong";
+            this.pl_phong.Size = new System.Drawing.Size(808, 370);
+            this.pl_phong.TabIndex = 8;
+            // 
             // GiaoDienKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,10 +176,10 @@
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(827, 542);
             this.ControlBox = false;
+            this.Controls.Add(this.pl_phong);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.btnTrolai);
             this.Controls.Add(this.gbKhachHang);
-            this.Controls.Add(this.gbDSPhong);
             this.Controls.Add(this.label3);
             this.Name = "GiaoDienKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -211,8 +206,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pHoTro;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox gbDSPhong;
         private System.Windows.Forms.Button btnTrolai;
         private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.Panel pl_phong;
     }
 }

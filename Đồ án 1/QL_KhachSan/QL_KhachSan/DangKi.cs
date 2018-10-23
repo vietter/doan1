@@ -22,7 +22,138 @@ namespace QL_KhachSan
         {
 
         }
+        private string tendv;
+        public string TENDV
+        {
+            set
+            {
+                tendv = value;
+            }
+        }
+        private string chuoiMaHD;
+        private string chinhanh;
+        public string CHINHANH
+        {
+            set
+            {
+                chinhanh = value;
+            }
+        }
+        private string ngaydatphong;
+        public string NGAYDATPHONG
+        {
+            set
+            {
+                ngaydatphong = value;
+            }
+        }
+        private string ngaytraphong;
+        public string NGAYTRAPHONG
+        {
+            set
+            {
+                ngaytraphong = value;
+            }
+        }
+        private string tennv;
+        public string TENNV
+        {
+            set
+            {
+                tennv = value;
+            }
+        }
+        private string manv;
+        public string MANV
+        {
+            set
+            {
+                manv = value;
+            }
+        }
 
+        private string tenchinhanh;
+        public string TENCHINHANH
+        {
+            set
+            {
+                tenchinhanh = value;
+            }
+        }
+
+        private string mahd;
+        public string MAHD
+        {
+            set
+            {
+                mahd = value;
+            }
+        }
+
+        private string sdt;
+        public string SDT
+        {
+            set
+            {
+                sdt = value;
+            }
+        }
+        private string maphong;
+        public string MAPHONG
+        {
+            set
+            {
+                maphong = value;
+            }
+        }
+        private string machinhanh;
+        public string MACHINHANH
+        {
+            set
+            {
+                machinhanh = value;
+            }
+        }
+        private string tenphong;
+        public string TENPHONG
+        {
+            set
+            {
+                tenphong = value;
+            }
+        }
+        private string options;
+        public string OPTIONS
+        {
+            set
+            {
+                options = value;
+            }
+        }
+        private string tenvtchinhanh;
+        public string TENVTCHINHANH
+        {
+            set
+            {
+                tenvtchinhanh = value;
+            }
+        }
+        private string madv;
+        public string MADV
+        {
+            set
+            {
+                madv = value;
+            }
+        }
+        private int giatien;
+        public int GIATIEN
+        {
+            set
+            {
+                giatien = value;
+            }
+        }
         private void DangKi_Load(object sender, EventArgs e)
         {
             txtTenKH.Focus();
@@ -41,18 +172,18 @@ namespace QL_KhachSan
 
         private void btnTroLai_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            DangNhap dangnhap = new DangNhap();
-            dangnhap.ShowDialog();
-            this.Close();
+                this.Hide();
+                DangNhap dangnhap = new DangNhap();
+                dangnhap.ShowDialog();
+                this.Close();
+            
         }
-
+       
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
            
 
-            if (KT == false)
-            {
+        
                 if(txtTenKH.Text =="")
                 {
                     lbTen.Visible = true;
@@ -118,7 +249,7 @@ namespace QL_KhachSan
                         {
                             MessageBox.Show("Bạn đã đăng kí thành công!", "Thông Báo", MessageBoxButtons.OK);
                             this.Hide();
-                            DangNhap dangnhap = new DangNhap();
+                            DangNhap dangnhap = new DangNhap();   
                             dangnhap.ShowDialog();
                             this.Close();
                         }
@@ -130,7 +261,7 @@ namespace QL_KhachSan
                     
                 }
                
-            }
+            
         }
 
         private void label6_Click(object sender, EventArgs e)

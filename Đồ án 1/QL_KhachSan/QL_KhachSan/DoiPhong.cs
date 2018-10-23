@@ -158,5 +158,18 @@ namespace QL_KhachSan
         {
             load();
         }
+        private string options;
+        public string OPTIONS
+        {
+            set
+            {
+                options = value;
+            }
+
+        }
+        private void gbDSPhongTrong_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

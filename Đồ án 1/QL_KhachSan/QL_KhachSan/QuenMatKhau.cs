@@ -33,7 +33,8 @@ namespace QL_KhachSan
         {
             InitializeComponent();
         }
-
+        private string options;
+       
         private void QuenMatKhau_Load(object sender, EventArgs e)
         {
             lbCauHoi.Visible = false;

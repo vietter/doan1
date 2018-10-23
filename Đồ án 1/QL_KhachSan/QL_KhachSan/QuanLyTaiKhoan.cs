@@ -26,6 +26,14 @@ namespace QL_KhachSan
         {
             InitializeComponent();
         }
+        private string options;
+        public string OPTIONS
+        {
+            set
+            {
+                options = value;
+            }
+        }
 
         private void QuanLyTaiKhoan_Load(object sender, EventArgs e)
         {
@@ -42,19 +50,22 @@ namespace QL_KhachSan
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            DoiMatKhau doi = new DoiMatKhau();
-            doi.SDT = sdt;
-            doi.KIEMTRA = "QUANLI";
-            doi.ShowDialog();
-            this.Close();
+           
+                this.Hide();
+                DoiMatKhau doi = new DoiMatKhau();
+                doi.SDT = sdt;               
+                doi.KIEMTRA = "QUANLI";
+                doi.ShowDialog();
+                this.Close();
+            
+           
 
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DangNhap dangnhap = new DangNhap();
+            DangNhap dangnhap = new DangNhap();          
             dangnhap.ShowDialog();
             this.Close();
         }

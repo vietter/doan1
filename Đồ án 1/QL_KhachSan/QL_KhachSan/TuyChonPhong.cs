@@ -945,6 +945,18 @@ namespace QL_KhachSan
 
         private void pThanhToan_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            ThanhToan thanhtoan = new ThanhToan();
+            thanhtoan.SDT = sdt;
+            thanhtoan.MAHD = mahd;
+            thanhtoan.MANV = manv;
+            thanhtoan.TENNV = tennv;
+            thanhtoan.TENPHONG = tenphong;
+            thanhtoan.MAPHONG = maphong;
+            thanhtoan.TENCHINHANH = tenchinhanh;
+            thanhtoan.MACHINHANH = machinhanh;
+            thanhtoan.ShowDialog();
+            this.Close();
             
         }
     }

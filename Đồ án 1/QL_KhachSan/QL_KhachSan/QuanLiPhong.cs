@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace QL_KhachSan
 {
     public partial class QuanLiPhong : TuyChonPhong
+
     {
         public QuanLiPhong()
         {

@@ -145,5 +145,17 @@ namespace QL_KhachSan
         {
 
         }
+
+        private void yêuCầuCủaKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            YeuCauKhachHang yeucau = new YeuCauKhachHang();
+            yeucau.MANV = manv;
+            yeucau.TENNV = tennv;
+            yeucau.MACHINHANH = machinhanh;
+            yeucau.TENCHINHANH = tenchinhanh;
+            yeucau.ShowDialog();
+            this.Close();
+        }
     }
 }

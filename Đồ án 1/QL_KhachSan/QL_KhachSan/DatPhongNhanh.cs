@@ -369,6 +369,30 @@ namespace QL_KhachSan
 
                             MessageBox.Show("Đặt phòng thành công ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Hide();
+                            
+                            BO_DangNhap kiemtrakh = new BO_DangNhap();
+                            DTO_KhachHang khachhang = new DTO_KhachHang();
+                            khachhang.SDT = txtSoDT.Text;
+                            DataSet result = kiemtrakh.KT_SDT(khachhang, ref tenkh);
+                            if(result.Tables.Count >0 && result.Tables[0].Rows.Count >0)
+                            {
+                                
+
+                            }
+                            else
+                            {
+                                //Néu khách hàng đặt lần đầu
+                                khachhang.TenKH = txt_Ten.Text;
+                                khachhang.MatKhau = "";
+                                khachhang.TichLuy = 0;
+                                khachhang.CauHoiBiMat = "";
+                                khachhang.CMND = "";
+                                khachhang.TraLoi = "";
+                                //lưu thông tin lại
+                                BO_DangKi dangki = new BO_DangKi();
+                                dangki.DangKi(khachhang);
+
+                            }
                             XacNhan xacnhan = new XacNhan();
                             xacnhan.MAHD = MaHDMoi;
                             xacnhan.MACHINHANH = machinhanh;
@@ -392,7 +416,7 @@ namespace QL_KhachSan
                 }
             }
         }
-
+        
         private void txtSoDT_Click(object sender, EventArgs e)
         {
             txtSoDT.Text = "";

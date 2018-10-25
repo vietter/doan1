@@ -66,6 +66,12 @@
     <Compile Include="BS_layer\DTO_NhanVien.cs" />
     <Compile Include="BS_layer\DTO_Phong.cs" />
     <Compile Include="BS_layer\DTO_KhachHang.cs" />
+    <Compile Include="DapUngYeuCau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DapUngYeuCau.Designer.cs">
+      <DependentUpon>DapUngYeuCau.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatPhongNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,21 @@
     <Compile Include="XacNhan.Designer.cs">
       <DependentUpon>XacNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="YeuCau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="YeuCau.Designer.cs">
+      <DependentUpon>YeuCau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YeuCauKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeuCauKhachHang.Designer.cs">
+      <DependentUpon>YeuCauKhachHang.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DapUngYeuCau.resx">
+      <DependentUpon>DapUngYeuCau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatPhongNhanh.resx">
       <DependentUpon>DatPhongNhanh.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +313,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XacNhan.resx">
       <DependentUpon>XacNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeuCau.resx">
+      <DependentUpon>YeuCau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeuCauKhachHang.resx">
+      <DependentUpon>YeuCauKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

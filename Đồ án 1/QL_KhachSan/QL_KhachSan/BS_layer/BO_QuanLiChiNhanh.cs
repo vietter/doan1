@@ -22,5 +22,62 @@ namespace QL_KhachSan.BS_layer
             result = data.getdataset(sql, para);
             return result;
         }
+       public DataSet HienThiYeuCau (DTO_HoaDon dto)
+        {
+            DataSet result = new DataSet();
+            string sql = "SELECT * FROM HoaDon WHERE MaChiNhanh = @MaChiNhanh AND DapUng = 'No'";
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@MaChiNhanh",dto.MaChiNhanh),
+
+            };
+            DataAccess data = new DataAccess();
+            result = data.getdataset(sql, para);
+            return result;
+        }
+        public DataSet LayTenPhong(DTO_Phong phong )
+        {
+            DataSet result = new DataSet();
+            string sql = "SELECT * FROM Phong WHERE MaPhong = @MaPhong AND MaChiNhanh = @MaChiNhanh";
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@MaPhong",phong.MaPhong),
+                new SqlParameter("@MaChiNhanh",phong.MaChiNhanh),
+            };
+            DataAccess data = new DataAccess();
+            result = data.getdataset(sql, para);
+            return result;
+        }
+        public int ThucHienYeuCau(DTO_HoaDon dto)
+        {
+            int result = -1;
+            string sql = "UPDATE HoaDon SET DapUng = 'Yes' WHERE MaHD = @MaHD AND MaPhong = @MaPhong AND MaChiNhanh = @MaChiNhanh AND STT = @STT";
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@MaPhong",dto.MaPhong),
+                new SqlParameter("@MaChiNhanh",dto.MaChiNhanh),
+                new SqlParameter("@STT",dto.STT),
+                new SqlParameter("@MaHD",dto.MaHD),
+            };
+            DataAccess data = new DataAccess();
+            result = data.Execute(sql, para);
+            return result;
+        }
+        public int XoaYeuCau(DTO_HoaDon hoadon)
+        {
+            int result = -1;
+            string sql = "DELETE FROM HoaDon WHERE MaHD = @MaHD AND MaPhong = @MaPhong AND MaChiNhanh = @MaChiNhanh AND STT = @STT";
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@MaHD",hoadon.MaHD),
+                new SqlParameter("@MaChiNhanh",hoadon.MaChiNhanh),
+                new SqlParameter("@MaPhong",hoadon.MaPhong),
+                new SqlParameter("@STT",hoadon.STT),
+            };
+            DataAccess data = new DataAccess();
+            result = data.Execute(sql, para);
+            return result;
+        }
+        
     }
 }

@@ -37,6 +37,6 @@ namespace QL_KhachSan.BS_layer
             result = data.Execute(sql, para);
             return result;
         }
-
+        
     }
 }

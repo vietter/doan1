@@ -124,7 +124,9 @@ namespace QL_KhachSan
                     }
                     else
                     {
-                        if (NgayDatPhong.Day < DateTime.Now.Day)
+                        TimeSpan ts2 = new TimeSpan();
+                        ts2 = DateTime.Now - NgayDatPhong;
+                        if(ts2.TotalDays >0)
                         {
                             MessageBox.Show("Bạn không thể đặt trong quá khứ được, vui lòng hãy chọn lại!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -425,11 +427,7 @@ namespace QL_KhachSan
 
         private void btnDatPhong_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            GiaoDienKhachHang giaoDienKhachHang = new GiaoDienKhachHang();
-            giaoDienKhachHang.SDT = sdt;
-            giaoDienKhachHang.ShowDialog();
-            
+         
             this.Close();
         }
 

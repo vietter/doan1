@@ -78,6 +78,18 @@ namespace QL_KhachSan.BS_layer
             result = data.Execute(sql, para);
             return result;
         }
-        
+        public int TichLuyDiem(DTO_HoaDon hoadon)
+        {
+            int result = -1;
+            string sql = "UPDATE KhachHang SET TichLuy = @Tong WHERE SoDienThoai = @SDT";
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@Tong",hoadon.ThanhTien/1000),
+                new SqlParameter("@SDT",hoadon.SoDienThoai),
+            };
+            DataAccess data = new DataAccess();
+            result = data.Execute(sql, para);
+            return result;
+        }
     }
 }

@@ -79,7 +79,7 @@
             // lb_danhxung
             // 
             this.lb_danhxung.AutoSize = true;
-            this.lb_danhxung.Location = new System.Drawing.Point(162, 52);
+            this.lb_danhxung.Location = new System.Drawing.Point(123, 52);
             this.lb_danhxung.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_danhxung.Name = "lb_danhxung";
             this.lb_danhxung.Size = new System.Drawing.Size(70, 16);

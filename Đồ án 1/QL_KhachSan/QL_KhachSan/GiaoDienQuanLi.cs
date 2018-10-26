@@ -160,12 +160,81 @@ namespace QL_KhachSan
 
         private void điềuChỉnhFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void lbTenChiNhanh_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void theoNgàyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(manv=="210398")
+            {
+                this.Hide();
+                BaoCaoDaLat baoCaoDaLat = new BaoCaoDaLat();
+                baoCaoDaLat.MANV = manv;
+                baoCaoDaLat.TENCHINHANH = tenchinhanh;
+                baoCaoDaLat.TENNV = tenchinhanh;
+                baoCaoDaLat.MACHINHANH = machinhanh;
+                baoCaoDaLat.OPTIONS = options;
+                baoCaoDaLat.ShowDialog();
+                this.Close();
+
+            }
+            else if (manv == "200698")
+            {
+                this.Hide();
+                BaoCaoDaNang baoCaoDaNang = new BaoCaoDaNang();
+                baoCaoDaNang.MANV = manv;
+                baoCaoDaNang.TENCHINHANH = tenchinhanh;
+                baoCaoDaNang.TENNV = tenchinhanh;
+                baoCaoDaNang.MACHINHANH = machinhanh;
+                baoCaoDaNang.OPTIONS = options;
+                baoCaoDaNang.ShowDialog();
+                this.Close();
+
+            }
+            else if (manv == "160697")
+            {
+                this.Hide();
+                BaoCaoHoChiMinh baoCaoHoChiMinh = new BaoCaoHoChiMinh();
+                baoCaoHoChiMinh.MANV = manv;
+                baoCaoHoChiMinh.TENCHINHANH = tenchinhanh;
+                baoCaoHoChiMinh.TENNV = tenchinhanh;
+                baoCaoHoChiMinh.MACHINHANH = machinhanh;
+                baoCaoHoChiMinh.OPTIONS = options;
+                baoCaoHoChiMinh.ShowDialog();
+                this.Close();
+
+            }
+            else if (manv == "191203")
+            {
+                this.Hide();
+                BaoCaoNhaTrang baoCaoNhaTrang = new BaoCaoNhaTrang();
+                baoCaoNhaTrang.MANV = manv;
+                baoCaoNhaTrang.TENCHINHANH = tenchinhanh;
+                baoCaoNhaTrang.TENNV = tenchinhanh;
+                baoCaoNhaTrang.MACHINHANH = machinhanh;
+                baoCaoNhaTrang.OPTIONS = options;
+                baoCaoNhaTrang.ShowDialog();
+                this.Close();
+
+            }
+            else if (manv == "190399")
+            {
+                this.Hide();
+                BaoCaoPhuQuoc baoCaoPhuQuoc = new BaoCaoPhuQuoc();
+                baoCaoPhuQuoc.MANV = manv;
+                baoCaoPhuQuoc.TENCHINHANH = tenchinhanh;
+                baoCaoPhuQuoc.TENNV = tenchinhanh;
+                baoCaoPhuQuoc.MACHINHANH = machinhanh;
+                baoCaoPhuQuoc.OPTIONS = options;
+                baoCaoPhuQuoc.ShowDialog();
+                this.Close();
+
+            }
         }
     }
 }

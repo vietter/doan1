@@ -105,6 +105,9 @@ namespace QL_KhachSan
                    
                     TimeSpan ts = new TimeSpan();
                     int NgayDat = int.Parse(dtpNgayDat.Text.Substring(0, 2));
+
+
+
                     int ThangDat = int.Parse(dtpNgayDat.Text.Substring(3, 2));
                     int NamDat = int.Parse(dtpNgayDat.Text.Substring(6, 4));
                     int GioDatPhong = 12;
@@ -126,7 +129,15 @@ namespace QL_KhachSan
                     {
                         TimeSpan ts2 = new TimeSpan();
                         ts2 = DateTime.Now - NgayDatPhong;
-                        if(ts2.TotalDays >0)
+                        
+                        // fix đặt phòng không được khi qua 12h
+                        String sDate = DateTime.Now.ToString();
+                        DateTime datevalue = (Convert.ToDateTime(sDate.ToString()));
+                        int dy = int.Parse(datevalue.Day.ToString());
+                        int ts3 = NgayDat-dy;
+
+
+                        if (ts2.TotalDays >0 && ts3 <0 )
                         {
                             MessageBox.Show("Bạn không thể đặt trong quá khứ được, vui lòng hãy chọn lại!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 

@@ -70,9 +70,9 @@
             // pbTroVe
             // 
             this.pbTroVe.Image = ((System.Drawing.Image)(resources.GetObject("pbTroVe.Image")));
-            this.pbTroVe.Location = new System.Drawing.Point(12, 66);
+            this.pbTroVe.Location = new System.Drawing.Point(12, 78);
             this.pbTroVe.Name = "pbTroVe";
-            this.pbTroVe.Size = new System.Drawing.Size(64, 52);
+            this.pbTroVe.Size = new System.Drawing.Size(48, 40);
             this.pbTroVe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTroVe.TabIndex = 29;
             this.pbTroVe.TabStop = false;

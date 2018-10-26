@@ -1252,7 +1252,7 @@ SELECT TenDichVu, SoLuong, ThanhTien, MaHD, STT, MaChiNhanh, MaPhong, SoDienThoa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QL_KhachSan.Properties.Settings.Default.TheNewStarHotel_DBConnectionString;
+            this._connection.ConnectionString = global::QL_KhachSan.Properties.Settings.Default.TheNewStarHotel_DBConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

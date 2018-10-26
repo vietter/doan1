@@ -16,7 +16,7 @@ namespace QL_KhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BaoCaoDaLat());
+            Application.Run(new DangNhap());
         }
     }
 }

@@ -265,9 +265,9 @@
             // pbXacNhan
             // 
             this.pbXacNhan.Image = ((System.Drawing.Image)(resources.GetObject("pbXacNhan.Image")));
-            this.pbXacNhan.Location = new System.Drawing.Point(303, 342);
+            this.pbXacNhan.Location = new System.Drawing.Point(354, 333);
             this.pbXacNhan.Name = "pbXacNhan";
-            this.pbXacNhan.Size = new System.Drawing.Size(78, 66);
+            this.pbXacNhan.Size = new System.Drawing.Size(57, 52);
             this.pbXacNhan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbXacNhan.TabIndex = 35;
             this.pbXacNhan.TabStop = false;
@@ -290,7 +290,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(424, 413);
+            this.ClientSize = new System.Drawing.Size(424, 395);
             this.ControlBox = false;
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pbXacNhan);

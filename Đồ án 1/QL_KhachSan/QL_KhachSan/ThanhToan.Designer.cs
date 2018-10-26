@@ -126,9 +126,9 @@
             // pbXacNhan
             // 
             this.pbXacNhan.Image = ((System.Drawing.Image)(resources.GetObject("pbXacNhan.Image")));
-            this.pbXacNhan.Location = new System.Drawing.Point(673, 401);
+            this.pbXacNhan.Location = new System.Drawing.Point(732, 406);
             this.pbXacNhan.Name = "pbXacNhan";
-            this.pbXacNhan.Size = new System.Drawing.Size(68, 48);
+            this.pbXacNhan.Size = new System.Drawing.Size(56, 43);
             this.pbXacNhan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbXacNhan.TabIndex = 36;
             this.pbXacNhan.TabStop = false;
@@ -137,9 +137,9 @@
             // pbTroVe
             // 
             this.pbTroVe.Image = ((System.Drawing.Image)(resources.GetObject("pbTroVe.Image")));
-            this.pbTroVe.Location = new System.Drawing.Point(49, 401);
+            this.pbTroVe.Location = new System.Drawing.Point(13, 406);
             this.pbTroVe.Name = "pbTroVe";
-            this.pbTroVe.Size = new System.Drawing.Size(68, 48);
+            this.pbTroVe.Size = new System.Drawing.Size(50, 43);
             this.pbTroVe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTroVe.TabIndex = 35;
             this.pbTroVe.TabStop = false;

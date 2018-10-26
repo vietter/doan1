@@ -84,7 +84,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(108, 136);
+            this.label4.Location = new System.Drawing.Point(31, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(253, 18);
             this.label4.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             this.lbLinkQuenMatKhau.AutoSize = true;
             this.lbLinkQuenMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbLinkQuenMatKhau.Location = new System.Drawing.Point(356, 136);
+            this.lbLinkQuenMatKhau.Location = new System.Drawing.Point(280, 154);
             this.lbLinkQuenMatKhau.Name = "lbLinkQuenMatKhau";
             this.lbLinkQuenMatKhau.Size = new System.Drawing.Size(31, 18);
             this.lbLinkQuenMatKhau.TabIndex = 4;
@@ -116,9 +116,9 @@
             // pbXacNhan
             // 
             this.pbXacNhan.Image = ((System.Drawing.Image)(resources.GetObject("pbXacNhan.Image")));
-            this.pbXacNhan.Location = new System.Drawing.Point(280, 38);
+            this.pbXacNhan.Location = new System.Drawing.Point(261, 85);
             this.pbXacNhan.Name = "pbXacNhan";
-            this.pbXacNhan.Size = new System.Drawing.Size(70, 53);
+            this.pbXacNhan.Size = new System.Drawing.Size(50, 48);
             this.pbXacNhan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbXacNhan.TabIndex = 32;
             this.pbXacNhan.TabStop = false;
@@ -127,9 +127,9 @@
             // pbTroVe
             // 
             this.pbTroVe.Image = ((System.Drawing.Image)(resources.GetObject("pbTroVe.Image")));
-            this.pbTroVe.Location = new System.Drawing.Point(12, 113);
+            this.pbTroVe.Location = new System.Drawing.Point(21, 85);
             this.pbTroVe.Name = "pbTroVe";
-            this.pbTroVe.Size = new System.Drawing.Size(70, 53);
+            this.pbTroVe.Size = new System.Drawing.Size(51, 44);
             this.pbTroVe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTroVe.TabIndex = 31;
             this.pbTroVe.TabStop = false;
@@ -140,7 +140,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(390, 188);
+            this.ClientSize = new System.Drawing.Size(336, 188);
             this.ControlBox = false;
             this.Controls.Add(this.pbXacNhan);
             this.Controls.Add(this.pbTroVe);

@@ -448,5 +448,13 @@ namespace QL_KhachSan
             dangki.ShowDialog();
             this.Close();
         }
+
+        private void pbTroVe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DatPhong datPhong = new DatPhong();
+            datPhong.ShowDialog();
+            this.Close();
+        }
     }
 }

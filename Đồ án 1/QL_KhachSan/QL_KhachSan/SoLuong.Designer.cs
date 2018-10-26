@@ -81,9 +81,9 @@
             // pbXacNhan
             // 
             this.pbXacNhan.Image = ((System.Drawing.Image)(resources.GetObject("pbXacNhan.Image")));
-            this.pbXacNhan.Location = new System.Drawing.Point(114, 84);
+            this.pbXacNhan.Location = new System.Drawing.Point(125, 93);
             this.pbXacNhan.Name = "pbXacNhan";
-            this.pbXacNhan.Size = new System.Drawing.Size(71, 58);
+            this.pbXacNhan.Size = new System.Drawing.Size(57, 49);
             this.pbXacNhan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbXacNhan.TabIndex = 35;
             this.pbXacNhan.TabStop = false;

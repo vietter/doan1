@@ -74,6 +74,15 @@
     <Compile Include="BaoCaoDaLat.Designer.cs">
       <DependentUpon>BaoCaoDaLat.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCaoDaNang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoDaNang.Designer.cs">
+      <DependentUpon>BaoCaoDaNang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoDL.cs">
+      <DependentUpon>BaoCaoDL.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BaoCaoDL1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,10 +98,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaoCaoHCM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BaoCaoHoChiMinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoHoChiMinh.Designer.cs">
+      <DependentUpon>BaoCaoHoChiMinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoNhaTrang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoNhaTrang.Designer.cs">
+      <DependentUpon>BaoCaoNhaTrang.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCaoNT.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaoCaoNT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoPhuQuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoPhuQuoc.Designer.cs">
+      <DependentUpon>BaoCaoPhuQuoc.cs</DependentUpon>
     </Compile>
     <Compile Include="BaoCaoPQ.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -289,6 +316,18 @@
     <EmbeddedResource Include="BaoCaoDaLat.resx">
       <DependentUpon>BaoCaoDaLat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoDaNang.resx">
+      <DependentUpon>BaoCaoDaNang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoHoChiMinh.resx">
+      <DependentUpon>BaoCaoHoChiMinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoNhaTrang.resx">
+      <DependentUpon>BaoCaoNhaTrang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoPhuQuoc.resx">
+      <DependentUpon>BaoCaoPhuQuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DapUngYeuCau.resx">
       <DependentUpon>DapUngYeuCau.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,6 +407,8 @@
     <EmbeddedResource Include="RP_DL.rdlc" />
     <EmbeddedResource Include="RP_DNrdlc.rdlc" />
     <EmbeddedResource Include="RP_HCM.rdlc" />
+    <EmbeddedResource Include="RP_NT.rdlc" />
+    <EmbeddedResource Include="RP_PQ.rdlc" />
     <EmbeddedResource Include="SoLuong.resx">
       <DependentUpon>SoLuong.cs</DependentUpon>
     </EmbeddedResource>

@@ -123,6 +123,7 @@
             this.theoNgàyToolStripMenuItem.Name = "theoNgàyToolStripMenuItem";
             this.theoNgàyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.theoNgàyToolStripMenuItem.Text = "Theo Ngày";
+            this.theoNgàyToolStripMenuItem.Click += new System.EventHandler(this.theoNgàyToolStripMenuItem_Click);
             // 
             // tổngDoanhThuToolStripMenuItem
             // 
@@ -149,14 +150,14 @@
             // điềuChỉnhFormToolStripMenuItem
             // 
             this.điềuChỉnhFormToolStripMenuItem.Name = "điềuChỉnhFormToolStripMenuItem";
-            this.điềuChỉnhFormToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.điềuChỉnhFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.điềuChỉnhFormToolStripMenuItem.Text = "Điều chỉnh Theme";
             this.điềuChỉnhFormToolStripMenuItem.Click += new System.EventHandler(this.điềuChỉnhFormToolStripMenuItem_Click);
             // 
             // thờiGianLoadToolStripMenuItem
             // 
             this.thờiGianLoadToolStripMenuItem.Name = "thờiGianLoadToolStripMenuItem";
-            this.thờiGianLoadToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.thờiGianLoadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.thờiGianLoadToolStripMenuItem.Text = "Thời gian load";
             // 
             // trợGiúpToolStripMenuItem

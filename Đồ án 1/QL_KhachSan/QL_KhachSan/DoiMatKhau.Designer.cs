@@ -112,9 +112,9 @@
             // pbXacNhan
             // 
             this.pbXacNhan.Image = ((System.Drawing.Image)(resources.GetObject("pbXacNhan.Image")));
-            this.pbXacNhan.Location = new System.Drawing.Point(340, 146);
+            this.pbXacNhan.Location = new System.Drawing.Point(369, 162);
             this.pbXacNhan.Name = "pbXacNhan";
-            this.pbXacNhan.Size = new System.Drawing.Size(72, 56);
+            this.pbXacNhan.Size = new System.Drawing.Size(49, 40);
             this.pbXacNhan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbXacNhan.TabIndex = 32;
             this.pbXacNhan.TabStop = false;
@@ -123,9 +123,9 @@
             // pbTroVe
             // 
             this.pbTroVe.Image = ((System.Drawing.Image)(resources.GetObject("pbTroVe.Image")));
-            this.pbTroVe.Location = new System.Drawing.Point(26, 146);
+            this.pbTroVe.Location = new System.Drawing.Point(26, 162);
             this.pbTroVe.Name = "pbTroVe";
-            this.pbTroVe.Size = new System.Drawing.Size(72, 56);
+            this.pbTroVe.Size = new System.Drawing.Size(47, 40);
             this.pbTroVe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTroVe.TabIndex = 31;
             this.pbTroVe.TabStop = false;
@@ -136,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(432, 214);
+            this.ClientSize = new System.Drawing.Size(443, 214);
             this.ControlBox = false;
             this.Controls.Add(this.pbXacNhan);
             this.Controls.Add(this.pbTroVe);

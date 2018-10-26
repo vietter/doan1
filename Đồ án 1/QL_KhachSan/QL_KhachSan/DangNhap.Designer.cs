@@ -85,7 +85,7 @@
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDangNhap.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDangNhap.Location = new System.Drawing.Point(148, 285);
+            this.btnDangNhap.Location = new System.Drawing.Point(228, 285);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(114, 41);
             this.btnDangNhap.TabIndex = 2;
@@ -112,9 +112,9 @@
             this.btnDangKi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDangKi.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDangKi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDangKi.Location = new System.Drawing.Point(12, 389);
+            this.btnDangKi.Location = new System.Drawing.Point(67, 285);
             this.btnDangKi.Name = "btnDangKi";
-            this.btnDangKi.Size = new System.Drawing.Size(103, 41);
+            this.btnDangKi.Size = new System.Drawing.Size(114, 41);
             this.btnDangKi.TabIndex = 3;
             this.btnDangKi.Text = "Đăng Kí ";
             this.btnDangKi.UseVisualStyleBackColor = false;

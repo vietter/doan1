@@ -43,7 +43,29 @@ namespace QL_KhachSan
 
         }
 
-        private void btnXacNhan_Click(object sender, EventArgs e)
+       
+
+
+
+
+
+       
+
+        private void txtCMND_Click(object sender, EventArgs e)
+        {
+            txtCMND.ResetText();
+            txtCMND.Focus();
+        }
+
+        private void pbTroVe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DangNhap dangnhap = new DangNhap();
+            dangnhap.ShowDialog();
+            this.Close();
+        }
+
+        private void pbXacNhan_Click(object sender, EventArgs e)
         {
 
             if (txtCMND.Text == "")
@@ -96,25 +118,6 @@ namespace QL_KhachSan
                     MessageBox.Show("Thông tin sai, vui lòng kiểm tra lại", "Thông Báo", MessageBoxButtons.OK);
                 }
             }
-        }
-
-
-
-
-
-
-        private void btnTroLai_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            DangNhap dangnhap = new DangNhap();
-            dangnhap.ShowDialog();
-            this.Close();
-        }
-
-        private void txtCMND_Click(object sender, EventArgs e)
-        {
-            txtCMND.ResetText();
-            txtCMND.Focus();
         }
     }
 

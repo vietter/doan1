@@ -426,6 +426,10 @@ namespace QL_KhachSan
         private void btnDatPhong_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+            GiaoDienKhachHang giaoDienKhachHang = new GiaoDienKhachHang();
+            giaoDienKhachHang.SDT = sdt;
+            giaoDienKhachHang.ShowDialog();
+            
             this.Close();
         }
 
@@ -451,6 +455,11 @@ namespace QL_KhachSan
         }
 
         private void pl_phong_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

@@ -184,84 +184,6 @@ namespace QL_KhachSan
            
 
         
-                if(txtTenKH.Text =="")
-                {
-                    lbTen.Visible = true;
-                }
-                else
-                {
-                    lbTen.Visible = false;
-                }
-                if (txtSoDT.Text == "(+84) ")
-                {
-                    lbSDT.Visible = true; 
-                }
-                else
-                {
-                    lbSDT.Visible = false;
-                }
-                if(txtMatKhau.Text == "")
-                {
-                    lbMatKhau.Visible = true;
-                }
-                else
-                {
-                    lbMatKhau.Visible = false;
-                }
-                if (txtCMND.Text == "")
-                {
-                    lbCMND.Visible = true;
-                }
-                else
-                {
-                    lbCMND.Visible = false;
-                }
-                if (cbbCauHoi.Text == "")
-                {
-                    lbCauHoi.Visible = true;
-                }
-                else
-                {
-                    lbCauHoi.Visible = false;
-                }
-                if (txtTraLoi.Text == "")
-                {
-                    lbTraLoi.Visible = true;
-                }
-                else
-                {
-                    lbTraLoi.Visible = false;
-                }
-                if(lbTen.Visible == false && lbSDT.Visible == false && lbMatKhau.Visible == false && lbCauHoi.Visible == false && lbTraLoi.Visible == false && lbCMND.Visible == false)
-                {
-                   
-                  
-                        DTO_KhachHang khachhang = new DTO_KhachHang();
-                        khachhang.SDT = txtSoDT.Text;
-                        khachhang.MatKhau = txtMatKhau.Text;
-                        khachhang.TenKH = txtTenKH.Text;
-                        khachhang.CMND = txtCMND.Text;
-                        khachhang.CauHoiBiMat = cbbCauHoi.Text;
-                        khachhang.TraLoi = txtTraLoi.Text;
-
-                        BO_DangKi dangki = new BO_DangKi();
-                        if (dangki.DangKi(khachhang) != -1)
-                        {
-                            MessageBox.Show("Bạn đã đăng kí thành công!", "Thông Báo", MessageBoxButtons.OK);
-                            this.Hide();
-                            DangNhap dangnhap = new DangNhap();   
-                            dangnhap.ShowDialog();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Chưa đăng kí thành công vui lòng thử lại", "Thông báo", MessageBoxButtons.OK);
-
-                        }
-                    
-                }
-               
-            
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -284,6 +206,98 @@ namespace QL_KhachSan
         {
             txtCMND.ResetText();
             txtCMND.Focus();
+        }
+
+        private void pbTroVe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DangNhap dangnhap = new DangNhap();
+            dangnhap.ShowDialog();
+            this.Close();
+
+        }
+
+        private void pbXacNhan_Click(object sender, EventArgs e)
+        {
+
+            if (txtTenKH.Text == "")
+            {
+                lbTen.Visible = true;
+            }
+            else
+            {
+                lbTen.Visible = false;
+            }
+            if (txtSoDT.Text == "(+84) ")
+            {
+                lbSDT.Visible = true;
+            }
+            else
+            {
+                lbSDT.Visible = false;
+            }
+            if (txtMatKhau.Text == "")
+            {
+                lbMatKhau.Visible = true;
+            }
+            else
+            {
+                lbMatKhau.Visible = false;
+            }
+            if (txtCMND.Text == "")
+            {
+                lbCMND.Visible = true;
+            }
+            else
+            {
+                lbCMND.Visible = false;
+            }
+            if (cbbCauHoi.Text == "")
+            {
+                lbCauHoi.Visible = true;
+            }
+            else
+            {
+                lbCauHoi.Visible = false;
+            }
+            if (txtTraLoi.Text == "")
+            {
+                lbTraLoi.Visible = true;
+            }
+            else
+            {
+                lbTraLoi.Visible = false;
+            }
+            if (lbTen.Visible == false && lbSDT.Visible == false && lbMatKhau.Visible == false && lbCauHoi.Visible == false && lbTraLoi.Visible == false && lbCMND.Visible == false)
+            {
+
+
+                DTO_KhachHang khachhang = new DTO_KhachHang();
+                khachhang.SDT = txtSoDT.Text;
+                khachhang.MatKhau = txtMatKhau.Text;
+                khachhang.TenKH = txtTenKH.Text;
+                khachhang.CMND = txtCMND.Text;
+                khachhang.CauHoiBiMat = cbbCauHoi.Text;
+                khachhang.TraLoi = txtTraLoi.Text;
+
+                BO_DangKi dangki = new BO_DangKi();
+                if (dangki.DangKi(khachhang) != -1)
+                {
+                    MessageBox.Show("Bạn đã đăng kí thành công!", "Thông Báo", MessageBoxButtons.OK);
+                    this.Hide();
+                    DangNhap dangnhap = new DangNhap();
+                    dangnhap.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Chưa đăng kí thành công vui lòng thử lại", "Thông báo", MessageBoxButtons.OK);
+
+                }
+
+            }
+
+
         }
     }
 }

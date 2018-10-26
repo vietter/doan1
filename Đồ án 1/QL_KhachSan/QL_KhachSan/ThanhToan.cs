@@ -122,7 +122,35 @@ namespace QL_KhachSan
 
 
         }
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = decimal.Parse(txtTong.Text, System.Globalization.NumberStyles.AllowThousands);
+            txtTong.Text = String.Format(culture, "{0:N0}", value);
+            txtTong.Select(txtTong.Text.Length, 0);
+        }
+
+      
+
+        private void pbTroVe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            QuanLiPhong quanli = new QuanLiPhong();
+            quanli.MANV = manv;
+            quanli.MAPHONG = maphong;
+            quanli.TENNV = tennv;
+            quanli.TENPHONG = tenphong;
+            quanli.MAHD = mahd;
+            quanli.SDT = sdt;
+            quanli.TENCHINHANH = tenchinhanh;
+            quanli.MACHINHANH = machinhanh;
+            quanli.ShowDialog();
+            this.Close();
+        }
+
+        private void pbXacNhan_Click(object sender, EventArgs e)
         {
             BO_HuyPhong giaiphongphong = new BO_HuyPhong();
             DTO_HoaDon hoadon = new DTO_HoaDon();
@@ -130,7 +158,7 @@ namespace QL_KhachSan
             hoadon.MaPhong = maphong;
             hoadon.MaChiNhanh = machinhanh;
             int result = giaiphongphong.HuyPhong(hoadon);
-            if(result != -1)
+            if (result != -1)
             {
                 this.Hide();
                 MessageBox.Show("Thanh toán thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -146,31 +174,6 @@ namespace QL_KhachSan
             {
                 MessageBox.Show("Thanh toán thất bại, vui lòng thử lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
-            decimal value = decimal.Parse(txtTong.Text, System.Globalization.NumberStyles.AllowThousands);
-            txtTong.Text = String.Format(culture, "{0:N0}", value);
-            txtTong.Select(txtTong.Text.Length, 0);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            QuanLiPhong quanli = new QuanLiPhong();
-            quanli.MANV = manv;
-            quanli.MAPHONG = maphong;
-            quanli.TENNV = tennv;
-            quanli.TENPHONG = tenphong;
-            quanli.MAHD = mahd;
-            quanli.SDT = sdt;
-            quanli.TENCHINHANH = tenchinhanh;
-            quanli.MACHINHANH = machinhanh;
-            quanli.ShowDialog();
-            this.Close();
         }
     }
 }

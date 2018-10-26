@@ -229,13 +229,7 @@ namespace QL_KhachSan
             this.Close();
         }
 
-        private void btnTrolai_Click(object sender, EventArgs e)
-        { 
-            this.Hide();
-            DangNhap dn = new DangNhap();
-            dn.ShowDialog();
-            this.Close();
-        }
+       
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -248,12 +242,26 @@ namespace QL_KhachSan
 
         private void pHoTro_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            HoTroKhachHang hoTroKhachHang = new HoTroKhachHang();
+            hoTroKhachHang.SDT = sdt;
+            hoTroKhachHang.OPTIONS = options;
+            hoTroKhachHang.ShowDialog();
+            this.Close();
 
         }
 
         private void pl_phong_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void pbTroVe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DangNhap dn = new DangNhap();
+            dn.ShowDialog();
+            this.Close();
         }
     }
 }

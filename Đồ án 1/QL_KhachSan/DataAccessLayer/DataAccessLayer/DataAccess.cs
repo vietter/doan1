@@ -13,7 +13,8 @@ namespace DataAccessLayer
         Exception error;
         public DataAccess()
         {
-            string connectString = @"Data Source=DESKTOP-SJULKJC;Initial Catalog=TheNewStarHotel_DB;Integrated Security=True ";
+            //  string connectString = @"Data Source=DESKTOP-SJULKJC;Initial Catalog=TheNewStarHotel_DB;Integrated Security=True ";
+            string connectString = @"Data Source=viet;Initial Catalog=TheNewStarHotel_DB;Integrated Security=True ";
             connect = new SqlConnection(connectString);
 
         }

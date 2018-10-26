@@ -249,5 +249,17 @@ namespace QL_KhachSan
         {
 
         }
+
+        private void pbTroVe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GiaoDienQuanLi giaoDienQuanLi = new GiaoDienQuanLi();
+            giaoDienQuanLi.MANV = manv;
+            giaoDienQuanLi.TENNV = tennv;
+            giaoDienQuanLi.MACHINHANH = machinhanh;
+            giaoDienQuanLi.TENCHINHANH = tenchinhanh;
+            giaoDienQuanLi.ShowDialog();
+            this.Close();
+        }
     }
 }

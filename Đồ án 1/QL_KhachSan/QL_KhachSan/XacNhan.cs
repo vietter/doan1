@@ -112,13 +112,7 @@ namespace QL_KhachSan
             txtTien.Text = giatien.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            DatPhong datphong = new DatPhong();
-            datphong.ShowDialog();
-            this.Close();
-        }
+      
         
         private void txtTien_TextChanged(object sender, EventArgs e)
         {
@@ -127,5 +121,14 @@ namespace QL_KhachSan
             txtTien.Text = String.Format(culture, "{0:N0}", value);
             txtTien.Select(txtTien.Text.Length, 0);
         }
+
+        private void pbXacNhan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DatPhong datphong = new DatPhong();
+            datphong.ShowDialog();
+            this.Close();
+        }
+
     }
 }

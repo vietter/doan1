@@ -72,6 +72,11 @@ namespace QL_KhachSan
 
         private void button2_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private void pbTroVe_Click(object sender, EventArgs e)
+        {
             this.Hide();
             GiaoDienKhachHang khachhang = new GiaoDienKhachHang();
             khachhang.SDT = sdt;

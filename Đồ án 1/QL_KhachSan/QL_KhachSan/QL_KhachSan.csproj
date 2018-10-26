@@ -162,6 +162,12 @@
     <Compile Include="giuongdon4nguoi.Designer.cs">
       <DependentUpon>giuongdon4nguoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoTroKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoTroKhachHang.Designer.cs">
+      <DependentUpon>HoTroKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="MatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     <EmbeddedResource Include="giuongdon4nguoi.resx">
       <DependentUpon>giuongdon4nguoi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HoTroKhachHang.resx">
+      <DependentUpon>HoTroKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MatKhau.resx">
       <DependentUpon>MatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +301,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QuanLiPhong.resx">
       <DependentUpon>QuanLiPhong.cs</DependentUpon>
@@ -332,6 +342,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27193857.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

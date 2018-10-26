@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoiMatKhau));
             this.label1 = new System.Windows.Forms.Label();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtReMatKhau = new System.Windows.Forms.TextBox();
-            this.btnXacNhan = new System.Windows.Forms.Button();
-            this.btnTroLai = new System.Windows.Forms.Button();
             this.lbMatKhau = new System.Windows.Forms.Label();
             this.lbReMatKhau = new System.Windows.Forms.Label();
+            this.pbXacNhan = new System.Windows.Forms.PictureBox();
+            this.pbTroVe = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbXacNhan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,30 +89,6 @@
             this.txtReMatKhau.Size = new System.Drawing.Size(195, 20);
             this.txtReMatKhau.TabIndex = 2;
             // 
-            // btnXacNhan
-            // 
-            this.btnXacNhan.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnXacNhan.Location = new System.Drawing.Point(319, 153);
-            this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(99, 40);
-            this.btnXacNhan.TabIndex = 3;
-            this.btnXacNhan.Text = "Xác nhận";
-            this.btnXacNhan.UseVisualStyleBackColor = false;
-            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
-            // 
-            // btnTroLai
-            // 
-            this.btnTroLai.BackColor = System.Drawing.Color.PeachPuff;
-            this.btnTroLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnTroLai.Location = new System.Drawing.Point(12, 153);
-            this.btnTroLai.Name = "btnTroLai";
-            this.btnTroLai.Size = new System.Drawing.Size(99, 40);
-            this.btnTroLai.TabIndex = 4;
-            this.btnTroLai.Text = "Trờ lại";
-            this.btnTroLai.UseVisualStyleBackColor = false;
-            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
-            // 
             // lbMatKhau
             // 
             this.lbMatKhau.AutoSize = true;
@@ -130,18 +109,39 @@
             this.lbReMatKhau.TabIndex = 16;
             this.lbReMatKhau.Text = "Bạn chưa nhập lại mật khẩu";
             // 
+            // pbXacNhan
+            // 
+            this.pbXacNhan.Image = ((System.Drawing.Image)(resources.GetObject("pbXacNhan.Image")));
+            this.pbXacNhan.Location = new System.Drawing.Point(340, 146);
+            this.pbXacNhan.Name = "pbXacNhan";
+            this.pbXacNhan.Size = new System.Drawing.Size(72, 56);
+            this.pbXacNhan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbXacNhan.TabIndex = 32;
+            this.pbXacNhan.TabStop = false;
+            this.pbXacNhan.Click += new System.EventHandler(this.pbXacNhan_Click);
+            // 
+            // pbTroVe
+            // 
+            this.pbTroVe.Image = ((System.Drawing.Image)(resources.GetObject("pbTroVe.Image")));
+            this.pbTroVe.Location = new System.Drawing.Point(26, 146);
+            this.pbTroVe.Name = "pbTroVe";
+            this.pbTroVe.Size = new System.Drawing.Size(72, 56);
+            this.pbTroVe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTroVe.TabIndex = 31;
+            this.pbTroVe.TabStop = false;
+            this.pbTroVe.Click += new System.EventHandler(this.pbTroVe_Click);
+            // 
             // DoiMatKhau
             // 
-            this.AcceptButton = this.btnXacNhan;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(444, 205);
+            this.ClientSize = new System.Drawing.Size(432, 214);
             this.ControlBox = false;
+            this.Controls.Add(this.pbXacNhan);
+            this.Controls.Add(this.pbTroVe);
             this.Controls.Add(this.lbReMatKhau);
             this.Controls.Add(this.lbMatKhau);
-            this.Controls.Add(this.btnXacNhan);
-            this.Controls.Add(this.btnTroLai);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtReMatKhau);
             this.Controls.Add(this.label2);
@@ -151,6 +151,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi Mật Khẩu";
             this.Load += new System.EventHandler(this.DoiMatKhau_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbXacNhan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,9 +165,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtReMatKhau;
-        private System.Windows.Forms.Button btnXacNhan;
-        private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.Label lbMatKhau;
         private System.Windows.Forms.Label lbReMatKhau;
+        private System.Windows.Forms.PictureBox pbXacNhan;
+        private System.Windows.Forms.PictureBox pbTroVe;
     }
 }

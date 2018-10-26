@@ -117,17 +117,32 @@ namespace QL_KhachSan
 
         }
 
-        private void bntThucHien_Click(object sender, EventArgs e)
+     
+
+
+
+        private void pbTroVe_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            YeuCauKhachHang dsyeucau = new YeuCauKhachHang();
+            dsyeucau.MANV = manv;
+            dsyeucau.MACHINHANH = machinhanh;
+            dsyeucau.TENNV = tennv;
+            dsyeucau.TENCHINHANH = tenchinhanh;
+            dsyeucau.ShowDialog();
+            this.Close();
+        }
+
+        private void pbXacNhan_Click(object sender, EventArgs e)
+        {
             DTO_HoaDon hoadon = new DTO_HoaDon();
             hoadon.MaPhong = maphong;
             hoadon.MaChiNhanh = machinhanh;
             hoadon.STT = stt;
             hoadon.MaHD = mahd;
             BO_QuanLiChiNhanh yeucau = new BO_QuanLiChiNhanh();
-            int result =yeucau.ThucHienYeuCau(hoadon);
-            if(result != -1)
+            int result = yeucau.ThucHienYeuCau(hoadon);
+            if (result != -1)
             {
                 this.Hide();
                 YeuCauKhachHang dsyeucau = new YeuCauKhachHang();
@@ -142,13 +157,13 @@ namespace QL_KhachSan
             {
                 MessageBox.Show("Đã xảy ra lỗi vui lòng thử lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
 
-        private void bntXoa_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
+
             DialogResult answer = MessageBox.Show("Bạn có muốn xóa yêu cầu này không ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(answer == DialogResult.Yes)
+            if (answer == DialogResult.Yes)
             {
                 DTO_HoaDon hoadon = new DTO_HoaDon();
                 hoadon.MaPhong = maphong;
@@ -174,18 +189,6 @@ namespace QL_KhachSan
                 }
 
             }
-        }
-
-        private void bntTroVe_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            YeuCauKhachHang dsyeucau = new YeuCauKhachHang();
-            dsyeucau.MANV = manv;
-            dsyeucau.MACHINHANH = machinhanh;
-            dsyeucau.TENNV = tennv;
-            dsyeucau.TENCHINHANH = tenchinhanh;
-            dsyeucau.ShowDialog();
-            this.Close();
         }
     }
 }

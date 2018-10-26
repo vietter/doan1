@@ -65,6 +65,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.pl_dangnhap.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -123,7 +124,7 @@
             this.pl_dangnhap.Controls.Add(this.label2);
             this.pl_dangnhap.Controls.Add(this.label1);
             this.pl_dangnhap.Controls.Add(this.linkLabel2);
-            this.pl_dangnhap.Location = new System.Drawing.Point(69, 61);
+            this.pl_dangnhap.Location = new System.Drawing.Point(101, 98);
             this.pl_dangnhap.Name = "pl_dangnhap";
             this.pl_dangnhap.Size = new System.Drawing.Size(656, 38);
             this.pl_dangnhap.TabIndex = 4;
@@ -213,9 +214,9 @@
             this.panel2.Controls.Add(this.cbb_DanhXung);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(4, 125);
+            this.panel2.Location = new System.Drawing.Point(36, 142);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(339, 165);
+            this.panel2.Size = new System.Drawing.Size(339, 185);
             this.panel2.TabIndex = 13;
             // 
             // lb_LoiSDT
@@ -344,12 +345,14 @@
             // 
             // btn_DatPhong
             // 
-            this.btn_DatPhong.BackColor = System.Drawing.Color.GreenYellow;
-            this.btn_DatPhong.Location = new System.Drawing.Point(308, 133);
+            this.btn_DatPhong.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_DatPhong.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DatPhong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_DatPhong.Location = new System.Drawing.Point(337, 133);
             this.btn_DatPhong.Name = "btn_DatPhong";
-            this.btn_DatPhong.Size = new System.Drawing.Size(139, 45);
+            this.btn_DatPhong.Size = new System.Drawing.Size(110, 45);
             this.btn_DatPhong.TabIndex = 23;
-            this.btn_DatPhong.Text = "Đặt phòng";
+            this.btn_DatPhong.Text = "Đặt Phòng";
             this.btn_DatPhong.UseVisualStyleBackColor = false;
             this.btn_DatPhong.Click += new System.EventHandler(this.btn_DatPhong_Click);
             // 
@@ -368,7 +371,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(16, 27);
+            this.label15.Location = new System.Drawing.Point(48, 64);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(84, 15);
             this.label15.TabIndex = 25;
@@ -377,7 +380,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(106, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(138, 60);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -388,7 +391,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(617, 27);
+            this.label16.Location = new System.Drawing.Point(649, 64);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(127, 15);
             this.label16.TabIndex = 28;
@@ -397,7 +400,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(744, 23);
+            this.pictureBox3.Location = new System.Drawing.Point(776, 60);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -407,7 +410,8 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(36, 9);
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(68, 46);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(41, 13);
             this.label17.TabIndex = 30;
@@ -416,7 +420,8 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(660, 9);
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(692, 46);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(41, 13);
             this.label18.TabIndex = 31;
@@ -439,7 +444,7 @@
             this.panel3.Controls.Add(this.dtpNgayDat);
             this.panel3.Controls.Add(this.label6);
             this.panel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel3.Location = new System.Drawing.Point(349, 105);
+            this.panel3.Location = new System.Drawing.Point(381, 142);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(450, 185);
             this.panel3.TabIndex = 32;
@@ -458,19 +463,32 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox2.Location = new System.Drawing.Point(132, 34);
+            this.textBox2.Location = new System.Drawing.Point(164, 71);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(486, 8);
             this.textBox2.TabIndex = 33;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Red;
+            this.label20.Location = new System.Drawing.Point(378, 25);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(172, 22);
+            this.label20.TabIndex = 34;
+            this.label20.Text = "Đặt Phòng Nhanh";
+            // 
             // DatPhongNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 295);
+            this.ClientSize = new System.Drawing.Size(865, 364);
+            this.ControlBox = false;
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label18);
@@ -482,7 +500,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pl_dangnhap);
             this.Name = "DatPhongNhanh";
-            this.Text = "DatPhongNhanh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đặt Phòng Nhanh";
             this.Load += new System.EventHandler(this.DatPhongNhanh_Load);
             this.pl_dangnhap.ResumeLayout(false);
             this.pl_dangnhap.PerformLayout();
@@ -535,5 +554,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label20;
     }
 }

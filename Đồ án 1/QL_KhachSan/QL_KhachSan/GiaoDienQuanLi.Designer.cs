@@ -61,11 +61,11 @@
             // lbTen
             // 
             this.lbTen.AutoSize = true;
-            this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbTen.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbTen.ForeColor = System.Drawing.Color.Blue;
             this.lbTen.Location = new System.Drawing.Point(146, 76);
             this.lbTen.Name = "lbTen";
-            this.lbTen.Size = new System.Drawing.Size(61, 20);
+            this.lbTen.Size = new System.Drawing.Size(78, 22);
             this.lbTen.TabIndex = 5;
             this.lbTen.Text = "Tên QL";
             // 
@@ -73,12 +73,13 @@
             // 
             this.lbTenChiNhanh.AutoSize = true;
             this.lbTenChiNhanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbTenChiNhanh.ForeColor = System.Drawing.Color.DeepPink;
-            this.lbTenChiNhanh.Location = new System.Drawing.Point(268, 31);
+            this.lbTenChiNhanh.ForeColor = System.Drawing.Color.Red;
+            this.lbTenChiNhanh.Location = new System.Drawing.Point(322, 24);
             this.lbTenChiNhanh.Name = "lbTenChiNhanh";
-            this.lbTenChiNhanh.Size = new System.Drawing.Size(140, 31);
+            this.lbTenChiNhanh.Size = new System.Drawing.Size(151, 31);
             this.lbTenChiNhanh.TabIndex = 14;
-            this.lbTenChiNhanh.Text = "chi nhánh";
+            this.lbTenChiNhanh.Text = "Chi Nhánh";
+            this.lbTenChiNhanh.Click += new System.EventHandler(this.lbTenChiNhanh_Click);
             // 
             // menuStrip1
             // 
@@ -166,6 +167,7 @@
             this.điềuChỉnhFormToolStripMenuItem.Name = "điềuChỉnhFormToolStripMenuItem";
             this.điềuChỉnhFormToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.điềuChỉnhFormToolStripMenuItem.Text = "Điều chỉnh Theme";
+            this.điềuChỉnhFormToolStripMenuItem.Click += new System.EventHandler(this.điềuChỉnhFormToolStripMenuItem_Click);
             // 
             // thờiGianLoadToolStripMenuItem
             // 
@@ -192,6 +194,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(820, 463);
+            this.ControlBox = false;
             this.Controls.Add(this.pl_phong);
             this.Controls.Add(this.lbTenChiNhanh);
             this.Controls.Add(this.lbTen);
@@ -199,6 +202,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GiaoDienQuanLi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí";
             this.Load += new System.EventHandler(this.GiaoDienQuanLi_Load);
             this.menuStrip1.ResumeLayout(false);

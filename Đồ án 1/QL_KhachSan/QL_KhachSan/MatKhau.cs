@@ -139,19 +139,24 @@ namespace QL_KhachSan
                 tenvtchinhanh = value;
             }
         }
-        private void btnTroLai_Click(object sender, EventArgs e)
+      
+
+     
+
+
+   
+
+        private void lbLinkQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
-                this.Hide();
-                DangNhap dangnhap = new DangNhap();
-                dangnhap.ShowDialog();
-                this.Close();
-            
-            
+            this.Hide();
+            QuenMatKhau quen = new QuenMatKhau();
+            quen.SDT = sdt;
+            quen.TENKH = tenkh;
+            quen.ShowDialog();
+            this.Close();
         }
 
-        private void btnDangNhap_Click(object sender, EventArgs e)
-
+        private void pbXacNhan_Click(object sender, EventArgs e)
         {
 
             if (txtMatKhau.Text == "")
@@ -177,8 +182,8 @@ namespace QL_KhachSan
                     this.Hide();
                     GiaoDienKhachHang giaodien = new GiaoDienKhachHang();
                     giaodien.SDT = sdt;
-                    giaodien.ShowDialog();                        
-                    this.Close();                   
+                    giaodien.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
@@ -190,17 +195,13 @@ namespace QL_KhachSan
             }
         }
 
-
-   
-
-        private void lbLinkQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void pbTroVe_Click(object sender, EventArgs e)
         {
             this.Hide();
-            QuenMatKhau quen = new QuenMatKhau();
-            quen.SDT = sdt;
-            quen.TENKH = tenkh;
-            quen.ShowDialog();
+            DangNhap dangnhap = new DangNhap();
+            dangnhap.ShowDialog();
             this.Close();
+
         }
     }
 }

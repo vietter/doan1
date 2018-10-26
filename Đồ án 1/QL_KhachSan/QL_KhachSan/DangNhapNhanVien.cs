@@ -153,7 +153,19 @@ namespace QL_KhachSan
        
 
 
-        private void btnDangNhap_Click_1(object sender, EventArgs e)
+      
+
+      
+
+        private void pbTroVe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DangNhap dangnhap = new DangNhap();
+            dangnhap.ShowDialog();
+            this.Close();
+        }
+
+        private void pbXacNhan_Click(object sender, EventArgs e)
         {
 
             DTO_NhanVien nhanvien = new DTO_NhanVien();
@@ -169,7 +181,7 @@ namespace QL_KhachSan
                 chinhanh.MaNguoiQuanLy = manv;
                 DataSet table = new DataSet();
                 BO_DangNhapNhanVien quanli = new BO_DangNhapNhanVien();
-                table = quanli.LayMaChiNhanh(chinhanh) ;
+                table = quanli.LayMaChiNhanh(chinhanh);
                 this.Hide();
                 GiaoDienQuanLi giaodien = new GiaoDienQuanLi();
                 giaodien.TENNV = tennv;
@@ -185,16 +197,6 @@ namespace QL_KhachSan
                 txtMatKhau.ResetText();
                 txtMatKhau.Focus();
             }
-
-        }
-
-        private void btnTroLai_Click_1(object sender, EventArgs e)
-        { 
-                this.Hide();
-                DangNhap dangnhap = new DangNhap();               
-                dangnhap.ShowDialog();
-                this.Close();
-           
         }
     }
 }

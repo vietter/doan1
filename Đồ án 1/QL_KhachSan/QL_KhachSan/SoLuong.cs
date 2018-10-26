@@ -40,7 +40,9 @@ namespace QL_KhachSan
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+      
+
+        private void pbXacNhan_Click(object sender, EventArgs e)
         {
             this.Close();
         }

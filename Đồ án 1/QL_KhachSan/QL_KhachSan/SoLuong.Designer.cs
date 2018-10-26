@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SoLuong));
             this.label7 = new System.Windows.Forms.Label();
             this.dmUDNumber = new System.Windows.Forms.DomainUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pbXacNhan = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbXacNhan)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -76,25 +78,25 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "label1";
             // 
-            // button1
+            // pbXacNhan
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Location = new System.Drawing.Point(102, 85);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 32);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Lựa Chọn";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pbXacNhan.Image = ((System.Drawing.Image)(resources.GetObject("pbXacNhan.Image")));
+            this.pbXacNhan.Location = new System.Drawing.Point(114, 84);
+            this.pbXacNhan.Name = "pbXacNhan";
+            this.pbXacNhan.Size = new System.Drawing.Size(71, 58);
+            this.pbXacNhan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbXacNhan.TabIndex = 35;
+            this.pbXacNhan.TabStop = false;
+            this.pbXacNhan.Click += new System.EventHandler(this.pbXacNhan_Click);
             // 
             // SoLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(320, 140);
+            this.ClientSize = new System.Drawing.Size(302, 167);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pbXacNhan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dmUDNumber);
             this.Controls.Add(this.label7);
@@ -102,6 +104,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SoLuong";
             this.Load += new System.EventHandler(this.SoLuong_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbXacNhan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,6 +115,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DomainUpDown dmUDNumber;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pbXacNhan;
     }
 }

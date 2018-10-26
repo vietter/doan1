@@ -47,8 +47,17 @@ namespace QL_KhachSan
             load();
         }
 
-        private void btnTroLai_Click(object sender, EventArgs e)
+      
+        private void load()
         {
+            lbMatKhau.Visible = false;
+            lbReMatKhau.Visible = false;
+        }
+      
+
+        private void pbTroVe_Click(object sender, EventArgs e)
+        {
+
             if (kiemtra == "QUENMATKHAU")
             {
                 this.Hide();
@@ -59,7 +68,7 @@ namespace QL_KhachSan
             }
             else
             {
-                
+
                 this.Hide();
                 QuanLyTaiKhoan khachhang = new QuanLyTaiKhoan();
                 khachhang.SDT = sdt;
@@ -67,67 +76,62 @@ namespace QL_KhachSan
                 this.Close();
             }
         }
-        private void load()
+
+        private void pbXacNhan_Click(object sender, EventArgs e)
         {
-            lbMatKhau.Visible = false;
-            lbReMatKhau.Visible = false;
-        }
-        private void btnXacNhan_Click(object sender, EventArgs e)
-        {
-       
-                if (txtMatKhau.Text == "")
+            if (txtMatKhau.Text == "")
+            {
+                lbMatKhau.Visible = true;
+            }
+            else
+            {
+                lbMatKhau.Visible = false;
+            }
+            if (txtReMatKhau.Text == "")
+            {
+                lbReMatKhau.Visible = true;
+            }
+            else
+            {
+                lbReMatKhau.Visible = false;
+            }
+            if (lbMatKhau.Visible == false && lbReMatKhau.Visible == false)
+            {
+                if (txtMatKhau.Text != txtReMatKhau.Text)
                 {
-                    lbMatKhau.Visible = true;
+                    MessageBox.Show("Mật khẩu bạn nhập lại không trùng với mật khẩu bạn đã nhập, vui lòng thử lại", "Thông Báo", MessageBoxButtons.OK);
+                    txtMatKhau.ResetText();
+                    txtReMatKhau.ResetText();
+                    load();
+                    txtMatKhau.Focus();
+
                 }
                 else
                 {
-                    lbMatKhau.Visible = false;
-                }
-                if (txtReMatKhau.Text == "")
-                {
-                    lbReMatKhau.Visible = true;
-                }
-                else
-                {
-                    lbReMatKhau.Visible = false;
-                }
-                if (lbMatKhau.Visible == false && lbReMatKhau.Visible == false)
-                {
-                    if (txtMatKhau.Text != txtReMatKhau.Text)
+                    DTO_KhachHang khachhang = new DTO_KhachHang();
+                    khachhang.SDT = sdt;
+                    khachhang.MatKhau = txtMatKhau.Text;
+                    BO_QuenMatKhau quen = new BO_QuenMatKhau();
+                    if (quen.DoiMatKhau(khachhang) != -1)
                     {
-                        MessageBox.Show("Mật khẩu bạn nhập lại không trùng với mật khẩu bạn đã nhập, vui lòng thử lại", "Thông Báo", MessageBoxButtons.OK);
-                        txtMatKhau.ResetText();
-                        txtReMatKhau.ResetText();
-                        load();
-                        txtMatKhau.Focus();
-                        
+                        MessageBox.Show("Bạn đã đổi mật khẩu thành công", "Thông Báo", MessageBoxButtons.OK);
+                        this.Hide();
+                        DangNhap dangnhap = new DangNhap();
+                        dangnhap.OPTIONS = options;
+                        dangnhap.ShowDialog();
+                        this.Close();
                     }
                     else
                     {
-                        DTO_KhachHang khachhang = new DTO_KhachHang();
-                        khachhang.SDT = sdt;
-                        khachhang.MatKhau = txtMatKhau.Text;
-                        BO_QuenMatKhau quen = new BO_QuenMatKhau();
-                        if (quen.DoiMatKhau(khachhang) != -1)
-                        {
-                            MessageBox.Show("Bạn đã đổi mật khẩu thành công", "Thông Báo", MessageBoxButtons.OK);
-                            this.Hide();
-                            DangNhap dangnhap = new DangNhap();
-                            dangnhap.OPTIONS = options;
-                            dangnhap.ShowDialog();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Đổi chưa thành công vui lòng thử lại", "Thông Báo", MessageBoxButtons.OK);
-                            txtMatKhau.ResetText();
-                            txtReMatKhau.ResetText();
-                            txtMatKhau.Focus();
-                        }
+                        MessageBox.Show("Đổi chưa thành công vui lòng thử lại", "Thông Báo", MessageBoxButtons.OK);
+                        txtMatKhau.ResetText();
+                        txtReMatKhau.ResetText();
+                        txtMatKhau.Focus();
                     }
-
                 }
+
             }
         }
+    }
     }
 

@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YeuCauKhachHang));
             this.pl_YeuCau = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_TenChiNhanh = new System.Windows.Forms.Label();
+            this.pbTroVe = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).BeginInit();
             this.SuspendLayout();
             // 
             // pl_YeuCau
@@ -75,18 +78,34 @@
             this.lb_TenChiNhanh.TabIndex = 3;
             this.lb_TenChiNhanh.Text = "Tên Chi nhánh";
             // 
+            // pbTroVe
+            // 
+            this.pbTroVe.Image = ((System.Drawing.Image)(resources.GetObject("pbTroVe.Image")));
+            this.pbTroVe.Location = new System.Drawing.Point(12, 28);
+            this.pbTroVe.Name = "pbTroVe";
+            this.pbTroVe.Size = new System.Drawing.Size(64, 60);
+            this.pbTroVe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTroVe.TabIndex = 26;
+            this.pbTroVe.TabStop = false;
+            this.pbTroVe.Click += new System.EventHandler(this.pbTroVe_Click);
+            // 
             // YeuCauKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(828, 450);
+            this.ControlBox = false;
+            this.Controls.Add(this.pbTroVe);
             this.Controls.Add(this.lb_TenChiNhanh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pl_YeuCau);
             this.Name = "YeuCauKhachHang";
-            this.Text = "YeuCauKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Yêu cầu khách hàng";
             this.Load += new System.EventHandler(this.YeuCauKhachHang_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,5 +117,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_TenChiNhanh;
+        private System.Windows.Forms.PictureBox pbTroVe;
     }
 }

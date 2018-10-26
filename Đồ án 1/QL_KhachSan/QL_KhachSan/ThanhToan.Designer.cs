@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThanhToan));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenphong = new System.Windows.Forms.TextBox();
             this.lb_Ten = new System.Windows.Forms.Label();
             this.dgvHienThi = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.bntThanhToan = new System.Windows.Forms.Button();
-            this.btnTroLai = new System.Windows.Forms.Button();
             this.txtTong = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pbXacNhan = new System.Windows.Forms.PictureBox();
+            this.pbTroVe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHienThi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbXacNhan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,11 +76,11 @@
             // lb_Ten
             // 
             this.lb_Ten.AutoSize = true;
-            this.lb_Ten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb_Ten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lb_Ten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lb_Ten.Location = new System.Drawing.Point(529, 15);
             this.lb_Ten.Name = "lb_Ten";
-            this.lb_Ten.Size = new System.Drawing.Size(43, 20);
+            this.lb_Ten.Size = new System.Drawing.Size(45, 20);
             this.lb_Ten.TabIndex = 3;
             this.lb_Ten.Text = "TÊN";
             // 
@@ -92,36 +95,13 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(328, 62);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 25);
+            this.label4.Size = new System.Drawing.Size(147, 22);
             this.label4.TabIndex = 5;
             this.label4.Text = "BẢNG DỊCH VỤ";
-            // 
-            // bntThanhToan
-            // 
-            this.bntThanhToan.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.bntThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bntThanhToan.Location = new System.Drawing.Point(666, 416);
-            this.bntThanhToan.Name = "bntThanhToan";
-            this.bntThanhToan.Size = new System.Drawing.Size(122, 39);
-            this.bntThanhToan.TabIndex = 6;
-            this.bntThanhToan.Text = "Thanh Toán";
-            this.bntThanhToan.UseVisualStyleBackColor = false;
-            this.bntThanhToan.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnTroLai
-            // 
-            this.btnTroLai.BackColor = System.Drawing.Color.PeachPuff;
-            this.btnTroLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnTroLai.Location = new System.Drawing.Point(12, 416);
-            this.btnTroLai.Name = "btnTroLai";
-            this.btnTroLai.Size = new System.Drawing.Size(118, 39);
-            this.btnTroLai.TabIndex = 7;
-            this.btnTroLai.Text = "Trở lại";
-            this.btnTroLai.UseVisualStyleBackColor = false;
-            this.btnTroLai.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtTong
             // 
@@ -136,12 +116,34 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(487, 376);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(481, 376);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 18);
+            this.label5.Size = new System.Drawing.Size(88, 18);
             this.label5.TabIndex = 9;
             this.label5.Text = "Tổng cộng";
+            // 
+            // pbXacNhan
+            // 
+            this.pbXacNhan.Image = ((System.Drawing.Image)(resources.GetObject("pbXacNhan.Image")));
+            this.pbXacNhan.Location = new System.Drawing.Point(673, 401);
+            this.pbXacNhan.Name = "pbXacNhan";
+            this.pbXacNhan.Size = new System.Drawing.Size(68, 48);
+            this.pbXacNhan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbXacNhan.TabIndex = 36;
+            this.pbXacNhan.TabStop = false;
+            this.pbXacNhan.Click += new System.EventHandler(this.pbXacNhan_Click);
+            // 
+            // pbTroVe
+            // 
+            this.pbTroVe.Image = ((System.Drawing.Image)(resources.GetObject("pbTroVe.Image")));
+            this.pbTroVe.Location = new System.Drawing.Point(49, 401);
+            this.pbTroVe.Name = "pbTroVe";
+            this.pbTroVe.Size = new System.Drawing.Size(68, 48);
+            this.pbTroVe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTroVe.TabIndex = 35;
+            this.pbTroVe.TabStop = false;
+            this.pbTroVe.Click += new System.EventHandler(this.pbTroVe_Click);
             // 
             // ThanhToan
             // 
@@ -149,10 +151,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(800, 461);
+            this.ControlBox = false;
+            this.Controls.Add(this.pbXacNhan);
+            this.Controls.Add(this.pbTroVe);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTong);
-            this.Controls.Add(this.btnTroLai);
-            this.Controls.Add(this.bntThanhToan);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgvHienThi);
             this.Controls.Add(this.lb_Ten);
@@ -160,9 +163,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ThanhToan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThanhToan";
             this.Load += new System.EventHandler(this.ThanhToan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHienThi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbXacNhan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,9 +182,9 @@
         private System.Windows.Forms.Label lb_Ten;
         private System.Windows.Forms.DataGridView dgvHienThi;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button bntThanhToan;
-        private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.TextBox txtTong;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pbXacNhan;
+        private System.Windows.Forms.PictureBox pbTroVe;
     }
 }

@@ -62,3 +62,43 @@ C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.YeuCau.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.YeuCauKhachHang.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DapUngYeuCau.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\bin\Debug\QL_KhachSan.exe.config
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\bin\Debug\QL_KhachSan.exe
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\bin\Debug\QL_KhachSan.pdb
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\bin\Debug\DataAccessLayer.dll
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\bin\Debug\DataAccessLayer.pdb
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.csprojAssemblyReference.cache
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DapUngYeuCau.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DatPhongNhanh.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BS_layer.giuongdon2nguoi.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DangKi.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DangNhap.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DangNhapNhanVien.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DatPhong.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DoiMatKhau.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DoiPhong.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.FreeRoom.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.GiaoDienKhachHang.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.GiaoDienQuanLi.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.giuongdoi2nguoi.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.giuongdoi4nguoi.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.giuongdoi6nguoi.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.giuongdon4nguoi.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.MatKhau.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.PhongCuaKhach.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.Properties.Resources.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.QuanLiPhong.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.QuanLyTaiKhoan.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.QuenMatKhau.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.SoLuong.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.ThanhToan.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.TuyChonPhong.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.XacNhan.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.YeuCau.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.YeuCauKhachHang.resources
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.csproj.GenerateResource.cache
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.csproj.CoreCompileInputs.cache
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.csproj.CopyComplete
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.exe
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.pdb
+D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.HoTroKhachHang.resources

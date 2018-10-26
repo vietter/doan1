@@ -64,8 +64,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.DeepPink;
-            this.label1.Location = new System.Drawing.Point(643, 58);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(629, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 24);
@@ -132,11 +132,15 @@
             // 
             // btnDatPhong
             // 
-            this.btnDatPhong.Location = new System.Drawing.Point(1283, 59);
+            this.btnDatPhong.BackColor = System.Drawing.Color.Crimson;
+            this.btnDatPhong.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDatPhong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDatPhong.Location = new System.Drawing.Point(1283, 48);
             this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Size = new System.Drawing.Size(75, 23);
+            this.btnDatPhong.Size = new System.Drawing.Size(75, 34);
             this.btnDatPhong.TabIndex = 25;
-            this.btnDatPhong.Text = "trở lại";
+            this.btnDatPhong.Text = "Trở Về";
+            this.btnDatPhong.UseVisualStyleBackColor = false;
             this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click_1);
             // 
             // pTimKiem
@@ -152,7 +156,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Goldenrod;
+            this.groupBox1.BackColor = System.Drawing.Color.LightBlue;
             this.groupBox1.Controls.Add(this.cbb_SoNguoi);
             this.groupBox1.Controls.Add(this.pTimKiem);
             this.groupBox1.Controls.Add(this.label5);
@@ -161,6 +165,7 @@
             this.groupBox1.Controls.Add(this.cbbDiaChi);
             this.groupBox1.Controls.Add(this.dtpNgayDat);
             this.groupBox1.Controls.Add(this.dtpNgayTra);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.Location = new System.Drawing.Point(12, 88);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(213, 340);
@@ -207,7 +212,8 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(960, 24);
+            this.label18.ForeColor = System.Drawing.Color.Crimson;
+            this.label18.Location = new System.Drawing.Point(960, 33);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(55, 18);
             this.label18.TabIndex = 38;
@@ -216,7 +222,8 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(339, 24);
+            this.label17.ForeColor = System.Drawing.Color.Crimson;
+            this.label17.Location = new System.Drawing.Point(339, 33);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(55, 18);
             this.label17.TabIndex = 37;
@@ -225,7 +232,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1044, 38);
+            this.pictureBox3.Location = new System.Drawing.Point(1044, 47);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -236,7 +243,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(917, 42);
+            this.label16.Location = new System.Drawing.Point(917, 51);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(127, 15);
             this.label16.TabIndex = 35;
@@ -246,7 +253,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(319, 42);
+            this.label15.Location = new System.Drawing.Point(319, 51);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(84, 15);
             this.label15.TabIndex = 32;
@@ -255,7 +262,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(399, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(399, 47);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,7 +271,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(430, 47);
+            this.textBox1.Location = new System.Drawing.Point(430, 56);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -280,6 +287,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 40;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // tàiKhoảnToolStripMenuItem
             // 
@@ -287,28 +295,30 @@
             this.đăngNhậpToolStripMenuItem,
             this.đăngKíToolStripMenuItem,
             this.thoátToolStripMenuItem});
+            this.tàiKhoảnToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // đăngNhậpToolStripMenuItem
             // 
             this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.đăngNhậpToolStripMenuItem.Text = "Đăng nhập";
             this.đăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
             // 
             // đăngKíToolStripMenuItem
             // 
             this.đăngKíToolStripMenuItem.Name = "đăngKíToolStripMenuItem";
-            this.đăngKíToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.đăngKíToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.đăngKíToolStripMenuItem.Text = "Đăng kí";
             this.đăngKíToolStripMenuItem.Click += new System.EventHandler(this.đăngKíToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
+            this.thoátToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 

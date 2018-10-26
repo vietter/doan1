@@ -37,7 +37,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pHoTro = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnTrolai = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.pl_phong = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pQuanLiTK)).BeginInit();
@@ -61,7 +60,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.DeepPink;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(12, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 20);
@@ -83,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.DeepPink;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(200, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 20);
@@ -103,14 +102,14 @@
             this.gbKhachHang.Size = new System.Drawing.Size(808, 129);
             this.gbKhachHang.TabIndex = 5;
             this.gbKhachHang.TabStop = false;
-            this.gbKhachHang.Text = "Khách Hàng";
+            this.gbKhachHang.Text = "Lựa Chọn Cho Khách Hàng";
             this.gbKhachHang.Enter += new System.EventHandler(this.gbKhachHang_Enter);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.DeepPink;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(733, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 20);
@@ -139,18 +138,6 @@
             this.label3.Text = "Thành tiền:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // btnTrolai
-            // 
-            this.btnTrolai.BackColor = System.Drawing.Color.PeachPuff;
-            this.btnTrolai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnTrolai.Location = new System.Drawing.Point(7, 513);
-            this.btnTrolai.Name = "btnTrolai";
-            this.btnTrolai.Size = new System.Drawing.Size(93, 30);
-            this.btnTrolai.TabIndex = 6;
-            this.btnTrolai.Text = "Trở lại";
-            this.btnTrolai.UseVisualStyleBackColor = false;
-            this.btnTrolai.Click += new System.EventHandler(this.btnTrolai_Click);
-            // 
             // txtTongTien
             // 
             this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -166,7 +153,7 @@
             // 
             this.pl_phong.Location = new System.Drawing.Point(7, 137);
             this.pl_phong.Name = "pl_phong";
-            this.pl_phong.Size = new System.Drawing.Size(808, 370);
+            this.pl_phong.Size = new System.Drawing.Size(808, 372);
             this.pl_phong.TabIndex = 8;
             // 
             // GiaoDienKhachHang
@@ -178,7 +165,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.pl_phong);
             this.Controls.Add(this.txtTongTien);
-            this.Controls.Add(this.btnTrolai);
             this.Controls.Add(this.gbKhachHang);
             this.Controls.Add(this.label3);
             this.Name = "GiaoDienKhachHang";
@@ -206,7 +192,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pHoTro;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnTrolai;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Panel pl_phong;
     }

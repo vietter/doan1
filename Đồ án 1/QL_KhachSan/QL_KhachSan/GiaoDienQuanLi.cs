@@ -157,5 +157,15 @@ namespace QL_KhachSan
             yeucau.ShowDialog();
             this.Close();
         }
+
+        private void điềuChỉnhFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbTenChiNhanh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -85,20 +85,7 @@ namespace QL_KhachSan
             InitializeComponent();
         }
 
-        private void btnTrolai_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            TuyChonPhong tuychon = new TuyChonPhong();
-            tuychon.MAHD = mahd;
-            tuychon.MACHINHANH = machinhanh;
-            tuychon.TENPHONG = tenphong;
-            tuychon.MAPHONG = maphong;
-            tuychon.MANV = manv;
-            tuychon.TENCHINHANH = tenchinhanh;
-            tuychon.TENNV = tennv;
-            tuychon.ShowDialog();
-            this.Close();
-        }
+       
 
         private void load()
         {
@@ -170,6 +157,21 @@ namespace QL_KhachSan
         private void gbDSPhongTrong_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void pbTroVe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TuyChonPhong tuychon = new TuyChonPhong();
+            tuychon.MAHD = mahd;
+            tuychon.MACHINHANH = machinhanh;
+            tuychon.TENPHONG = tenphong;
+            tuychon.MAPHONG = maphong;
+            tuychon.MANV = manv;
+            tuychon.TENCHINHANH = tenchinhanh;
+            tuychon.TENNV = tennv;
+            tuychon.ShowDialog();
+            this.Close();
         }
     }
 }

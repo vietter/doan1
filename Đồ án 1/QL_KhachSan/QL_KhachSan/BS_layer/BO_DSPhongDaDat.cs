@@ -13,7 +13,7 @@ namespace QL_KhachSan.BS_layer
         public DataSet TongTien(DTO_HoaDon hoadon)
         {
             DataSet result = new DataSet();
-            string sql = "SELECT ThanhTien FROM HoaDon WHERE SoDienThoai = @SDT";
+            string sql = "SELECT ThanhTien FROM HoaDon WHERE SoDienThoai = @SDT AND DapUng != 'Done'";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@SDT",hoadon.SoDienThoai),

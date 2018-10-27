@@ -275,10 +275,10 @@ namespace QL_KhachSan
         
         private void timer1_Tick(object sender, EventArgs e)
         {
-            /*foreach(YeuCau i in danhsach)
-             {
-                 i.Refresh();
-             }*/
+            //foreach(YeuCau i in danhsach)
+            // {
+            //     i.Refresh();
+            // }
             this.Refresh();
         }
 

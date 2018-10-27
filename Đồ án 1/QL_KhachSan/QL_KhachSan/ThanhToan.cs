@@ -158,6 +158,7 @@ namespace QL_KhachSan
             hoadon.ThanhTien = total;
             hoadon.MaPhong = maphong;
             hoadon.MaChiNhanh = machinhanh;
+            hoadon.MaHD = mahd;
             int result = giaiphongphong.HuyPhong(hoadon);
             if (result != -1)
             {
@@ -167,16 +168,26 @@ namespace QL_KhachSan
                 hoadon1.SoDienThoai = sdt;
                 hoadon1.ThanhTien = total;
                 BO_QuanLiChiNhanh quanli1 = new BO_QuanLiChiNhanh();
+                
                 int KQ = quanli1.TichLuyDiem(hoadon1);
-                if (result != -1)
+                if (KQ != -1)
                 {
-                    GiaoDienQuanLi quanli = new GiaoDienQuanLi();
-                    quanli.MANV = manv;
-                    quanli.MACHINHANH = machinhanh;
-                    quanli.TENCHINHANH = tenchinhanh;
-                    quanli.TENNV = tennv;
-                    quanli.ShowDialog();
-                    this.Close();
+
+                    int table = quanli1.SetHoaDon(hoadon);
+                    if (table != -1)
+                    {
+                        GiaoDienQuanLi quanli = new GiaoDienQuanLi();
+                        quanli.MANV = manv;
+                        quanli.MACHINHANH = machinhanh;
+                        quanli.TENCHINHANH = tenchinhanh;
+                        quanli.TENNV = tennv;
+                        quanli.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lỗi khi set Hóa đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {

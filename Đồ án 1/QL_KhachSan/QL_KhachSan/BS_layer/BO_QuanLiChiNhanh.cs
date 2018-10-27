@@ -22,6 +22,19 @@ namespace QL_KhachSan.BS_layer
             result = data.getdataset(sql, para);
             return result;
         }
+        public int SetHoaDon(DTO_HoaDon dto)
+        {
+
+            int result = -1;
+            string sql = "UPDATE HoaDon SET DapUng = 'Done' WHERE MaHD = @MaHD";
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@MaHD",dto.MaHD),
+            };
+            DataAccess data = new DataAccess();
+            result = data.Execute(sql, para);
+            return result;
+        }
        public DataSet HienThiYeuCau (DTO_HoaDon dto)
         {
             DataSet result = new DataSet();

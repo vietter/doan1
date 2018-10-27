@@ -193,8 +193,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TI_THUEOTO";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 500000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -275,8 +275,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_SUA";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 40000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -297,8 +297,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_NUOC";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 10000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -324,8 +324,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_COCA";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 15000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -346,8 +346,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_PEPSI";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 15000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -368,8 +368,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_NUOCCAM";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 35000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -390,8 +390,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_MONSTER";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 50000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -412,8 +412,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TI_SUACHUA";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = 0;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -434,8 +434,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TI_THUEXEMAY";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 200000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -456,8 +456,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TI_DONPHONG";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 50000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -487,8 +487,8 @@ namespace QL_KhachSan
             number.soluong(ref soluong);
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 100000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -509,8 +509,9 @@ namespace QL_KhachSan
             dichvu.MaDV = "DVP_BCS";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 45000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -535,8 +536,8 @@ namespace QL_KhachSan
             number.soluong(ref soluong);
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 50000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -562,8 +563,8 @@ namespace QL_KhachSan
             number.soluong(ref soluong);
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 150000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -589,8 +590,8 @@ namespace QL_KhachSan
             number.soluong(ref soluong);
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 70000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -647,8 +648,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TA_PHOBO";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 45000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -669,8 +670,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TA_GAQUAY";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 350000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -691,8 +692,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TA_HAMBURGER";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 35000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -713,8 +714,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TA_PIZZAHS";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 268000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -735,8 +736,8 @@ namespace QL_KhachSan
             dichvu.MaDV = "TA_BANHMI";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 20000;
-            dichvu.NgayDatPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayDatPhong"].Value.ToString());
-            dichvu.NgayTraPhong = Convert.ToDateTime(dgvHienThi.Rows[DongCuoi].Cells["NgayTraPhong"].Value.ToString());
+            dichvu.NgayDatPhong = DateTime.Now;
+            dichvu.NgayTraPhong = DateTime.Now;
             dichvu.DapUng = "No";
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
@@ -750,27 +751,50 @@ namespace QL_KhachSan
 
         public void pictureBox5_Click(object sender, EventArgs e)
         {
-            if (dgvHienThi.CurrentRow.Cells["STT"].Value.ToString() == "1")
+            if (options == "TuyChon")
             {
-                MessageBox.Show("Bạn không thể xóa dịch vụ THUÊ PHÒNG được", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                if(dgvHienThi.CurrentRow.Cells["DapUng"].Value.ToString() == "Yes")
+                if (dgvHienThi.CurrentRow.Cells["STT"].Value.ToString() == "1")
                 {
-                    MessageBox.Show("Chúng tôi đã thực hiện xong yêu cầu của bạn nên bạn không thể xóa được yêu cầu này", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bạn không thể xóa dịch vụ THUÊ PHÒNG được", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    int STT = int.Parse(dgvHienThi.CurrentRow.Cells["STT"].Value.ToString());
-                    DTO_HoaDon hoadon = new DTO_HoaDon();
-                    hoadon.MaHD = mahd;
-                    hoadon.STT = STT;
-                    BO_ChiTietPhong xoadv = new BO_ChiTietPhong();
-                    xoadv.XoaDV(hoadon);
-                    HienThi();
+                    if (dgvHienThi.CurrentRow.Cells["DapUng"].Value.ToString() == "Yes")
+                    {
+                        MessageBox.Show("Chúng tôi đã thực hiện xong yêu cầu của bạn nên bạn không thể xóa được yêu cầu này", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        int STT = int.Parse(dgvHienThi.CurrentRow.Cells["STT"].Value.ToString());
+                        DTO_HoaDon hoadon = new DTO_HoaDon();
+                        hoadon.MaHD = mahd;
+                        hoadon.STT = STT;
+                        BO_ChiTietPhong xoadv = new BO_ChiTietPhong();
+                        xoadv.XoaDV(hoadon);
+                        HienThi();
+                    }
+
                 }
-               
+            }
+            else
+            {
+                if (dgvHienThi.CurrentRow.Cells["STT"].Value.ToString() == "1")
+                {
+                    MessageBox.Show("Bạn không thể xóa dịch vụ THUÊ PHÒNG được", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                   
+                        int STT = int.Parse(dgvHienThi.CurrentRow.Cells["STT"].Value.ToString());
+                        DTO_HoaDon hoadon = new DTO_HoaDon();
+                        hoadon.MaHD = mahd;
+                        hoadon.STT = STT;
+                        BO_ChiTietPhong xoadv = new BO_ChiTietPhong();
+                        xoadv.XoaDV(hoadon);
+                        HienThi();
+                    
+
+                }
             }
         }
 

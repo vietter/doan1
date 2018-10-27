@@ -88,7 +88,17 @@ namespace QL_KhachSan
                 maphong = value;
             }
         }
+        private DateTime thoigian;
+        public DateTime THOIGIAN
+        {
+            set
+            {
+                thoigian = value;
+            }
+        }
+
         private string machinhanh;
+
         public string MACHINHANH
         {
             set
@@ -129,7 +139,18 @@ namespace QL_KhachSan
 
         private void YeuCau_Load(object sender, EventArgs e)
         {
+            
+            
+        }
+
+        private void YeuCau_Paint(object sender, PaintEventArgs e)
+        {
             label.Text = maphong + "-" + tenphong;
+            TimeSpan ts = new TimeSpan();
+            ts = DateTime.Now - thoigian;
+
+            lb_ThoiGian.Text = ts.Hours.ToString() + " Giờ " + ts.Minutes.ToString() + " Phút " + ts.Seconds.ToString() + " Giây "  ;
+           
         }
     }
 }

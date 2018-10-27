@@ -41,6 +41,14 @@ namespace QL_KhachSan
             rtbHuyPhong.Visible = false;
             rtbMatKhau.Visible = false;
             rtbThongTin.Visible = false;
+            rtbDoiPhong.Visible = false;
+            rtbDoiPhong.ReadOnly = true;
+            rtbDangXuat.ReadOnly = true;
+            rtbDatPhong.ReadOnly = true;
+            rtbHuyPhong.ReadOnly = true;
+            rtbMatKhau.ReadOnly = true;
+            rtbThongTin.ReadOnly = true;
+            
 
 
         }
@@ -79,16 +87,17 @@ namespace QL_KhachSan
 
         private void cmbLuaChon_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbLuaChon.Text.Equals("Hủy Phòng"))
+            if (cbbLuaChon.Text.Equals("Hủy Phòng"))
             {
-
+                
                 rtbDangXuat.Visible = false;
                 rtbDatPhong.Visible = false;
                 rtbHuyPhong.Visible = true;
                 rtbMatKhau.Visible = false;
                 rtbThongTin.Visible = false;
+                rtbDoiPhong.Visible = false;
             }
-            else if (cmbLuaChon.Text == "Đổi Mật Khẩu")
+            else if (cbbLuaChon.Text == "Đổi Mật Khẩu")
             {
 
                 rtbDangXuat.Visible = false;
@@ -96,8 +105,9 @@ namespace QL_KhachSan
                 rtbHuyPhong.Visible = false;
                 rtbMatKhau.Visible = true;
                 rtbThongTin.Visible = false;
+                rtbDoiPhong.Visible = false;
             }
-            else  if (cmbLuaChon.Text.Equals("Đăng Xuất"))
+            else  if (cbbLuaChon.Text.Equals("Đăng Xuất"))
                 {
 
                     rtbDangXuat.Visible = true;
@@ -105,8 +115,9 @@ namespace QL_KhachSan
                     rtbHuyPhong.Visible = false;
                     rtbMatKhau.Visible = false;
                     rtbThongTin.Visible = false;
+                rtbDoiPhong.Visible = false;
             }
-            else if (cmbLuaChon.Text.Equals("Đặt Phòng"))
+            else if (cbbLuaChon.Text.Equals("Đặt Phòng"))
             {
 
                 rtbDangXuat.Visible = false;
@@ -114,8 +125,9 @@ namespace QL_KhachSan
                 rtbHuyPhong.Visible = false;
                 rtbMatKhau.Visible = false;
                 rtbThongTin.Visible = false;
+                rtbDoiPhong.Visible = false;
             }
-            else if (cmbLuaChon.Text.Equals("Thông Tin Phòng Đã Đặt"))
+            else if (cbbLuaChon.Text.Equals("Thông Tin Phòng Đã Đặt"))
             {
 
                 rtbDangXuat.Visible = false;
@@ -123,6 +135,16 @@ namespace QL_KhachSan
                 rtbHuyPhong.Visible = false;
                 rtbMatKhau.Visible = false;
                 rtbThongTin.Visible = true;
+                rtbDoiPhong.Visible = false;
+            }
+            else
+            {
+                rtbDangXuat.Visible = false;
+                rtbDatPhong.Visible = false;
+                rtbHuyPhong.Visible = false;
+                rtbMatKhau.Visible = false;
+                rtbThongTin.Visible = false;
+                rtbDoiPhong.Visible = true;
             }
         }
     }

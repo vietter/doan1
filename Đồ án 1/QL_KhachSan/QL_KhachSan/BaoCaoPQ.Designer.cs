@@ -1252,7 +1252,7 @@ SELECT TenDichVu, SoLuong, ThanhTien, MaHD, STT, MaChiNhanh, MaPhong, SoDienThoa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QL_KhachSan.Properties.Settings.Default.TheNewStarHotel_DBConnectionString1;
+            this._connection.ConnectionString = global::QL_KhachSan.Properties.Settings.Default.TheNewStarHotel_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1262,8 +1262,8 @@ SELECT TenDichVu, SoLuong, ThanhTien, MaHD, STT, MaChiNhanh, MaPhong, SoDienThoa
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT TenDichVu, SoLuong, ThanhTien, MaHD, STT, MaChiNhanh, MaPhong, SoDienThoai" +
-                ", NgayDatPhong, NgayTraPhong, MaDV, DapUng FROM dbo.HoaDon\r\nwhere MaChiNhanh=\'PQ" +
-                "_TNS5\'";
+                ", NgayDatPhong, NgayTraPhong, MaDV, DapUng FROM dbo.HoaDon\r\nWHERE MaChiNhanh = \'" +
+                "PQ_TNS5\'";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

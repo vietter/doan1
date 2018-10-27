@@ -287,3 +287,7 @@ D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSa
 D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BaoCaoHoChiMinh.resources
 D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BaoCaoNhaTrang.resources
 D:\New folder (2)\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BaoCaoPhuQuoc.resources
+C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BaoCaoDaNang.resources
+C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BaoCaoHoChiMinh.resources
+C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BaoCaoNhaTrang.resources
+C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BaoCaoPhuQuoc.resources

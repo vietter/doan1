@@ -14,7 +14,7 @@ namespace QL_KhachSan.BS_layer
         {
             int result = -1;
             string sql = @"IF EXISTS (SELECT * FROM dbo.KhachHang WHERE SoDienThoai=@SDT AND MatKhau='')
-                      UPDATE dbo.KhachHang SET MatKhau=@MatKhau, TenKhachHang=@TenKH, TichLuy=@TichLuy, CMND=@CMND, CauHoiBaoMat=@CauHoiBaoMat, TraLoi=@TraLoi WHERE SoDienThoai=@SDT
+                      UPDATE dbo.KhachHang SET MatKhau=@MatKhau, TenKhachHang=@TenKH, CMND=@CMND, CauHoiBaoMat=@CauHoiBaoMat, TraLoi=@TraLoi WHERE SoDienThoai=@SDT
                              ELSE  INSERT INTO KhachHang VALUES (@SDT,@TenKH,@TichLuy,@MatKhau,@CMND,@CauHoiBaoMat,@TraLoi)";
             SqlParameter[] para = new SqlParameter[]
             {

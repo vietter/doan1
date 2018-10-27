@@ -31,7 +31,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Ten Dich Vu</Value>
+                              <Value>Tên Dịch Vụ</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -68,7 +68,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>So Luong</Value>
+                              <Value>Số Lượng</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -105,7 +105,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Thanh Tien</Value>
+                              <Value>Thành Tiền</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -142,7 +142,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>So Dien Thoai</Value>
+                              <Value>Số điện thoại</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -429,7 +429,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!SoDienThoai.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -621,7 +621,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Ma HD</Value>
+                            <Value>Mã Hóa Đơn</Value>
                             <Style>
                               <FontSize>11pt</FontSize>
                               <FontWeight>Bold</FontWeight>
@@ -724,7 +724,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Total</Value>
+                            <Value>Tổng</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                               <Color>#333333</Color>

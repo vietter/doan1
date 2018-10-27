@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YeuCauKhachHang));
             this.pl_YeuCau = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_TenChiNhanh = new System.Windows.Forms.Label();
             this.pbTroVe = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,9 +43,9 @@
             // 
             this.pl_YeuCau.Location = new System.Drawing.Point(10, 94);
             this.pl_YeuCau.Name = "pl_YeuCau";
-            this.pl_YeuCau.Size = new System.Drawing.Size(808, 352);
+            this.pl_YeuCau.Size = new System.Drawing.Size(841, 352);
             this.pl_YeuCau.TabIndex = 0;
-            this.pl_YeuCau.Paint += new System.Windows.Forms.PaintEventHandler(this.pl_YeuCau_Paint);
+            
             // 
             // label1
             // 
@@ -89,12 +91,18 @@
             this.pbTroVe.TabStop = false;
             this.pbTroVe.Click += new System.EventHandler(this.pbTroVe_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // YeuCauKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(828, 450);
+            this.ClientSize = new System.Drawing.Size(863, 450);
             this.ControlBox = false;
             this.Controls.Add(this.pbTroVe);
             this.Controls.Add(this.lb_TenChiNhanh);
@@ -118,5 +126,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_TenChiNhanh;
         private System.Windows.Forms.PictureBox pbTroVe;
+        private System.Windows.Forms.Timer timer1;
     }
 }

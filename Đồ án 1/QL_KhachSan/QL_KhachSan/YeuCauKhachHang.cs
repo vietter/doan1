@@ -90,10 +90,13 @@ namespace QL_KhachSan
             pl_YeuCau.HorizontalScroll.Maximum = 0;
             pl_YeuCau.AutoScroll = true;
         }
+        private List<YeuCau> danhsach = new List<YeuCau>();
 
         private void YeuCauKhachHang_Load(object sender, EventArgs e)
         {
             load();
+            timer1.Interval = 1000;
+            timer1.Start();
         }
         private void load()
         {
@@ -125,6 +128,7 @@ namespace QL_KhachSan
                         request.TENDV = result.Tables[0].Rows[i][0].ToString();
                         request.SOLUONG = result.Tables[0].Rows[i][1].ToString();
                         request.TENNV = tennv;
+                        request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][8].ToString());
                         request.MAHD = result.Tables[0].Rows[i][3].ToString();
                         request.MANV = manv;
                         request.STT = int.Parse(result.Tables[0].Rows[i][4].ToString());
@@ -133,6 +137,7 @@ namespace QL_KhachSan
                         vitridau.Y = 150;
                         request.Location = vitridau;
                         vitridau.X += 165;
+                        danhsach.Add(request);
                     }
                     else
                     {
@@ -149,6 +154,7 @@ namespace QL_KhachSan
                             request.TENCHINHANH = tenchinhanh;
                             request.MAHD = result.Tables[0].Rows[i][3].ToString();
                             request.MACHINHANH = machinhanh;
+                            request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][8].ToString());
                             request.TENDV = result.Tables[0].Rows[i][0].ToString();
                             request.STT = int.Parse(result.Tables[0].Rows[i][4].ToString());
                             request.SOLUONG = result.Tables[0].Rows[i][1].ToString();
@@ -159,6 +165,7 @@ namespace QL_KhachSan
                             vitridau.Y = 280;
                             request.Location = vitridau;
                             vitridau.X += 165;
+                            danhsach.Add(request);
                         }
                         else
                         {
@@ -175,6 +182,7 @@ namespace QL_KhachSan
                                     request.TENPHONG = table.Tables[0].Rows[0][2].ToString();
                                     request.MAHD = result.Tables[0].Rows[i][3].ToString();
                                     request.TENCHINHANH = tenchinhanh;
+                                    request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][8].ToString());
                                     request.MACHINHANH = machinhanh;
                                     request.TENDV = result.Tables[0].Rows[i][0].ToString();
                                     request.STT = int.Parse(result.Tables[0].Rows[i][4].ToString());
@@ -186,7 +194,8 @@ namespace QL_KhachSan
                                     vitridau.Y = 410;
                                     request.Location = vitridau;
                                     vitridau.X += 165;
-                                }
+                                    danhsach.Add(request);
+                            }
                                 else
                             {
                                 if(i == 20)
@@ -200,6 +209,7 @@ namespace QL_KhachSan
                                     DataSet table = quanli.LayTenPhong(phong);
                                     request.TENPHONG = table.Tables[0].Rows[0][2].ToString();
                                     request.TENCHINHANH = tenchinhanh;
+                                    request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][8].ToString());
                                     request.TENDV = result.Tables[0].Rows[i][0].ToString();
                                     request.MAHD = result.Tables[0].Rows[i][3].ToString();
                                     request.SOLUONG = result.Tables[0].Rows[i][1].ToString();
@@ -212,6 +222,7 @@ namespace QL_KhachSan
                                     vitridau.Y = 540;
                                     request.Location = vitridau;
                                     vitridau.X += 165;
+                                    danhsach.Add(request);
                                 }
 
                                 else
@@ -225,6 +236,7 @@ namespace QL_KhachSan
                                     DataSet table = quanli.LayTenPhong(phong);
                                     request.TENPHONG = table.Tables[0].Rows[0][2].ToString();
                                     request.TENCHINHANH = tenchinhanh;
+                                    request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][8].ToString());
                                     request.TENDV = result.Tables[0].Rows[i][0].ToString();
                                     request.MAHD = result.Tables[0].Rows[i][3].ToString();
                                     request.STT = int.Parse(result.Tables[0].Rows[i][4].ToString());
@@ -235,6 +247,7 @@ namespace QL_KhachSan
                                     pl_YeuCau.Controls.Add(request);
                                     request.Location = vitridau;
                                     vitridau.X += 165;
+                                    danhsach.Add(request);
                                 }
                             }
                             
@@ -243,12 +256,10 @@ namespace QL_KhachSan
                 }
 
             }
+            
         }
 
-        private void pl_YeuCau_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void pbTroVe_Click(object sender, EventArgs e)
         {
@@ -261,5 +272,16 @@ namespace QL_KhachSan
             giaoDienQuanLi.ShowDialog();
             this.Close();
         }
+        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            /*foreach(YeuCau i in danhsach)
+             {
+                 i.Refresh();
+             }*/
+            this.Refresh();
+        }
+
+       
     }
 }

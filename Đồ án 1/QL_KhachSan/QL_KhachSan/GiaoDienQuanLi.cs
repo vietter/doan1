@@ -64,6 +64,9 @@ namespace QL_KhachSan
         private void GiaoDienQuanLi_Load(object sender, EventArgs e)
         {
             load();
+            timer1.Interval = 1000;
+            timer1.Start();
+           
         }
 
         private void load()
@@ -75,7 +78,7 @@ namespace QL_KhachSan
             BO_QuanLiChiNhanh quanli = new BO_QuanLiChiNhanh();
             DataSet table = new DataSet();
             table = quanli.HienThiDSPhongDaDatCuaKhachHang(phong);
-            if (table.Tables.Count >0 && table.Tables[0].Rows.Count >0)
+            if (table.Tables.Count > 0 && table.Tables[0].Rows.Count > 0)
             {
                 Point vitridau = new Point(20, 20);
                 for (int i = 0; i < table.Tables[0].Rows.Count; i++)
@@ -128,7 +131,7 @@ namespace QL_KhachSan
                     }
                 }
             }
-           
+
 
 
         }
@@ -160,7 +163,7 @@ namespace QL_KhachSan
 
         private void điềuChỉnhFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void lbTenChiNhanh_Click(object sender, EventArgs e)
@@ -170,7 +173,13 @@ namespace QL_KhachSan
 
         private void theoNgàyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(manv=="210398")
+
+
+        }
+
+        private void tổngDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (manv == "210398")
             {
                 this.Hide();
                 BaoCaoDaLat baoCaoDaLat = new BaoCaoDaLat();
@@ -178,7 +187,7 @@ namespace QL_KhachSan
                 baoCaoDaLat.TENCHINHANH = tenchinhanh;
                 baoCaoDaLat.TENNV = tenchinhanh;
                 baoCaoDaLat.MACHINHANH = machinhanh;
-                baoCaoDaLat.OPTIONS = options;
+
                 baoCaoDaLat.ShowDialog();
                 this.Close();
 
@@ -191,7 +200,7 @@ namespace QL_KhachSan
                 baoCaoDaNang.TENCHINHANH = tenchinhanh;
                 baoCaoDaNang.TENNV = tenchinhanh;
                 baoCaoDaNang.MACHINHANH = machinhanh;
-                baoCaoDaNang.OPTIONS = options;
+
                 baoCaoDaNang.ShowDialog();
                 this.Close();
 
@@ -204,7 +213,7 @@ namespace QL_KhachSan
                 baoCaoHoChiMinh.TENCHINHANH = tenchinhanh;
                 baoCaoHoChiMinh.TENNV = tenchinhanh;
                 baoCaoHoChiMinh.MACHINHANH = machinhanh;
-                baoCaoHoChiMinh.OPTIONS = options;
+
                 baoCaoHoChiMinh.ShowDialog();
                 this.Close();
 
@@ -217,7 +226,7 @@ namespace QL_KhachSan
                 baoCaoNhaTrang.TENCHINHANH = tenchinhanh;
                 baoCaoNhaTrang.TENNV = tenchinhanh;
                 baoCaoNhaTrang.MACHINHANH = machinhanh;
-                baoCaoNhaTrang.OPTIONS = options;
+
                 baoCaoNhaTrang.ShowDialog();
                 this.Close();
 
@@ -230,11 +239,20 @@ namespace QL_KhachSan
                 baoCaoPhuQuoc.TENCHINHANH = tenchinhanh;
                 baoCaoPhuQuoc.TENNV = tenchinhanh;
                 baoCaoPhuQuoc.MACHINHANH = machinhanh;
-                baoCaoPhuQuoc.OPTIONS = options;
+
                 baoCaoPhuQuoc.ShowDialog();
                 this.Close();
-
             }
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Refresh();
         }
     }
 }

@@ -60,7 +60,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(12, 12);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(583, 256);
+            this.reportViewer1.Size = new System.Drawing.Size(635, 445);
             this.reportViewer1.TabIndex = 0;
             // 
             // HoaDonTableAdapter
@@ -70,7 +70,7 @@
             // pbTroVe
             // 
             this.pbTroVe.Image = ((System.Drawing.Image)(resources.GetObject("pbTroVe.Image")));
-            this.pbTroVe.Location = new System.Drawing.Point(601, 208);
+            this.pbTroVe.Location = new System.Drawing.Point(653, 12);
             this.pbTroVe.Name = "pbTroVe";
             this.pbTroVe.Size = new System.Drawing.Size(64, 60);
             this.pbTroVe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -82,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 280);
+            this.ClientSize = new System.Drawing.Size(721, 461);
             this.ControlBox = false;
             this.Controls.Add(this.pbTroVe);
             this.Controls.Add(this.reportViewer1);

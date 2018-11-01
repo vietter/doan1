@@ -102,7 +102,22 @@ namespace QL_KhachSan
             OPTIONS = "TuyChon";
             InitializeComponent();
         }
-
+        private string loaiphong;
+        private int songuoi;
+        public string LOAIPHONG
+        {
+            set
+            {
+                loaiphong = value;
+            }
+        }
+        public int SONGUOI
+        {
+            set
+            {
+                songuoi = value;
+            }
+        }
         public void label18_Click(object sender, EventArgs e)
         {
 
@@ -193,9 +208,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TI_THUEOTO";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 500000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -275,9 +292,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_SUA";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 40000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -297,9 +316,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_NUOC";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 10000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -324,9 +345,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_COCA";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 15000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -346,9 +369,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_PEPSI";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 15000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -368,9 +393,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_NUOCCAM";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 35000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -390,9 +417,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TU_MONSTER";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 50000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -412,9 +441,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TI_SUACHUA";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = 0;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -434,9 +465,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TI_THUEXEMAY";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 200000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -456,9 +489,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TI_DONPHONG";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 50000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -471,28 +506,38 @@ namespace QL_KhachSan
 
         public void pictureBox16_Click(object sender, EventArgs e)
         {
-            DTO_HoaDon dichvu = new DTO_HoaDon();
-            dichvu.TenDichVu = "Ghế Massage";
-            dichvu.MaHD = mahd;
-            dichvu.MaChiNhanh = machinhanh;
-            dichvu.MaPhong = maphong;
-            dichvu.SoDienThoai = sdt;
-            int DongCuoi = dgvHienThi.Rows.Count - 2;
-            int STT = int.Parse(dgvHienThi.Rows[DongCuoi].Cells["STT"].Value.ToString()) + 1;
-            dichvu.STT = STT;
-            dichvu.MaDV = "DVP_GHEMASSAGE";
             SoLuong number = new SoLuong();
             number.DonVi("Giờ");
             number.ShowDialog();
             number.soluong(ref soluong);
-            dichvu.SoLuong = soluong;
-            dichvu.ThanhTien = soluong * 100000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
-            dichvu.DapUng = "No";
-            BO_ChiTietPhong them = new BO_ChiTietPhong();
-            them.ThemDV(dichvu);
-            HienThi();
+            if(soluong == 0)
+            {
+
+            }
+            else
+            {
+                DTO_HoaDon dichvu = new DTO_HoaDon();
+                dichvu.TenDichVu = "Ghế Massage";
+                dichvu.MaHD = mahd;
+                dichvu.MaChiNhanh = machinhanh;
+                dichvu.MaPhong = maphong;
+                dichvu.SoDienThoai = sdt;
+                int DongCuoi = dgvHienThi.Rows.Count - 2;
+                int STT = int.Parse(dgvHienThi.Rows[DongCuoi].Cells["STT"].Value.ToString()) + 1;
+                dichvu.STT = STT;
+                dichvu.MaDV = "DVP_GHEMASSAGE";
+                dichvu.SoLuong = soluong;
+                dichvu.ThanhTien = soluong * 100000;
+                dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+                dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
+                dichvu.DapUng = "No";
+                dichvu.DatCoc = "Yes";
+                dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
+                BO_ChiTietPhong them = new BO_ChiTietPhong();
+                them.ThemDV(dichvu);
+                HienThi();
+            }
+            
         }
 
         public void pictureBox18_Click(object sender, EventArgs e)
@@ -509,10 +554,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "DVP_BCS";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 45000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon =DateTime.Now ;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -520,83 +566,109 @@ namespace QL_KhachSan
 
         public void pictureBox17_Click(object sender, EventArgs e)
         {
-            DTO_HoaDon dichvu = new DTO_HoaDon();
-            dichvu.TenDichVu = "Ipad";
-            dichvu.MaHD = mahd;
-            dichvu.MaChiNhanh = machinhanh;
-            dichvu.MaPhong = maphong;
-            dichvu.SoDienThoai = sdt;
-            int DongCuoi = dgvHienThi.Rows.Count - 2;
-            int STT = int.Parse(dgvHienThi.Rows[DongCuoi].Cells["STT"].Value.ToString()) + 1;
-            dichvu.STT = STT;
-            dichvu.MaDV = "DVP_IPAD";
             SoLuong number = new SoLuong();
             number.DonVi("Ngày");
             number.ShowDialog();
             number.soluong(ref soluong);
-            dichvu.SoLuong = soluong;
-            dichvu.ThanhTien = soluong * 50000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
-            dichvu.DapUng = "No";
-            BO_ChiTietPhong them = new BO_ChiTietPhong();
-            them.ThemDV(dichvu);
-            HienThi();
+            if (soluong == 0)
+            {
 
+            }
+            else
+            {
+                DTO_HoaDon dichvu = new DTO_HoaDon();
+                dichvu.TenDichVu = "Ipad";
+                dichvu.MaHD = mahd;
+                dichvu.MaChiNhanh = machinhanh;
+                dichvu.MaPhong = maphong;
+                dichvu.SoDienThoai = sdt;
+                int DongCuoi = dgvHienThi.Rows.Count - 2;
+                int STT = int.Parse(dgvHienThi.Rows[DongCuoi].Cells["STT"].Value.ToString()) + 1;
+                dichvu.STT = STT;
+                dichvu.MaDV = "DVP_IPAD";
+                dichvu.SoLuong = soluong;
+                dichvu.ThanhTien = soluong * 50000;
+                dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+                dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
+                dichvu.DapUng = "No";
+                dichvu.DatCoc = "Yes";
+                dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
+                BO_ChiTietPhong them = new BO_ChiTietPhong();
+                them.ThemDV(dichvu);
+                HienThi();
+
+            }
         }
 
         public void pictureBox15_Click(object sender, EventArgs e)
         {
-            DTO_HoaDon dichvu = new DTO_HoaDon();
-            dichvu.TenDichVu = "Massage";
-            dichvu.MaHD = mahd;
-            dichvu.MaChiNhanh = machinhanh;
-            dichvu.MaPhong = maphong;
-            dichvu.SoDienThoai = sdt;
-            int DongCuoi = dgvHienThi.Rows.Count - 2;
-            int STT = int.Parse(dgvHienThi.Rows[DongCuoi].Cells["STT"].Value.ToString()) + 1;
-            dichvu.STT = STT;
-            dichvu.MaDV = "DVP_MASSAGE";
             SoLuong number = new SoLuong();
             number.DonVi("Suất");
             number.ShowDialog();
             number.soluong(ref soluong);
-            dichvu.SoLuong = soluong;
-            dichvu.ThanhTien = soluong * 150000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
-            dichvu.DapUng = "No";
-            BO_ChiTietPhong them = new BO_ChiTietPhong();
-            them.ThemDV(dichvu);
-            HienThi();
+            if (soluong == 0)
+            {
 
+            }
+            else
+            {
+                DTO_HoaDon dichvu = new DTO_HoaDon();
+                dichvu.TenDichVu = "Massage";
+                dichvu.MaHD = mahd;
+                dichvu.MaChiNhanh = machinhanh;
+                dichvu.MaPhong = maphong;
+                dichvu.SoDienThoai = sdt;
+                int DongCuoi = dgvHienThi.Rows.Count - 2;
+                int STT = int.Parse(dgvHienThi.Rows[DongCuoi].Cells["STT"].Value.ToString()) + 1;
+                dichvu.STT = STT;
+                dichvu.MaDV = "DVP_MASSAGE";
+                dichvu.SoLuong = soluong;
+                dichvu.ThanhTien = soluong * 150000;
+                dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+                dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
+                dichvu.DapUng = "No";
+                dichvu.DatCoc = "Yes";
+                dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
+                BO_ChiTietPhong them = new BO_ChiTietPhong();
+                them.ThemDV(dichvu);
+                HienThi();
+            }
         }
 
         public void pictureBox14_Click(object sender, EventArgs e)
         {
-            DTO_HoaDon dichvu = new DTO_HoaDon();
-            dichvu.TenDichVu = "LapTop";
-            dichvu.MaHD = mahd;
-            dichvu.MaChiNhanh = machinhanh;
-            dichvu.MaPhong = maphong;
-            dichvu.SoDienThoai = sdt;
-            int DongCuoi = dgvHienThi.Rows.Count - 2;
-            int STT = int.Parse(dgvHienThi.Rows[DongCuoi].Cells["STT"].Value.ToString()) + 1;
-            dichvu.STT = STT;
-            dichvu.MaDV = "DVP_LAPTOP";
             SoLuong number = new SoLuong();
-            number.DonVi("Ngày");
+            number.DonVi("Ngay");
             number.ShowDialog();
             number.soluong(ref soluong);
-            dichvu.SoLuong = soluong;
-            dichvu.ThanhTien = soluong * 70000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
-            dichvu.DapUng = "No";
-            BO_ChiTietPhong them = new BO_ChiTietPhong();
-            them.ThemDV(dichvu);
-            HienThi();
+            if (soluong == 0)
+            {
 
+            }
+            else
+            {
+                DTO_HoaDon dichvu = new DTO_HoaDon();
+                dichvu.TenDichVu = "LapTop";
+                dichvu.MaHD = mahd;
+                dichvu.MaChiNhanh = machinhanh;
+                dichvu.MaPhong = maphong;
+                dichvu.SoDienThoai = sdt;
+                int DongCuoi = dgvHienThi.Rows.Count - 2;
+                int STT = int.Parse(dgvHienThi.Rows[DongCuoi].Cells["STT"].Value.ToString()) + 1;
+                dichvu.STT = STT;
+                dichvu.MaDV = "DVP_LAPTOP";
+                dichvu.SoLuong = soluong;
+                dichvu.ThanhTien = soluong * 70000;
+                dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+                dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
+                dichvu.DapUng = "No";
+                dichvu.DatCoc = "Yes";
+                dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
+                BO_ChiTietPhong them = new BO_ChiTietPhong();
+                them.ThemDV(dichvu);
+                HienThi();
+
+            }
         }
 
         public void btnThucUong_Click(object sender, EventArgs e)
@@ -648,9 +720,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TA_PHOBO";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 45000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -670,9 +744,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TA_GAQUAY";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 350000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -692,9 +768,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TA_HAMBURGER";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 35000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -714,9 +792,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TA_PIZZAHS";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 268000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -736,9 +816,11 @@ namespace QL_KhachSan
             dichvu.MaDV = "TA_BANHMI";
             dichvu.SoLuong = soluong;
             dichvu.ThanhTien = soluong * 20000;
-            dichvu.NgayDatPhong = DateTime.Now;
-            dichvu.NgayTraPhong = DateTime.Now;
+            dichvu.NgayDatPhong = DateTime.Now.ToShortDateString();
+            dichvu.NgayTraPhong = DateTime.Now.ToShortDateString();
             dichvu.DapUng = "No";
+            dichvu.DatCoc = "Yes";
+            dichvu.ThoiGianThucHienHoaDon = DateTime.Now;
             BO_ChiTietPhong them = new BO_ChiTietPhong();
             them.ThemDV(dichvu);
             HienThi();
@@ -822,38 +904,7 @@ namespace QL_KhachSan
             txtTong.Select(txtTong.Text.Length, 0);
         }
 
-        public void pDoiPhong_Click(object sender, EventArgs e)
-        {
-            if(options == "TuyChon")
-            {
-                this.Hide();
-                DoiPhong doi = new DoiPhong();
-                doi.SDT = sdt;
-                doi.MAHD = mahd;
-                doi.MACHINHANH = machinhanh;
-                doi.MAPHONG = maphong;
-                doi.TENPHONG = tenphong;
-                doi.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                this.Hide();
-                DoiPhong doi = new DoiPhong();
-                doi.SDT = sdt;
-                doi.MAHD = mahd;
-                doi.MACHINHANH = machinhanh;
-                doi.MAPHONG = maphong;
-                doi.TENPHONG = tenphong;
-                doi.TENCHINHANH = tenchinhanh;
-                doi.TENNV = tennv;
-                doi.MANV = manv;
-                doi.MACHINHANH = machinhanh;
-                doi.ShowDialog();
-                this.Close();
-            }
-         
-        }
+      
 
         public void pHuyPhong_Click(object sender, EventArgs e)
         {
@@ -876,33 +927,22 @@ namespace QL_KhachSan
                         }
                         else
                         {
-                            DTO_HoaDon hoadon = new DTO_HoaDon();
-                            hoadon.SoDienThoai = "Free";
-                            hoadon.MaPhong = maphong;
-                            hoadon.MaChiNhanh = machinhanh;
-                            BO_HuyPhong giaiphongphong = new BO_HuyPhong();
-                            if (giaiphongphong.HuyPhong(hoadon) != -1)
+
+                            DTO_HoaDon hoadon2 = new DTO_HoaDon();
+                            hoadon2.MaHD = mahd;
+                            BO_HuyPhong xoahoadon = new BO_HuyPhong();
+                            if (xoahoadon.HuyHoaDon(hoadon2) != -1)
                             {
-                                DTO_HoaDon hoadon2 = new DTO_HoaDon();
-                                hoadon2.MaHD = mahd;
-                                BO_HuyPhong xoahoadon = new BO_HuyPhong();
-                                if (xoahoadon.HuyHoaDon(hoadon2) != -1)
-                                {
-                                    MessageBox.Show("Đã hủy phòng thành công!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    this.Hide();
-                                    GiaoDienKhachHang khachhang = new GiaoDienKhachHang();
-                                    khachhang.SDT = sdt;
-                                    khachhang.ShowDialog();
-                                    this.Close();
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Lỗi khi xóa hóa đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
+                                MessageBox.Show("Đã hủy phòng thành công!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Hide();
+                                GiaoDienKhachHang khachhang = new GiaoDienKhachHang();
+                                khachhang.SDT = sdt;
+                                khachhang.ShowDialog();
+                                this.Close();
                             }
                             else
                             {
-                                MessageBox.Show("Lỗi khi giải phóng phòng, vui lòng thử lại !!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Lỗi khi xóa hóa đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
@@ -923,39 +963,27 @@ namespace QL_KhachSan
                 {
                     if (dgvHienThi.Rows.Count == 2)
                     {
-                      
-                            DTO_HoaDon hoadon = new DTO_HoaDon();
-                            hoadon.SoDienThoai = "Free";
-                            hoadon.MaPhong = maphong;
-                            hoadon.MaChiNhanh = machinhanh;
-                            BO_HuyPhong giaiphongphong = new BO_HuyPhong();
-                            if (giaiphongphong.HuyPhong(hoadon) != -1)
-                            {
-                                DTO_HoaDon hoadon2 = new DTO_HoaDon();
-                                hoadon2.MaHD = mahd;
-                                BO_HuyPhong xoahoadon = new BO_HuyPhong();
-                                if (xoahoadon.HuyHoaDon(hoadon2) != -1)
-                                {
-                                    MessageBox.Show("Đã hủy phòng thành công!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    this.Hide();
-                                    GiaoDienQuanLi quanli = new GiaoDienQuanLi();
-                                    quanli.MANV = manv;
-                                    quanli.TENCHINHANH = tenchinhanh;
-                                    quanli.TENNV = tennv;
-                                    quanli.MACHINHANH = machinhanh;
-                                    quanli.ShowDialog();
-                                    this.Close();
-                            }
-                                else
-                                {
-                                    MessageBox.Show("Lỗi khi xóa hóa đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Lỗi khi giải phóng phòng, vui lòng thử lại !!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+                        DTO_HoaDon hoadon2 = new DTO_HoaDon();
+                        hoadon2.MaHD = mahd;
+                        BO_HuyPhong xoahoadon = new BO_HuyPhong();
+                        if (xoahoadon.HuyHoaDon(hoadon2) != -1)
+                        {
+                            MessageBox.Show("Đã hủy phòng thành công!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            GiaoDienQuanLi quanli = new GiaoDienQuanLi();
+                            quanli.MANV = manv;
+                            quanli.TENCHINHANH = tenchinhanh;
+                            quanli.TENNV = tennv;
+                            quanli.MACHINHANH = machinhanh;
+                            quanli.ShowDialog();
+                            this.Close();
                         }
+                        else
+                        {
+                            MessageBox.Show("Lỗi khi xóa hóa đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
                     else
                     {
                         MessageBox.Show("Vui lòng thanh toán hết dịch vụ của bạn trước khi hủy phòng !!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -972,7 +1000,7 @@ namespace QL_KhachSan
             this.Hide();
             ThanhToan thanhtoan = new ThanhToan();
             thanhtoan.SDT = sdt;
-            thanhtoan.MAHD = mahd;
+            thanhtoan.MAHD = dgvHienThi.CurrentRow.Cells["MaHD"].Value.ToString();
             thanhtoan.MANV = manv;
             thanhtoan.TENNV = tennv;
             thanhtoan.TENPHONG = tenphong;

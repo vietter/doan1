@@ -128,7 +128,7 @@ namespace QL_KhachSan
                         request.TENDV = result.Tables[0].Rows[i][0].ToString();
                         request.SOLUONG = result.Tables[0].Rows[i][1].ToString();
                         request.TENNV = tennv;
-                        request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][8].ToString());
+                        request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][13].ToString());
                         request.MAHD = result.Tables[0].Rows[i][3].ToString();
                         request.MANV = manv;
                         request.STT = int.Parse(result.Tables[0].Rows[i][4].ToString());
@@ -154,7 +154,7 @@ namespace QL_KhachSan
                             request.TENCHINHANH = tenchinhanh;
                             request.MAHD = result.Tables[0].Rows[i][3].ToString();
                             request.MACHINHANH = machinhanh;
-                            request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][8].ToString());
+                            request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][13].ToString());
                             request.TENDV = result.Tables[0].Rows[i][0].ToString();
                             request.STT = int.Parse(result.Tables[0].Rows[i][4].ToString());
                             request.SOLUONG = result.Tables[0].Rows[i][1].ToString();
@@ -182,7 +182,7 @@ namespace QL_KhachSan
                                     request.TENPHONG = table.Tables[0].Rows[0][2].ToString();
                                     request.MAHD = result.Tables[0].Rows[i][3].ToString();
                                     request.TENCHINHANH = tenchinhanh;
-                                    request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][8].ToString());
+                                    request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][13].ToString());
                                     request.MACHINHANH = machinhanh;
                                     request.TENDV = result.Tables[0].Rows[i][0].ToString();
                                     request.STT = int.Parse(result.Tables[0].Rows[i][4].ToString());
@@ -209,7 +209,7 @@ namespace QL_KhachSan
                                     DataSet table = quanli.LayTenPhong(phong);
                                     request.TENPHONG = table.Tables[0].Rows[0][2].ToString();
                                     request.TENCHINHANH = tenchinhanh;
-                                    request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][8].ToString());
+                                    request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][13].ToString());
                                     request.TENDV = result.Tables[0].Rows[i][0].ToString();
                                     request.MAHD = result.Tables[0].Rows[i][3].ToString();
                                     request.SOLUONG = result.Tables[0].Rows[i][1].ToString();
@@ -236,7 +236,7 @@ namespace QL_KhachSan
                                     DataSet table = quanli.LayTenPhong(phong);
                                     request.TENPHONG = table.Tables[0].Rows[0][2].ToString();
                                     request.TENCHINHANH = tenchinhanh;
-                                    request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][8].ToString());
+                                    request.THOIGIAN = DateTime.Parse(result.Tables[0].Rows[i][13].ToString());
                                     request.TENDV = result.Tables[0].Rows[i][0].ToString();
                                     request.MAHD = result.Tables[0].Rows[i][3].ToString();
                                     request.STT = int.Parse(result.Tables[0].Rows[i][4].ToString());
@@ -282,6 +282,24 @@ namespace QL_KhachSan
             this.Refresh();
         }
 
-       
+        private void lb_TenChiNhanh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pl_YeuCau_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

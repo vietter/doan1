@@ -145,10 +145,9 @@ namespace QL_KhachSan
 
         private void YeuCau_Paint(object sender, PaintEventArgs e)
         {
-            label.Text = maphong + "-" + tenphong;
+            label.Text = maphong + " - " + tenphong;
             TimeSpan ts = new TimeSpan();
             ts = DateTime.Now - thoigian;
-
             lb_ThoiGian.Text = ts.Hours.ToString() + " Giờ " + ts.Minutes.ToString() + " Phút " + ts.Seconds.ToString() + " Giây "  ;
            
         }

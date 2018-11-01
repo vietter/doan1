@@ -38,7 +38,7 @@ namespace QL_KhachSan
                 tenchinhanh = value;
             }
         }
-      
+
         int total = 0;
         private string mahd;
         public string MAHD
@@ -81,12 +81,12 @@ namespace QL_KhachSan
                 tenphong = value;
             }
         }
-      
+
         public ThanhToan()
         {
             InitializeComponent();
         }
-      
+
         private void ThanhToan_Load(object sender, EventArgs e)
         {
             load();
@@ -94,7 +94,6 @@ namespace QL_KhachSan
         private string tenkh;
         private void load()
         {
-           
             BO_DangNhap dangnhap = new BO_DangNhap();
             DTO_KhachHang khachhang = new DTO_KhachHang();
             khachhang.SDT = sdt;
@@ -119,10 +118,8 @@ namespace QL_KhachSan
             }
             txtTong.Text = total.ToString();
             txtTenphong.Text = tenphong;
-
-
         }
-        
+
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -132,7 +129,7 @@ namespace QL_KhachSan
             txtTong.Select(txtTong.Text.Length, 0);
         }
 
-      
+
 
         private void pbTroVe_Click(object sender, EventArgs e)
         {
@@ -152,51 +149,38 @@ namespace QL_KhachSan
 
         private void pbXacNhan_Click(object sender, EventArgs e)
         {
-            BO_HuyPhong giaiphongphong = new BO_HuyPhong();
             DTO_HoaDon hoadon = new DTO_HoaDon();
-            hoadon.SoDienThoai = "Free";
             hoadon.ThanhTien = total;
             hoadon.MaPhong = maphong;
             hoadon.MaChiNhanh = machinhanh;
             hoadon.MaHD = mahd;
-            int result = giaiphongphong.HuyPhong(hoadon);
-            if (result != -1)
+            hoadon.SoDienThoai = sdt;
+            hoadon.ThanhTien = total;
+            BO_QuanLiChiNhanh quanli1 = new BO_QuanLiChiNhanh();
+            int KQ = quanli1.TichLuyDiem(hoadon);
+            if (KQ != -1)
             {
-                this.Hide();
-                MessageBox.Show("Thanh toán thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DTO_HoaDon hoadon1 = new DTO_HoaDon();
-                hoadon1.SoDienThoai = sdt;
-                hoadon1.ThanhTien = total;
-                BO_QuanLiChiNhanh quanli1 = new BO_QuanLiChiNhanh();
-                
-                int KQ = quanli1.TichLuyDiem(hoadon1);
-                if (KQ != -1)
+                int table = quanli1.SetHoaDon(hoadon);
+                if (table != -1)
                 {
-
-                    int table = quanli1.SetHoaDon(hoadon);
-                    if (table != -1)
-                    {
-                        GiaoDienQuanLi quanli = new GiaoDienQuanLi();
-                        quanli.MANV = manv;
-                        quanli.MACHINHANH = machinhanh;
-                        quanli.TENCHINHANH = tenchinhanh;
-                        quanli.TENNV = tennv;
-                        quanli.ShowDialog();
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Lỗi khi set Hóa đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    this.Hide();
+                    MessageBox.Show("Thanh toán thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GiaoDienQuanLi quanli = new GiaoDienQuanLi();
+                    quanli.MANV = manv;
+                    quanli.MACHINHANH = machinhanh;
+                    quanli.TENCHINHANH = tenchinhanh;
+                    quanli.TENNV = tennv;
+                    quanli.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Lỗi tích lũy", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lỗi khi set Hóa đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Thanh toán thất bại, vui lòng thử lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi tích lũy", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

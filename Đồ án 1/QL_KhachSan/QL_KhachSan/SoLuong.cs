@@ -22,7 +22,7 @@ namespace QL_KhachSan
         }
         public void soluong(ref int num)
         {
-           num = int.Parse(dmUDNumber.SelectedItem.ToString()); 
+           num = int.Parse(dmUDNumber.Text); 
         }
         private void SoLuong_Load(object sender, EventArgs e)
         {

@@ -95,9 +95,10 @@ namespace QL_KhachSan
             phong.ShowDialog();
             this.ParentForm.Close();
         }
-        public void settenphong (string ten)
+
+        private void PhongCuaKhach_Load(object sender, EventArgs e)
         {
-            label.Text = ten;
+            label.Text = tenphong;
         }
     }
 }

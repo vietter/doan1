@@ -144,6 +144,8 @@ namespace QL_KhachSan.BS_layer
                 tuychon.MACHINHANH = machinhanh;
                 tuychon.TENPHONG = tenphong;
                 tuychon.SDT = sdt;
+                tuychon.LOAIPHONG = "Giường Đơn";
+                tuychon.SONGUOI = 2;
                 tuychon.ShowDialog();
                 this.ParentForm.Close();
             }

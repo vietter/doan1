@@ -42,6 +42,7 @@
             this.txtSoDT = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pbTroVe = new System.Windows.Forms.PictureBox();
             this.lb_LoiSDT = new System.Windows.Forms.Label();
             this.lb_LoiTen = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -66,13 +67,12 @@
             this.label19 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.pbTroVe = new System.Windows.Forms.PictureBox();
             this.pl_dangnhap.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -221,6 +221,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(339, 185);
             this.panel2.TabIndex = 13;
+            // 
+            // pbTroVe
+            // 
+            this.pbTroVe.Image = ((System.Drawing.Image)(resources.GetObject("pbTroVe.Image")));
+            this.pbTroVe.Location = new System.Drawing.Point(0, 141);
+            this.pbTroVe.Name = "pbTroVe";
+            this.pbTroVe.Size = new System.Drawing.Size(48, 44);
+            this.pbTroVe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTroVe.TabIndex = 26;
+            this.pbTroVe.TabStop = false;
+            this.pbTroVe.Click += new System.EventHandler(this.pbTroVe_Click);
             // 
             // lb_LoiSDT
             // 
@@ -484,17 +495,6 @@
             this.label20.TabIndex = 34;
             this.label20.Text = "Đặt Phòng Nhanh";
             // 
-            // pbTroVe
-            // 
-            this.pbTroVe.Image = ((System.Drawing.Image)(resources.GetObject("pbTroVe.Image")));
-            this.pbTroVe.Location = new System.Drawing.Point(0, 141);
-            this.pbTroVe.Name = "pbTroVe";
-            this.pbTroVe.Size = new System.Drawing.Size(48, 44);
-            this.pbTroVe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTroVe.TabIndex = 26;
-            this.pbTroVe.TabStop = false;
-            this.pbTroVe.Click += new System.EventHandler(this.pbTroVe_Click);
-            // 
             // DatPhongNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,11 +521,11 @@
             this.pl_dangnhap.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

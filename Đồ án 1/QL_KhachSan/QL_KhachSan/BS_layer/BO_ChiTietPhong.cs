@@ -27,7 +27,7 @@ namespace QL_KhachSan.BS_layer
         public int ThemDV(DTO_HoaDon hoadon)
         {
             int result = -1;
-            string sql = "INSERT INTO HoaDon VALUES (@TenDichVu,@SoLuong,@ThanhTien,@MaHD,@STT,@MaChiNhanh,@MaPhong,@SoDienThoai,@NgayDatPhong,@NgayTraPhong,@MaDV,@DapUng)";
+            string sql = "INSERT INTO HoaDon VALUES (@TenDichVu,@SoLuong,@ThanhTien,@MaHD,@STT,@MaChiNhanh,@MaPhong,@SoDienThoai,@NgayDatPhong,@NgayTraPhong,@MaDV,@DapUng,@DatCoc,@ThoiGianThucHienHoaDon)";
             SqlParameter[] para = new SqlParameter[]
             {   
                 new SqlParameter("@TenDichVu",hoadon.TenDichVu),
@@ -42,6 +42,8 @@ namespace QL_KhachSan.BS_layer
                 new SqlParameter("@NgayTraPhong",hoadon.NgayTraPhong),
                 new SqlParameter("@MaDV",hoadon.MaDV),
                 new SqlParameter("@DapUng",hoadon.DapUng),
+                new SqlParameter("@DatCoc",hoadon.DatCoc),
+                new SqlParameter("ThoiGianThucHienHoaDon",hoadon.ThoiGianThucHienHoaDon),
             };
             DataAccess data = new DataAccess();
             result = data.Execute(sql, para);

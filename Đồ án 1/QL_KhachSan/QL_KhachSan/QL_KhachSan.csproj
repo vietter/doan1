@@ -55,8 +55,11 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +69,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaoCaoDaLat.cs">
@@ -131,7 +135,6 @@
     <Compile Include="BS_layer\BO_DangNhap.cs" />
     <Compile Include="BS_layer\BO_DangNhapNhanVien.cs" />
     <Compile Include="BS_layer\BO_DatPhong.cs" />
-    <Compile Include="BS_layer\BO_DoiPhong.cs" />
     <Compile Include="BS_layer\BO_DSPhongDaDat.cs" />
     <Compile Include="BS_layer\BO_HuyPhong.cs" />
     <Compile Include="BS_layer\BO_QuanLiChiNhanh.cs" />
@@ -153,6 +156,12 @@
     </Compile>
     <Compile Include="DatPhongNhanh.Designer.cs">
       <DependentUpon>DatPhongNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSPhongChuaDatCoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSPhongChuaDatCoc.Designer.cs">
+      <DependentUpon>DSPhongChuaDatCoc.cs</DependentUpon>
     </Compile>
     <Compile Include="giuongdon2nguoi.cs">
       <SubType>UserControl</SubType>
@@ -189,18 +198,6 @@
     </Compile>
     <Compile Include="DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DoiPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DoiPhong.Designer.cs">
-      <DependentUpon>DoiPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FreeRoom.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FreeRoom.Designer.cs">
-      <DependentUpon>FreeRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoDienKhachHang.cs">
       <SubType>Form</SubType>
@@ -249,6 +246,12 @@
     </Compile>
     <Compile Include="MatKhau.Designer.cs">
       <DependentUpon>MatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhongChuaDatCoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhongChuaDatCoc.Designer.cs">
+      <DependentUpon>PhongChuaDatCoc.cs</DependentUpon>
     </Compile>
     <Compile Include="PhongCuaKhach.cs">
       <SubType>UserControl</SubType>
@@ -334,6 +337,9 @@
     <EmbeddedResource Include="DatPhongNhanh.resx">
       <DependentUpon>DatPhongNhanh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DSPhongChuaDatCoc.resx">
+      <DependentUpon>DSPhongChuaDatCoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="giuongdon2nguoi.resx">
       <DependentUpon>giuongdon2nguoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,12 +357,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DoiPhong.resx">
-      <DependentUpon>DoiPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FreeRoom.resx">
-      <DependentUpon>FreeRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDienKhachHang.resx">
       <DependentUpon>GiaoDienKhachHang.cs</DependentUpon>
@@ -381,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MatKhau.resx">
       <DependentUpon>MatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhongChuaDatCoc.resx">
+      <DependentUpon>PhongChuaDatCoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhongCuaKhach.resx">
       <DependentUpon>PhongCuaKhach.cs</DependentUpon>

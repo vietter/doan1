@@ -153,7 +153,7 @@
             this.txtSoDT.PromptChar = ' ';
             this.txtSoDT.Size = new System.Drawing.Size(114, 20);
             this.txtSoDT.TabIndex = 11;
-            this.txtSoDT.Click += new System.EventHandler(this.txtSoDT_Click_1);
+            this.txtSoDT.Click += new System.EventHandler(this.txtSoDT_Click);
             // 
             // DangNhap
             // 

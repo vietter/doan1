@@ -221,8 +221,8 @@ namespace QL_KhachSan
                     int PhutTraPhong = 00;
                     DateTime NgayDatPhong1 = new DateTime(NamDat, ThangDat, NgayDat, GioDatPhong, PhutDatPhong, 0);
                     DateTime NgayTraPhong1 = new DateTime(NamTra, ThangTra, NgayTra, GioTraPhong, PhutTraPhong, 0);
-                    dtpNgayDat.Value = NgayDatPhong1;
-                    dtpNgayTra.Value = NgayTraPhong1;
+                    dtpNgayDat.Text = NgayDatPhong1.ToShortDateString();
+                    dtpNgayTra.Text = NgayTraPhong1.ToShortDateString() ;
                     lb_LoiSDT.Visible = false;
                     lb_LoiTen.Visible = false;
                     lb_Ten.Text = tenphong;
@@ -330,18 +330,18 @@ namespace QL_KhachSan
                     TaoMaHD(tenvtchinhanh, ref MaHDMoi);
                     phong.MaHD = MaHDMoi;
                     phong.MaPhong = maphong;
-                    int NgayDat = int.Parse(dtpNgayDat.Text.Substring(0, 2));
-                    int ThangDat = int.Parse(dtpNgayDat.Text.Substring(3, 2));
-                    int NamDat = int.Parse(dtpNgayDat.Text.Substring(6, 4));
-                    int GioDatPhong = 12;
-                    int PhutDatPhong = 00;
-                    int NgayTra = int.Parse(dtpNgayTra.Text.Substring(0, 2));
-                    int ThangTra = int.Parse(dtpNgayTra.Text.Substring(3, 2));
-                    int NamTra = int.Parse(dtpNgayTra.Text.Substring(6, 4));
-                    int GioTraPhong = 12;
-                    int PhutTraPhong = 00;
-                    DateTime NgayDatPhong1 = new DateTime(NamDat, ThangDat, NgayDat, GioDatPhong, PhutDatPhong, 0);
-                    DateTime NgayTraPhong1 = new DateTime(NamTra, ThangTra, NgayTra, GioTraPhong, PhutTraPhong, 0);
+                    string NgayDat = dtpNgayDat.Text.Substring(0, 2);
+                    string ThangDat = dtpNgayDat.Text.Substring(3, 2);
+                    string NamDat =dtpNgayDat.Text.Substring(6, 4);
+                    string GioDatPhong = "12";
+                    string PhutDatPhong = "00";
+                    string NgayTra = dtpNgayTra.Text.Substring(0, 2);
+                    string ThangTra = dtpNgayTra.Text.Substring(3, 2);
+                    string NamTra = dtpNgayTra.Text.Substring(6, 4);
+                    string GioTraPhong = "12";
+                    string PhutTraPhong = "00";
+                    string NgayDatPhong1 = NamDat + "-" + ThangDat + "-" + NgayDat + " " + GioDatPhong + ":" + PhutDatPhong + ":00";
+                    string NgayTraPhong1 = NamTra + "-" + ThangTra + "-" + NgayTra + " " + GioTraPhong + ":" + PhutTraPhong + ":00";
                     phong.NgayDatPhong = NgayDatPhong1;
                     phong.NgayTraPhong = NgayTraPhong1;
                     phong.SoDienThoai = txtSoDT.Text;
@@ -350,26 +350,24 @@ namespace QL_KhachSan
                     phong.TenDichVu = tendv;
                     phong.ThanhTien = giatien;
                     phong.DapUng = "Yes";
+                    phong.DatCoc = "No";
+                    phong.ThoiGianThucHienHoaDon = DateTime.Now;
                     TimeSpan ts = new TimeSpan();
-                    ts = NgayTraPhong1 - NgayDatPhong1;
+
+                    DateTime NgayDatPhong2 = new DateTime(dtpNgayDat.Value.Year, dtpNgayDat.Value.Month, dtpNgayDat.Value.Day, 12, 00,00);
+                    DateTime NgayTraPhong2 = new DateTime(dtpNgayTra.Value.Year, dtpNgayTra.Value.Month, dtpNgayTra.Value.Day, 12, 00, 00);
+                    ts = NgayTraPhong2 - NgayDatPhong2;
                     phong.STT = 1;
                     double count = ts.TotalDays;
-                    phong.SoLuong = (int)count + 1;
-                    phong.ThanhTien = 400000 * phong.SoLuong;
+                    phong.SoLuong = (int)count ;
+                    phong.ThanhTien = giatien * phong.SoLuong;
                     BO_DatPhong datphongnhanh = new BO_DatPhong();
                     if (datphongnhanh.DatPhong(phong) != -1)
                     {
-                        DTO_Phong phong1 = new DTO_Phong();
-                        phong1.SDT = txtSoDT.Text;
-                        phong1.MaPhong = maphong;
-                        phong1.MaChiNhanh = machinhanh;
-                        BO_DatPhong dungphong = new BO_DatPhong();
-                        if (dungphong.SuDungPhong(phong1) != -1)
-                        {
-
-                            MessageBox.Show("Đặt phòng thành công ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
-                            
+                       
+                        MessageBox.Show("Đặt phòng thành công ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                         
                             BO_DangNhap kiemtrakh = new BO_DangNhap();
                             DTO_KhachHang khachhang = new DTO_KhachHang();
                             khachhang.SDT = txtSoDT.Text;
@@ -404,6 +402,7 @@ namespace QL_KhachSan
                             xacnhan.NGAYDAT = dtpNgayDat.Text;
                             xacnhan.NGAYTRA = dtpNgayTra.Text;
                             xacnhan.GIATIEN = phong.ThanhTien;
+                            xacnhan.THOIGIANTHUCHIEN = DateTime.Now;
                             xacnhan.ShowDialog();
                             this.Close();
                         }
@@ -415,7 +414,7 @@ namespace QL_KhachSan
                     }
                 }
             }
-        }
+        
         
         private void txtSoDT_Click(object sender, EventArgs e)
         {

@@ -73,7 +73,7 @@ namespace QL_KhachSan
         {
             lbTen.Text = tennv;
             lbTenChiNhanh.Text = tenchinhanh;
-            DTO_Phong phong = new DTO_Phong();
+            DTO_HoaDon phong = new DTO_HoaDon();
             phong.MaChiNhanh = machinhanh;
             BO_QuanLiChiNhanh quanli = new BO_QuanLiChiNhanh();
             DataSet table = new DataSet();
@@ -87,20 +87,18 @@ namespace QL_KhachSan
                     {
                         PhongCuaKhach dsphong = new PhongCuaKhach();
                         dsphong.MACHINHANH = machinhanh;
-                        dsphong.MAPHONG = table.Tables[0].Rows[i][0].ToString();
-                        dsphong.TENPHONG = table.Tables[0].Rows[i][2].ToString();
-                        dsphong.SDT = table.Tables[0].Rows[0][3].ToString();
-                        dsphong.settenphong(table.Tables[0].Rows[i][2].ToString());
+                        dsphong.MAPHONG = table.Tables[0].Rows[i][6].ToString();
+                        BO_QuanLiChiNhanh quanli1 = new BO_QuanLiChiNhanh();
+                        DTO_Phong phong1 = new DTO_Phong();
+                        phong1.MaPhong = table.Tables[0].Rows[i][6].ToString();
+                        phong1.MaChiNhanh = machinhanh;
+                        DataSet KQ = quanli1.LayTenPhong(phong1);
+                        dsphong.TENPHONG = KQ.Tables[0].Rows[0][2].ToString();
+                        dsphong.SDT = table.Tables[0].Rows[i][7].ToString();
                         dsphong.TENCHINHANH = tenchinhanh;
                         dsphong.TENNV = tennv;
                         dsphong.MANV = manv;
-                        DTO_HoaDon hoadon = new DTO_HoaDon();
-                        hoadon.SoDienThoai = table.Tables[0].Rows[0][3].ToString();
-                        hoadon.MaPhong = table.Tables[0].Rows[i][0].ToString();
-                        hoadon.MaChiNhanh = machinhanh;
-                        BO_DSPhongDaDat laymahd = new BO_DSPhongDaDat();
-                        DataSet result = laymahd.LayMaHD(hoadon);
-                        dsphong.MAHD = result.Tables[0].Rows[0][0].ToString();
+                        dsphong.MAHD = table.Tables[0].Rows[i][3].ToString();
                         vitridau.X = 20;
                         vitridau.Y = 150;
                         dsphong.Location = vitridau;
@@ -111,20 +109,18 @@ namespace QL_KhachSan
                     {
                         PhongCuaKhach dsphong = new PhongCuaKhach();
                         dsphong.MACHINHANH = machinhanh;
-                        dsphong.MAPHONG = table.Tables[0].Rows[i][0].ToString();
-                        dsphong.TENPHONG = table.Tables[0].Rows[i][2].ToString();
-                        dsphong.SDT = table.Tables[0].Rows[0][3].ToString();
-                        dsphong.settenphong(table.Tables[0].Rows[i][2].ToString());
+                        dsphong.MAPHONG = table.Tables[0].Rows[i][6].ToString();
+                        BO_QuanLiChiNhanh quanli1 = new BO_QuanLiChiNhanh();
+                        DTO_Phong phong1 = new DTO_Phong();
+                        phong1.MaPhong = table.Tables[0].Rows[i][6].ToString();
+                        phong1.MaChiNhanh = machinhanh;
+                        DataSet KQ =  quanli1.LayTenPhong(phong1);
+                        dsphong.TENPHONG = KQ.Tables[0].Rows[0][2].ToString();
+                        dsphong.SDT = table.Tables[0].Rows[i][7].ToString();
                         dsphong.TENCHINHANH = tenchinhanh;
                         dsphong.TENNV = tennv;
                         dsphong.MANV = manv;
-                        DTO_HoaDon hoadon = new DTO_HoaDon();
-                        hoadon.SoDienThoai = table.Tables[0].Rows[i][3].ToString();
-                        hoadon.MaPhong = table.Tables[0].Rows[i][0].ToString();
-                        hoadon.MaChiNhanh = machinhanh;
-                        BO_DSPhongDaDat laymahd = new BO_DSPhongDaDat();
-                        DataSet result = laymahd.LayMaHD(hoadon);
-                        dsphong.MAHD = result.Tables[0].Rows[0][0].ToString();
+                        dsphong.MAHD = table.Tables[0].Rows[i][3].ToString();
                         dsphong.Location = vitridau;
                         pl_phong.Controls.Add(dsphong);
                         vitridau.X += 165;
@@ -253,6 +249,24 @@ namespace QL_KhachSan
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.Refresh();
+            
+        }
+
+        private void danhSáchPhòngChưaĐặtCọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DSPhongChuaDatCoc hienthi = new DSPhongChuaDatCoc();
+            hienthi.MACHINHANH = machinhanh;
+            hienthi.MANV = manv;
+            hienthi.TENCHINHANH = tenchinhanh;
+            hienthi.TENNV = tennv;
+            hienthi.ShowDialog();
+            this.Close();
+        }
+
+        private void quảnLíToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

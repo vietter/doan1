@@ -45,7 +45,11 @@ namespace QL_KhachSan
 
         private void DatPhong_Load(object sender, EventArgs e)
         {
-         
+            dtpNgayDat.MaxDate = DateTime.Now.AddDays(60);
+            dtpNgayDat.MinDate = DateTime.Now;
+            dtpNgayTra.MinDate = DateTime.Now.AddDays(1);
+            cbb_SoNguoi.Text = "Tất Cả";
+
 
         }
         private void load()
@@ -53,8 +57,8 @@ namespace QL_KhachSan
             pl_phong.Controls.Clear();
         }
 
-      
-     
+
+
         private void pTimKiem_Click(object sender, EventArgs e)
         {
             load();
@@ -62,7 +66,7 @@ namespace QL_KhachSan
             if (cbbDiaChi.Text == "")
             {
                 MessageBox.Show("Bạn chưa chọn nơi ở", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+
             }
             else
             {
@@ -95,6 +99,7 @@ namespace QL_KhachSan
                             }
                         }
                     }
+
                 }
                 if (dtpNgayDat.Text == dtpNgayTra.Text)
                 {
@@ -102,337 +107,538 @@ namespace QL_KhachSan
                 }
                 else
                 {
-                   
+                    DateTime dtp1 = new DateTime();
+                    DateTime dtp2 = new DateTime();
+                    catchuoi(dtpNgayTra.Text, ref dtp1);
+                    catchuoi(dtpNgayDat.Text, ref dtp2);
                     TimeSpan ts = new TimeSpan();
-                    int NgayDat = int.Parse(dtpNgayDat.Text.Substring(0, 2));
-
-
-
-                    int ThangDat = int.Parse(dtpNgayDat.Text.Substring(3, 2));
-                    int NamDat = int.Parse(dtpNgayDat.Text.Substring(6, 4));
-                    int GioDatPhong = 12;
-                    int PhutDatPhong = 00;
-                    int NgayTra = int.Parse(dtpNgayTra.Text.Substring(0, 2));
-                    int ThangTra = int.Parse(dtpNgayTra.Text.Substring(3, 2));
-                    int NamTra = int.Parse(dtpNgayTra.Text.Substring(6, 4));
-                    int GioTraPhong = 12;
-                    int PhutTraPhong = 00;
-                    DateTime NgayDatPhong = new DateTime(NamDat, ThangDat, NgayDat, GioDatPhong, PhutDatPhong, 0);
-                    DateTime NgayTraPhong = new DateTime(NamTra, ThangTra, NgayTra, GioTraPhong, PhutTraPhong, 0);
-                    ts = NgayTraPhong - NgayDatPhong;
+                    ts = dtp1 - dtp2;
                     if (ts.TotalDays < 0)
                     {
-                        MessageBox.Show("Ngày Đặt Phòng không thể sau ngày Trả Phòng được, vui lòng hãy chọn lại!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                        MessageBox.Show("Ngày Đặt không thể sau Ngày Trả được", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        TimeSpan ts2 = new TimeSpan();
-                        ts2 = DateTime.Now - NgayDatPhong;
-                        
-                        // fix đặt phòng không được khi qua 12h
-                        String sDate = DateTime.Now.ToString();
-                        DateTime datevalue = (Convert.ToDateTime(sDate.ToString()));
-                        int dy = int.Parse(datevalue.Day.ToString());
-                        int ts3 = NgayDat-dy;
-
-
-                        if (ts2.TotalDays >0 && ts3 <0 )
+                        if (cbb_SoNguoi.Text != "Tất Cả")
                         {
-                            MessageBox.Show("Bạn không thể đặt trong quá khứ được, vui lòng hãy chọn lại!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-                        }
-                        else
-                        {
-                            DTO_Phong phong = new DTO_Phong();
+                            DTO_HoaDon hoadon = new DTO_HoaDon();
                             if (cbb_SoNguoi.Text == "1-2 người (2 giường đơn)")
                             {
-                                phong.SoNguoi = 2;
-                                phong.LoaiPhong = "Giường đơn";
+
+                                hoadon.SoNguoi = 2;
+                                hoadon.LoaiPhong = "Giường Đơn";
                             }
                             else
                             {
                                 if (cbb_SoNguoi.Text == "2 người (giường đôi)")
                                 {
-                                    phong.SoNguoi = 2;
-                                    phong.LoaiPhong = "Giường đôi";
 
+                                    hoadon.SoNguoi = 2;
+                                    hoadon.LoaiPhong = "Giường Đôi";
                                 }
                                 else
                                 {
                                     if (cbb_SoNguoi.Text == "3-4 người (4 giường đơn)")
                                     {
-                                        phong.SoNguoi = 4;
-                                        phong.LoaiPhong = "Giường đơn";
 
+                                        hoadon.SoNguoi = 4;
+                                        hoadon.LoaiPhong = "Giường Đơn";
                                     }
                                     else
                                     {
                                         if (cbb_SoNguoi.Text == "3-4 người (2 giường đôi)")
                                         {
-                                            phong.SoNguoi = 4;
-                                            phong.LoaiPhong = "Giường đôi";
 
+                                            hoadon.SoNguoi = 4;
+                                            hoadon.LoaiPhong = "Giường Đôi";
                                         }
                                         else
                                         {
                                             if (cbb_SoNguoi.Text == "5-6 người (3 giường đôi)")
                                             {
-                                                phong.SoNguoi = 6;
-                                                phong.LoaiPhong = "Giường đôi";
+
+                                                hoadon.SoNguoi = 6;
+                                                hoadon.LoaiPhong = "Giường Đôi";
                                             }
-                                            else
-                                            {
-                                                if (cbb_SoNguoi.Text == "")
-                                                {
-                                                    phong.SDT = "Free"
-     ;
-                                                }
-                                            }
+
                                         }
                                     }
                                 }
                             }
+                            hoadon.MaChiNhanh = MaHD;
                             Point vitribandau = new Point(5, 5);
-                            phong.MaChiNhanh = MaHD;
                             BO_DatPhong kiemtra = new BO_DatPhong();
-                            if (cbb_SoNguoi.Text == "")
+                            DataSet table = new DataSet();
+                            table = kiemtra.ChonPhong(hoadon);
+                            if (table.Tables[0].Rows.Count > 0)
                             {
-                                DataSet table = new DataSet();
-                                BO_DatPhong tatcaphong = new BO_DatPhong();
-                                table = tatcaphong.showall(phong);
-                                if (table.Tables.Count > 0 && table.Tables[0].Rows.Count > 0)
+                                for (int i = 0; i < table.Tables[0].Rows.Count; i++)
                                 {
-                                    for (int i = 0; i < table.Tables[0].Rows.Count; i++)
+                                    DTO_HoaDon thongtinphong = new DTO_HoaDon();
+                                    thongtinphong.MaPhong = table.Tables[0].Rows[i][0].ToString();
+                                    thongtinphong.MaChiNhanh = table.Tables[0].Rows[i][1].ToString();
+                                    //Kiểm tra trong phòng hiện tại có nằm trong hóa đơn không, nếu không thì phòng chưa từng được đặt
+                                    DataSet KTPhongtrong = new DataSet();
+                                    KTPhongtrong = kiemtra.kiemtratronghoadon(thongtinphong);
+                                    if (KTPhongtrong.Tables[0].Rows.Count == 0)   //Phòng hiện chưa được sử dụng lần nào => phòng trống
                                     {
-                                        if (table.Tables[0].Rows[i][4].ToString() == "Giường đôi" && table.Tables[0].Rows[i][5].ToString() == "2")
+                                        if (table.Tables[0].Rows[i][3].ToString() == "Giường Đơn" && table.Tables[0].Rows[i][4].ToString() == "2")
                                         {
-                                            giuongdoi2nguoi hienthi = new giuongdoi2nguoi();
-                                            hienthi.Location = vitribandau;
-                                            hienthi.Location = vitribandau;                                            
-                                            hienthi.TENVTCHINHANH = MaHD;
+                                            giuongdon2nguoi hienthi = new giuongdon2nguoi();
                                             hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
-                                            hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                             hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
-                                            hienthi.SDT = sdt;
-                                            hienthi.CHINHANH = MaHD;
+                                            hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                             hienthi.NGAYDATPHONG = dtpNgayDat.Text;
                                             hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                            hienthi.TENVTCHINHANH = MaHD;
                                             pl_phong.Controls.Add(hienthi);
-                                            vitribandau.Y += 220;
+                                            hienthi.Location = vitribandau;
+                                            vitribandau.Y += 295;
                                         }
                                         else
                                         {
-                                            if (table.Tables[0].Rows[i][4].ToString() == "Giường đơn" && table.Tables[0].Rows[i][5].ToString() == "2")
+                                            if (table.Tables[0].Rows[i][3].ToString() == "Giường Đôi" && table.Tables[0].Rows[i][4].ToString() == "2")
                                             {
-                                                giuongdon2nguoi hienthi = new giuongdon2nguoi();
-                                                hienthi.Location = vitribandau;
-                                                hienthi.Location = vitribandau;
-                                                hienthi.TENVTCHINHANH = MaHD;
+                                                giuongdoi2nguoi hienthi = new giuongdoi2nguoi();
                                                 hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
-                                                hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                                 hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                                 hienthi.NGAYDATPHONG = dtpNgayDat.Text;
-                                                hienthi.CHINHANH = MaHD;
                                                 hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
-                                                hienthi.SDT = sdt;
+                                                hienthi.TENVTCHINHANH = MaHD;
                                                 pl_phong.Controls.Add(hienthi);
-                                                vitribandau.Y += 220;
+                                                hienthi.Location = vitribandau;
+                                                vitribandau.Y += 295;
                                             }
                                             else
                                             {
-                                                if (table.Tables[0].Rows[i][4].ToString() == "Giường đôi" && table.Tables[0].Rows[i][5].ToString() == "4")
+                                                if (table.Tables[0].Rows[i][3].ToString() == "Giường Đơn" && table.Tables[0].Rows[i][4].ToString() == "4")
                                                 {
-                                                    giuongdoi4nguoi hienthi = new giuongdoi4nguoi();
-                                                    hienthi.Location = vitribandau;
-                                                    hienthi.Location = vitribandau;
-                                                    hienthi.TENVTCHINHANH = MaHD;
+                                                    giuongdon4nguoi hienthi = new giuongdon4nguoi();
                                                     hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
-                                                    hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                                     hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                    hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                                     hienthi.NGAYDATPHONG = dtpNgayDat.Text;
-                                                    hienthi.CHINHANH = MaHD;
                                                     hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
-                                                    hienthi.SDT = sdt;
+                                                    hienthi.TENVTCHINHANH = MaHD;
                                                     pl_phong.Controls.Add(hienthi);
-                                                    vitribandau.Y += 220;
+                                                    hienthi.Location = vitribandau;
+                                                    vitribandau.Y += 295;
                                                 }
                                                 else
                                                 {
-                                                    if (table.Tables[0].Rows[i][4].ToString() == "Giường đơn" && table.Tables[0].Rows[i][5].ToString() == "4")
+                                                    if (table.Tables[0].Rows[i][3].ToString() == "Giường Đôi" && table.Tables[0].Rows[i][4].ToString() == "4")
                                                     {
-                                                        giuongdon4nguoi hienthi = new giuongdon4nguoi();
-                                                        hienthi.Location = vitribandau;
-                                                        hienthi.Location = vitribandau;
-                                                        hienthi.TENVTCHINHANH = MaHD;
+                                                        giuongdoi4nguoi hienthi = new giuongdoi4nguoi();
                                                         hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
-                                                        hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                                         hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                        hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                                         hienthi.NGAYDATPHONG = dtpNgayDat.Text;
-                                                        hienthi.CHINHANH = MaHD;
                                                         hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
-                                                        hienthi.SDT = sdt;
+                                                        hienthi.TENVTCHINHANH = MaHD;
                                                         pl_phong.Controls.Add(hienthi);
-                                                        vitribandau.Y += 220;
+                                                        hienthi.Location = vitribandau;
+                                                        vitribandau.Y += 295;
                                                     }
                                                     else
                                                     {
-                                                        giuongdoi6nguoi hienthi = new giuongdoi6nguoi();
-                                                        hienthi.Location = vitribandau;
-                                                        hienthi.Location = vitribandau;
-                                                        hienthi.TENVTCHINHANH = MaHD;
-                                                        hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
-                                                        hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
-                                                        hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
-                                                        hienthi.NGAYDATPHONG = dtpNgayDat.Text;
-                                                        hienthi.CHINHANH = MaHD;
-                                                        hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
-                                                        hienthi.SDT = sdt;
-                                                        pl_phong.Controls.Add(hienthi);
-                                                        vitribandau.Y += 220;
+                                                        if (table.Tables[0].Rows[i][3].ToString() == "Giường Đôi" && table.Tables[0].Rows[i][4].ToString() == "6")
+                                                        {
+                                                            giuongdoi6nguoi hienthi = new giuongdoi6nguoi();
+                                                            hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                            hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                            hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                            hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                            hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                            hienthi.TENVTCHINHANH = MaHD;
+                                                            pl_phong.Controls.Add(hienthi);
+                                                            hienthi.Location = vitribandau;
+                                                            vitribandau.Y += 295;
+                                                        }
                                                     }
-
                                                 }
                                             }
-                                        }
-                                    }
-                                }
-                            }
-                            else
-                            {
-
-                                DataSet result = kiemtra.KiemTraPhongTrong(phong);
-                                if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
-                                {
-
-                                    if (cbb_SoNguoi.Text == "1-2 người (2 giường đơn)")
-                                    {
-                                        for (int i = 0; i < result.Tables[0].Rows.Count; i++)
-                                        {
-                                            giuongdon2nguoi hienthi = new giuongdon2nguoi();
-                                            hienthi.Location = vitribandau;
-                                            hienthi.TENVTCHINHANH = MaHD;
-                                            hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
-                                            hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
-                                            hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
-                                            hienthi.NGAYDATPHONG = dtpNgayDat.Text;
-                                            hienthi.CHINHANH = MaHD;
-                                            hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
-                                            hienthi.SDT = sdt;
-                                            pl_phong.Controls.Add(hienthi);
-                                            vitribandau.Y += 220;
                                         }
                                     }
                                     else
                                     {
-                                        if (cbb_SoNguoi.Text == "2 người (giường đôi)")
+                                        //Nếu có phòng đang đc sử dụng => kiểm tra xem phòng đó có trùng ngày đặt hay không
+                                        DateTime ngaydat = new DateTime();
+                                        DateTime ngaytra = new DateTime();
+                                        catchuoi(dtpNgayDat.Text, ref ngaydat);
+                                        catchuoi(dtpNgayTra.Text, ref ngaytra);
+                                        TimeSpan thoigiandat = new TimeSpan();
+                                        thoigiandat = ngaytra - ngaydat;
+                                        for (int k = 0; k < thoigiandat.Days; k++)
                                         {
-                                            for (int i = 0; i < result.Tables[0].Rows.Count; i++)
-                                            {
-                                                giuongdoi2nguoi hienthi = new giuongdoi2nguoi();
-                                                hienthi.Location = vitribandau;
-                                                hienthi.Location = vitribandau;
-                                                hienthi.TENVTCHINHANH = MaHD;
-                                                hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
-                                                hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
-                                                hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
-                                                hienthi.NGAYDATPHONG = dtpNgayDat.Text;
-                                                hienthi.CHINHANH = MaHD;
-                                                hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
-                                                hienthi.SDT = sdt;
-                                                pl_phong.Controls.Add(hienthi);
-                                                vitribandau.Y += 220;
-                                            }
-
+                                            SoSanhNgayDat.Add(ngaydat);
+                                            ngaydat = ngaydat.AddDays(1);
                                         }
-                                        else
-                                        {
-                                            if (cbb_SoNguoi.Text == "3-4 người (4 giường đơn)")
-                                            {
-                                                for (int i = 0; i < result.Tables[0].Rows.Count; i++)
-                                                {
-                                                    giuongdon4nguoi hienthi = new giuongdon4nguoi();
-                                                    hienthi.Location = vitribandau;
-                                                    hienthi.Location = vitribandau;
-                                                    hienthi.TENVTCHINHANH = MaHD;
-                                                    hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
-                                                    hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
-                                                    hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
-                                                    hienthi.NGAYDATPHONG = dtpNgayDat.Text;
-                                                    hienthi.CHINHANH = MaHD;
-                                                    hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
-                                                    hienthi.SDT = sdt;
-                                                    pl_phong.Controls.Add(hienthi);
-                                                    vitribandau.Y += 220;
-                                                }
-                                            }
-                                            else
-                                            {
-                                                if (cbb_SoNguoi.Text == "3-4 người (2 giường đôi)")
-                                                {
-                                                    for (int i = 0; i < result.Tables[0].Rows.Count; i++)
-                                                    {
-                                                        giuongdoi4nguoi hienthi = new giuongdoi4nguoi();
-                                                        hienthi.Location = vitribandau;
-                                                        hienthi.Location = vitribandau;
-                                                        hienthi.TENVTCHINHANH = MaHD;
-                                                        hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
-                                                        hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
-                                                        hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
-                                                        hienthi.NGAYDATPHONG = dtpNgayDat.Text;
-                                                        hienthi.CHINHANH = MaHD;
-                                                        hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
-                                                        hienthi.SDT = sdt;
-                                                        pl_phong.Controls.Add(hienthi);
-                                                        vitribandau.Y += 220;
-                                                    }
+                                        int count = 0;
+                                        DTO_HoaDon kt = new DTO_HoaDon();
+                                        kt.MaPhong = table.Tables[0].Rows[i][0].ToString();
+                                        kt.MaChiNhanh = table.Tables[0].Rows[i][1].ToString();
+                                        DataSet table1 = new DataSet();
+                                        table1 = kiemtra.KiemTraNgayPhongDangDuocSuDung(kt);
 
+                                        if (table1.Tables[0].Rows.Count > 0 && table1.Tables.Count > 0)
+                                        {
+                                            int demhd = table1.Tables[0].Rows.Count;
+                                            for (int j = 0; j < demhd; j++)
+                                            {
+                                                DateTime Ngay1 = new DateTime(int.Parse(table1.Tables[0].Rows[j][8].ToString().Substring(6, 2)), int.Parse(table1.Tables[0].Rows[j][8].ToString().Substring(3, 2)), int.Parse(table1.Tables[0].Rows[j][8].ToString().Substring(0, 2)));
+                                                DateTime Ngay2 = new DateTime(int.Parse(table1.Tables[0].Rows[j][9].ToString().Substring(6, 2)), int.Parse(table1.Tables[0].Rows[j][9].ToString().Substring(3, 2)), int.Parse(table1.Tables[0].Rows[j][9].ToString().Substring(0, 2)));
+
+                                                TimeSpan khoangthoigiandat = new TimeSpan();
+                                                khoangthoigiandat = Ngay2 - Ngay1;
+                                                for (int t = 0; t < khoangthoigiandat.Days; t++)
+                                                {
+                                                    NgayDaDat.Add(Ngay1);
+                                                    Ngay1 = Ngay1.AddDays(1);
+                                                }
+                                                foreach (DateTime day in NgayDaDat)
+                                                {
+                                                    foreach (DateTime day1 in SoSanhNgayDat)
+                                                    {
+                                                        if (day == day1)
+                                                        {
+                                                            count++;
+                                                        }
+                                                    }
+                                                }
+                                                NgayDaDat.Clear();
+                                            }
+                                            if (count == 0)   //Nếu không trùng ngày nào thì hiện lên
+
+                                            {
+                                                if (hoadon.LoaiPhong == "Giường Đơn" && hoadon.SoNguoi == 2)
+                                                {
+                                                    giuongdon2nguoi hienthi = new giuongdon2nguoi();
+                                                    hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                    hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                    hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                    hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                    hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                    hienthi.TENVTCHINHANH = MaHD;
+                                                    pl_phong.Controls.Add(hienthi);
+                                                    hienthi.Location = vitribandau;
+                                                    vitribandau.Y += 295;
                                                 }
                                                 else
                                                 {
-                                                    if (cbb_SoNguoi.Text == "5-6 người (3 giường đôi)")
+                                                    if (hoadon.LoaiPhong == "Giường Đôi" && hoadon.SoNguoi == 2)
                                                     {
-                                                        for (int i = 0; i < result.Tables[0].Rows.Count; i++)
+                                                        giuongdoi2nguoi hienthi = new giuongdoi2nguoi();
+                                                        hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                        hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                        hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                        hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                        hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                        hienthi.TENVTCHINHANH = MaHD;
+                                                        pl_phong.Controls.Add(hienthi);
+                                                        hienthi.Location = vitribandau;
+                                                        vitribandau.Y += 295;
+                                                    }
+                                                    else
+                                                    {
+                                                        if (hoadon.LoaiPhong == "Giường Đơn" && hoadon.SoNguoi == 4)
                                                         {
-                                                            giuongdoi6nguoi hienthi = new giuongdoi6nguoi();
-                                                            hienthi.Location = vitribandau;
-                                                            hienthi.TENVTCHINHANH = MaHD;
-                                                            hienthi.Location = vitribandau;
-                                                            hienthi.MAPHONG = result.Tables[0].Rows[i][0].ToString();
-                                                            hienthi.TENPHONG = result.Tables[0].Rows[i][2].ToString();
-                                                            hienthi.MACHINHANH = result.Tables[0].Rows[i][1].ToString();
+                                                            giuongdon4nguoi hienthi = new giuongdon4nguoi();
+                                                            hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                            hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                            hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
                                                             hienthi.NGAYDATPHONG = dtpNgayDat.Text;
-                                                            hienthi.CHINHANH = MaHD;
                                                             hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
-                                                            hienthi.SDT = sdt;
+                                                            hienthi.TENVTCHINHANH = MaHD;
                                                             pl_phong.Controls.Add(hienthi);
-                                                            vitribandau.Y += 220;
+                                                            hienthi.Location = vitribandau;
+                                                            vitribandau.Y += 295;
+                                                        }
+                                                        else
+                                                        {
+                                                            if (hoadon.LoaiPhong == "Giường Đôi" && hoadon.SoNguoi == 4)
+                                                            {
+                                                                giuongdoi4nguoi hienthi = new giuongdoi4nguoi();
+                                                                hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                                hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                                hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                                hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                                hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                                hienthi.TENVTCHINHANH = MaHD;
+                                                                pl_phong.Controls.Add(hienthi);
+                                                                hienthi.Location = vitribandau;
+                                                                vitribandau.Y += 295;
+                                                            }
+                                                            else
+                                                            {
+                                                                if (hoadon.LoaiPhong == "Giường Đôi" && hoadon.SoNguoi == 6)
+                                                                {
+                                                                    giuongdoi6nguoi hienthi = new giuongdoi6nguoi();
+                                                                    hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                                    hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                                    hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                                    hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                                    hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                                    hienthi.TENVTCHINHANH = MaHD;
+                                                                    pl_phong.Controls.Add(hienthi);
+                                                                    hienthi.Location = vitribandau;
+                                                                    vitribandau.Y += 295;
+                                                                }
+                                                            }
                                                         }
                                                     }
-
                                                 }
                                             }
                                         }
                                     }
                                 }
-
-
-
-                                else
+                            }
+                            SoSanhNgayDat.Clear();
+                        }
+                        else
+                        {
+                            Point vitribandau = new Point(5, 5);
+                            DTO_HoaDon hoadon = new DTO_HoaDon();
+                            hoadon.MaChiNhanh = MaHD;
+                            BO_DatPhong kiemtra = new BO_DatPhong();
+                            DataSet table = kiemtra.showall(hoadon);
+                            if (table.Tables[0].Rows.Count > 0)
+                            {
+                                for (int i = 0; i < table.Tables[0].Rows.Count; i++)
                                 {
-                                    MessageBox.Show("Phòng của chi nhánh này đã hết, hãy liên hệ với nhân viên khi có phòng chúng tôi sẽ liên hệ lại bạn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                                    DTO_HoaDon thongtinphong = new DTO_HoaDon();
+                                    thongtinphong.MaPhong = table.Tables[0].Rows[i][0].ToString();
+                                    thongtinphong.MaChiNhanh = table.Tables[0].Rows[i][1].ToString();
+                                    //Kiểm tra trong phòng hiện tại có nằm trong hóa đơn không, nếu không thì phòng chưa từng được đặt
+                                    DataSet KTPhongtrong = new DataSet();
+                                    KTPhongtrong = kiemtra.kiemtratronghoadon(thongtinphong);
+                                    if (KTPhongtrong.Tables[0].Rows.Count == 0)
+                                    {
+                                        if (table.Tables[0].Rows[i][3].ToString() == "Giường Đơn" && table.Tables[0].Rows[i][4].ToString() == "2")
+                                        {
+                                            giuongdon2nguoi hienthi = new giuongdon2nguoi();
+                                            hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                            hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                            hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                            hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                            hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                            hienthi.TENVTCHINHANH = MaHD;
+                                            pl_phong.Controls.Add(hienthi);
+                                            hienthi.Location = vitribandau;
+                                            vitribandau.Y += 295;
+                                        }
+                                        else
+                                        {
+                                            if (table.Tables[0].Rows[i][3].ToString() == "Giường Đôi" && table.Tables[0].Rows[i][4].ToString() == "2")
+                                            {
+                                                giuongdoi2nguoi hienthi = new giuongdoi2nguoi();
+                                                hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                hienthi.TENVTCHINHANH = MaHD;
+                                                pl_phong.Controls.Add(hienthi);
+                                                hienthi.Location = vitribandau;
+                                                vitribandau.Y += 295;
+                                            }
+                                            else
+                                            {
+                                                if (table.Tables[0].Rows[i][3].ToString() == "Giường Đơn" && table.Tables[0].Rows[i][4].ToString() == "4")
+                                                {
+                                                    giuongdon4nguoi hienthi = new giuongdon4nguoi();
+                                                    hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                    hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                    hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                    hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                    hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                    hienthi.TENVTCHINHANH = MaHD;
+                                                    pl_phong.Controls.Add(hienthi);
+                                                    hienthi.Location = vitribandau;
+                                                    vitribandau.Y += 295;
+                                                }
+                                                else
+                                                {
+                                                    if (table.Tables[0].Rows[i][3].ToString() == "Giường Đôi" && table.Tables[0].Rows[i][4].ToString() == "4")
+                                                    {
+                                                        giuongdoi4nguoi hienthi = new giuongdoi4nguoi();
+                                                        hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                        hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                        hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                        hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                        hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                        hienthi.TENVTCHINHANH = MaHD;
+                                                        pl_phong.Controls.Add(hienthi);
+                                                        hienthi.Location = vitribandau;
+                                                        vitribandau.Y += 295;
+                                                    }
+                                                    else
+                                                    {
+                                                        if (table.Tables[0].Rows[i][3].ToString() == "Giường Đôi" && table.Tables[0].Rows[i][4].ToString() == "6")
+                                                        {
+                                                            giuongdoi6nguoi hienthi = new giuongdoi6nguoi();
+                                                            hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                            hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                            hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                            hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                            hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                            hienthi.TENVTCHINHANH = MaHD;
+                                                            pl_phong.Controls.Add(hienthi);
+                                                            hienthi.Location = vitribandau;
+                                                            vitribandau.Y += 295;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        DateTime ngaydat = new DateTime();
+                                        DateTime ngaytra = new DateTime();
+                                        catchuoi(dtpNgayDat.Text, ref ngaydat);
+                                        catchuoi(dtpNgayTra.Text, ref ngaytra);
+                                        TimeSpan thoigiandat = new TimeSpan();
+                                        thoigiandat = ngaytra - ngaydat;
+                                        for (int k = 0; k < thoigiandat.Days; k++)
+                                        {
+                                            SoSanhNgayDat.Add(ngaydat);
+                                            ngaydat = ngaydat.AddDays(1);
+                                        }
+                                        int count = 0;
+                                        DTO_HoaDon kt = new DTO_HoaDon();
+                                        kt.MaPhong = table.Tables[0].Rows[i][0].ToString();
+                                        kt.MaChiNhanh = table.Tables[0].Rows[i][1].ToString();
+                                        DataSet table1 = new DataSet();
+                                        table1 = kiemtra.KiemTraNgayPhongDangDuocSuDung(kt);
+                                        if (table1.Tables[0].Rows.Count > 0 && table1.Tables.Count > 0)
+                                        {
+                                            int demhd = table1.Tables[0].Rows.Count;
+                                            for (int j = 0; j < demhd; j++)
+                                            {
+                                                DateTime Ngay1 = new DateTime(int.Parse(table1.Tables[0].Rows[j][8].ToString().Substring(6,2)),int.Parse(table1.Tables[0].Rows[j][8].ToString().Substring(3,2)),int.Parse(table1.Tables[0].Rows[j][8].ToString().Substring(0,2)));
+                                                DateTime Ngay2 = new DateTime(int.Parse(table1.Tables[0].Rows[j][9].ToString().Substring(6,2)), int.Parse(table1.Tables[0].Rows[j][9].ToString().Substring(3, 2)), int.Parse(table1.Tables[0].Rows[j][9].ToString().Substring(0, 2)));
+                                                
+                                                TimeSpan khoangthoigiandat = new TimeSpan();
+                                                khoangthoigiandat = Ngay2 - Ngay1;
+                                                for (int t = 0; t < khoangthoigiandat.Days; t++)
+                                                {
+                                                    NgayDaDat.Add(Ngay1);
+                                                    Ngay1 = Ngay1.AddDays(1);
+                                                }
+                                                foreach (DateTime day in NgayDaDat)
+                                                {
+                                                    foreach (DateTime day1 in SoSanhNgayDat)
+                                                    {
+                                                        if (day == day1)
+                                                        {
+                                                            count++;
+                                                        }
+                                                    }
+                                                }
+                                                NgayDaDat.Clear();
+                                            }
+                                        }
+                                        if (count == 0)
+                                        {
+                                            if (table.Tables[0].Rows[i][3].ToString() == "Giường Đơn" && table.Tables[0].Rows[i][4].ToString() == "2")
+                                            {
+                                                giuongdon2nguoi hienthi = new giuongdon2nguoi();
+                                                hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                hienthi.TENVTCHINHANH = MaHD;
+                                                pl_phong.Controls.Add(hienthi);
+                                                hienthi.Location = vitribandau;
+                                                vitribandau.Y += 295;
+                                            }
+                                            else
+                                            {
+                                                if (table.Tables[0].Rows[i][3].ToString() == "Giường Đôi" && table.Tables[0].Rows[i][4].ToString() == "2")
+                                                {
+                                                    giuongdoi2nguoi hienthi = new giuongdoi2nguoi();
+                                                    hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                    hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                    hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                    hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                    hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                    hienthi.TENVTCHINHANH = MaHD;
+                                                    pl_phong.Controls.Add(hienthi);
+                                                    hienthi.Location = vitribandau;
+                                                    vitribandau.Y += 295;
+                                                }
+                                                else
+                                                {
+                                                    if (table.Tables[0].Rows[i][3].ToString() == "Giường Đơn" && table.Tables[0].Rows[i][4].ToString() == "4")
+                                                    {
+                                                        giuongdon4nguoi hienthi = new giuongdon4nguoi();
+                                                        hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                        hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                        hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                        hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                        hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                        hienthi.TENVTCHINHANH = MaHD;
+                                                        pl_phong.Controls.Add(hienthi);
+                                                        hienthi.Location = vitribandau;
+                                                        vitribandau.Y += 295;
+                                                    }
+                                                    else
+                                                    {
+                                                        if (table.Tables[0].Rows[i][3].ToString() == "Giường Đôi" && table.Tables[0].Rows[i][4].ToString() == "4")
+                                                        {
+                                                            giuongdoi4nguoi hienthi = new giuongdoi4nguoi();
+                                                            hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                            hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                            hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                            hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                            hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                            hienthi.TENVTCHINHANH = MaHD;
+                                                            pl_phong.Controls.Add(hienthi);
+                                                            hienthi.Location = vitribandau;
+                                                            vitribandau.Y += 295;
+                                                        }
+                                                        else
+                                                        {
+                                                            if (table.Tables[0].Rows[i][3].ToString() == "Giường Đôi" && table.Tables[0].Rows[i][4].ToString() == "6")
+                                                            {
+                                                                giuongdoi6nguoi hienthi = new giuongdoi6nguoi();
+                                                                hienthi.MAPHONG = table.Tables[0].Rows[i][0].ToString();
+                                                                hienthi.MACHINHANH = table.Tables[0].Rows[i][1].ToString();
+                                                                hienthi.TENPHONG = table.Tables[0].Rows[i][2].ToString();
+                                                                hienthi.NGAYDATPHONG = dtpNgayDat.Text;
+                                                                hienthi.NGAYTRAPHONG = dtpNgayTra.Text;
+                                                                hienthi.TENVTCHINHANH = MaHD;
+                                                                pl_phong.Controls.Add(hienthi);
+                                                                hienthi.Location = vitribandau;
+                                                                vitribandau.Y += 295;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                                 }
                             }
+                            SoSanhNgayDat.Clear();
+
                         }
                     }
                 }
-            }
+            
         }
-
-
-    
+        private void catchuoi(string chuoi, ref DateTime ngay)
+        {
+            int Ngay = int.Parse(chuoi.Substring(0, 2));
+            int Thang = int.Parse(chuoi.Substring(3, 2));
+            int Nam = int.Parse(chuoi.Substring(8, 2));
+            ngay = new DateTime(Nam,Thang,Ngay);
+        }
+        private List<DateTime> SoSanhNgayDat = new List<DateTime>();
+        private List<DateTime> NgayDaDat = new List<DateTime>();
  
        
 
@@ -463,10 +669,7 @@ namespace QL_KhachSan
             this.Close();
         }
 
-        private void pl_phong_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {

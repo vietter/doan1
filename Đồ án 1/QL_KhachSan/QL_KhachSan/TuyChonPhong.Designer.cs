@@ -84,8 +84,6 @@
             this.btnTrolai = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.pHuyPhong = new System.Windows.Forms.PictureBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.pDoiPhong = new System.Windows.Forms.PictureBox();
             this.dgvHienThi = new System.Windows.Forms.DataGridView();
             this.txtTong = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -130,7 +128,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHuyPhong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pDoiPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHienThi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pXoaDichVu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pThanhToan)).BeginInit();
@@ -738,29 +735,6 @@
             this.pHuyPhong.TabStop = false;
             this.pHuyPhong.Click += new System.EventHandler(this.pHuyPhong_Click);
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.ForeColor = System.Drawing.Color.DeepPink;
-            this.label24.Location = new System.Drawing.Point(788, 106);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(76, 18);
-            this.label24.TabIndex = 19;
-            this.label24.Text = "Đổi phòng";
-            this.label24.Click += new System.EventHandler(this.label24_Click);
-            // 
-            // pDoiPhong
-            // 
-            this.pDoiPhong.Image = ((System.Drawing.Image)(resources.GetObject("pDoiPhong.Image")));
-            this.pDoiPhong.Location = new System.Drawing.Point(778, 9);
-            this.pDoiPhong.Name = "pDoiPhong";
-            this.pDoiPhong.Size = new System.Drawing.Size(98, 94);
-            this.pDoiPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pDoiPhong.TabIndex = 18;
-            this.pDoiPhong.TabStop = false;
-            this.pDoiPhong.Click += new System.EventHandler(this.pDoiPhong_Click);
-            // 
             // dgvHienThi
             // 
             this.dgvHienThi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -987,8 +961,6 @@
             this.Controls.Add(this.dgvHienThi);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pHuyPhong);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.pDoiPhong);
             this.Controls.Add(this.btnTrolai);
             this.Controls.Add(this.pl_ThucUong);
             this.Controls.Add(this.pl_main);
@@ -1028,7 +1000,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHuyPhong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pDoiPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHienThi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pXoaDichVu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pThanhToan)).EndInit();
@@ -1092,8 +1063,6 @@
         private System.Windows.Forms.Button btnTrolai;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pHuyPhong;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.PictureBox pDoiPhong;
         private System.Windows.Forms.DataGridView dgvHienThi;
         private System.Windows.Forms.TextBox txtTong;
         private System.Windows.Forms.Label label7;

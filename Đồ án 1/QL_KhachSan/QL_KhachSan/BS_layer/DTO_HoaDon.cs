@@ -14,11 +14,15 @@ namespace QL_KhachSan.BS_layer
         public string MaChiNhanh;
         public string MaPhong;
         public string SoDienThoai;
-        public DateTime NgayDatPhong;
-        public DateTime NgayTraPhong;
+        public string NgayDatPhong;
+        public string NgayTraPhong;
         public string MaDV;
         public int SoLuong;
         public int ThanhTien;
+        public string DatCoc;
+        public string LoaiPhong;
+        public int SoNguoi;
         public string DapUng;
+        public DateTime ThoiGianThucHienHoaDon;
     }
 }

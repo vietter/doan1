@@ -8,7 +8,6 @@ C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DangNhap.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DatPhong.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DoiMatKhau.resources
-C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DoiPhong.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.GiaoDienKhachHang.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.GiaoDienQuanLi.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.MatKhau.resources
@@ -49,7 +48,6 @@ D:\New folder\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.pdb
 D:\New folder\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DangNhapNhanVien.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DangNhapNhanVien.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.SoLuong.resources
-C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.FreeRoom.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.PhongCuaKhach.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.QuanLiPhong.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BS_layer.giuongdon2nguoi.resources
@@ -291,3 +289,5 @@ C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BaoCaoHoChiMinh.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BaoCaoNhaTrang.resources
 C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.BaoCaoPhuQuoc.resources
+C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.DSPhongChuaDatCoc.resources
+C:\Users\Windows 10\Desktop\GitHub\doan1\Đồ án 1\QL_KhachSan\QL_KhachSan\obj\Debug\QL_KhachSan.PhongChuaDatCoc.resources

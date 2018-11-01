@@ -45,7 +45,7 @@
             this.pl_YeuCau.Name = "pl_YeuCau";
             this.pl_YeuCau.Size = new System.Drawing.Size(841, 352);
             this.pl_YeuCau.TabIndex = 0;
-            
+            this.pl_YeuCau.Paint += new System.Windows.Forms.PaintEventHandler(this.pl_YeuCau_Paint);
             // 
             // label1
             // 
@@ -58,6 +58,7 @@
             this.label1.Size = new System.Drawing.Size(418, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Danh sách yêu cầu dịch vụ của khách hàng";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -68,6 +69,7 @@
             this.label2.Size = new System.Drawing.Size(69, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Chi nhánh:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lb_TenChiNhanh
             // 
@@ -79,6 +81,7 @@
             this.lb_TenChiNhanh.Size = new System.Drawing.Size(106, 16);
             this.lb_TenChiNhanh.TabIndex = 3;
             this.lb_TenChiNhanh.Text = "Tên Chi nhánh";
+            this.lb_TenChiNhanh.Click += new System.EventHandler(this.lb_TenChiNhanh_Click);
             // 
             // pbTroVe
             // 

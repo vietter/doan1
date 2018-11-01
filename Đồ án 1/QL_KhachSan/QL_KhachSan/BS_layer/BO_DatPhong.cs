@@ -10,28 +10,54 @@ namespace QL_KhachSan.BS_layer
 {
     class BO_DatPhong
     { 
-       public DataSet KiemTraPhongTrong (DTO_Phong phong)
+        public DataSet kiemtratronghoadon(DTO_HoaDon dto)
         {
             DataSet result = new DataSet();
-            string sql = "SELECT * FROM Phong WHERE MaChiNhanh LIKE @MaChiNhanh + '%' AND NguoiSuDung = 'Free' AND SoNguoi = @SoNguoi AND LoaiPhong = @LoaiPhong";
+            string sql = "SELECT * FROM HoaDon WHERE MaPhong = @MaPhong AND MaChiNhanh =@MaChiNhanh AND TenDichVu LIKE 'Thuê Phòng%' AND DapUng != 'Done'";
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter ("@MaChiNhanh",phong.MaChiNhanh),
-                new SqlParameter("@SoNguoi",phong.SoNguoi),
-                new SqlParameter("@LoaiPhong",phong.LoaiPhong),
+                new SqlParameter("@MaPhong",dto.MaPhong),
+                new SqlParameter("@MaChiNhanh",dto.MaChiNhanh),
             };
             DataAccess data = new DataAccess();
             result = data.getdataset(sql, para);
             return result;
         }
-        public DataSet showall(DTO_Phong phong)
+       public DataSet ChonPhong (DTO_HoaDon dto)
+        {
+            DataSet result = new DataSet();
+            string sql = "SELECT * FROM Phong WHERE LoaiPhong = @LoaiPhong AND SoNguoi = @SoNguoi AND MaChiNhanh LIKE @MaChiNhanh +'%'";
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@LoaiPhong",dto.LoaiPhong),
+                new SqlParameter("@MaChiNhanh",dto.MaChiNhanh),
+                new SqlParameter("@SoNguoi",dto.SoNguoi),
+            };
+            DataAccess data = new DataAccess();
+            result = data.getdataset(sql, para);
+            return result;
+        }
+        public DataSet KiemTraNgayPhongDangDuocSuDung(DTO_HoaDon dto)
+        {
+            DataSet result = new DataSet();
+            string sql = "SELECT * FROM HoaDon WHERE MaPhong = @MaPhong AND MaChiNhanh = @MaChiNhanh AND TenDichVu LIKE 'Thuê Phòng%' AND DapUng != 'Done'";
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@MaPhong",dto.MaPhong),
+                new SqlParameter("@MaChiNhanh",dto.MaChiNhanh),
+            };
+            DataAccess data = new DataAccess();
+            result = data.getdataset(sql, para);
+            return result;
+        }
+        public DataSet showall(DTO_HoaDon phong)
         {
             DataSet result;
-            string sql = "SELECT * FROM Phong WHERE MaChiNhanh LIKE @MaChiNhanh + '%' AND NguoiSuDung = @SDT";
+            string sql = "SELECT * FROM Phong WHERE  MaChiNhanh LIKE @MaChiNhanh +'%'";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@MaChiNhanh",phong.MaChiNhanh),
-                new SqlParameter("@SDT",phong.SDT),
+               
             };
             DataAccess data = new DataAccess();
             result = data.getdataset(sql, para);
@@ -40,7 +66,7 @@ namespace QL_KhachSan.BS_layer
        public int DatPhong(DTO_HoaDon thongtin)
         {
             int result = -1;
-            string sql = "INSERT INTO HoaDon VALUES(@TenDichVu,@SoLuong,@ThanhTien,@MaHD,@STT,@MaChiNhanh,@MaPhong,@SDT,@NgayDat,@NgayTra,@MaDV,@DapUng)";
+            string sql = "INSERT INTO HoaDon VALUES(@TenDichVu,@SoLuong,@ThanhTien,@MaHD,@STT,@MaChiNhanh,@MaPhong,@SDT,@NgayDat,@NgayTra,@MaDV,@DapUng,@DatCoc,@ThoiGianThucHienHoaDon)";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@TenDichVu",thongtin.TenDichVu),
@@ -55,6 +81,8 @@ namespace QL_KhachSan.BS_layer
                 new SqlParameter("@NgayTra",thongtin.NgayTraPhong),
                 new SqlParameter("@MaDV",thongtin.MaDV),
                 new SqlParameter("@DapUng",thongtin.DapUng),
+                new SqlParameter("@DatCoc",thongtin.DatCoc),
+                new SqlParameter("ThoiGianThucHienHoaDon",thongtin.ThoiGianThucHienHoaDon),
             };
             DataAccess data = new DataAccess();
             result = data.Execute(sql, para);
@@ -73,22 +101,7 @@ namespace QL_KhachSan.BS_layer
             result = data.Execute(sql, para);
             return result;
         }
-        public int SuDungPhong( DTO_Phong phong)
-        {
-            int result = -1;
-            string sql = @"UPDATE Phong SET NguoiSuDung = @SDT WHERE MaPhong = @MaPhong AND MaChiNhanh = @MaChiNhanh";
-            SqlParameter[] para = new SqlParameter[]
-            {
-                new SqlParameter ("@SDT",phong.SDT),
-                new SqlParameter("@MaPhong",phong.MaPhong),
-                new SqlParameter ("@MaChiNhanh",phong.MaChiNhanh),
-
-            };
-            DataAccess data = new DataAccess();
-            result = data.Execute(sql, para);
-            return result;
-
-        }
+       
         public DataSet KiemTraMaHD(DTO_HoaDon hoadon)
         {
             DataSet result = new DataSet();

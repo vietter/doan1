@@ -63,6 +63,7 @@
             this.Controls.Add(this.picture);
             this.Name = "PhongCuaKhach";
             this.Size = new System.Drawing.Size(102, 119);
+            this.Load += new System.EventHandler(this.PhongCuaKhach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

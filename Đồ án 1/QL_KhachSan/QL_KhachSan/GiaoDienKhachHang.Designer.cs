@@ -103,7 +103,6 @@
             this.gbKhachHang.TabIndex = 5;
             this.gbKhachHang.TabStop = false;
             this.gbKhachHang.Text = "Lựa Chọn Cho Khách Hàng";
-            this.gbKhachHang.Enter += new System.EventHandler(this.gbKhachHang_Enter);
             // 
             // label4
             // 

@@ -112,17 +112,18 @@
             // 
             // dtpNgayDat
             // 
-            this.dtpNgayDat.CustomFormat = "dd/MM/yyyy ";
+            this.dtpNgayDat.CustomFormat = "dd/MM/yyyy";
             this.dtpNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayDat.Location = new System.Drawing.Point(7, 99);
             this.dtpNgayDat.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgayDat.Name = "dtpNgayDat";
             this.dtpNgayDat.Size = new System.Drawing.Size(120, 24);
             this.dtpNgayDat.TabIndex = 2;
+            this.dtpNgayDat.Value = new System.DateTime(2018, 10, 30, 15, 39, 0, 0);
             // 
             // dtpNgayTra
             // 
-            this.dtpNgayTra.CustomFormat = "dd/MM/yyyy ";
+            this.dtpNgayTra.CustomFormat = "dd/MM/yyyy";
             this.dtpNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayTra.Location = new System.Drawing.Point(6, 148);
             this.dtpNgayTra.Margin = new System.Windows.Forms.Padding(4);
@@ -182,7 +183,8 @@
             "2 người (giường đôi)",
             "3-4 người (4 giường đơn)",
             "3-4 người (2 giường đôi)",
-            "5-6 người (3 giường đôi)"});
+            "5-6 người (3 giường đôi)",
+            "Tất Cả"});
             this.cbb_SoNguoi.Location = new System.Drawing.Point(6, 198);
             this.cbb_SoNguoi.Margin = new System.Windows.Forms.Padding(4);
             this.cbb_SoNguoi.Name = "cbb_SoNguoi";
@@ -207,7 +209,6 @@
             this.pl_phong.Name = "pl_phong";
             this.pl_phong.Size = new System.Drawing.Size(1133, 465);
             this.pl_phong.TabIndex = 27;
-            this.pl_phong.Paint += new System.Windows.Forms.PaintEventHandler(this.pl_phong_Paint);
             // 
             // label18
             // 
@@ -327,7 +328,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(1370, 505);
+            this.ClientSize = new System.Drawing.Size(1370, 577);
             this.ControlBox = false;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label18);

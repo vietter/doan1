@@ -215,6 +215,7 @@ namespace QL_KhachSan
         {
             lbSai.Hide();
             txtSoDT.Focus();
+           
         }
 
 
@@ -245,9 +246,6 @@ namespace QL_KhachSan
 
         }
 
-        private void txtSoDT_Click_1(object sender, EventArgs e)
-        {
-            txtSoDT.Text = "";
-        }
+        
     }
 }

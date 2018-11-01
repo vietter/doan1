@@ -65,6 +65,14 @@ namespace QL_KhachSan
                 maphong = value;    
             }
         }
+        public DateTime THOIGIANTHUCHIEN
+        {
+            set
+            {
+                thoigianthuchien = value;
+            }
+        }
+        private DateTime thoigianthuchien;
         public string MACHINHANH
         {
             set
@@ -109,6 +117,7 @@ namespace QL_KhachSan
             lb_tenphong.Text = tenphong;
             lb_ngaydatphong.Text = NgayDat;
             lb_ngaytraphong.Text = NgayTra;
+            lb_thoigian.Text = thoigianthuchien.Hour.ToString() + " Giờ " + thoigianthuchien.Minute.ToString() +" Phút " + "Ngày " + thoigianthuchien.Day.ToString() + " Tháng " + thoigianthuchien.Month.ToString() + " Năm " + thoigianthuchien.Year.ToString(); 
             txtTien.Text = giatien.ToString();
         }
 

@@ -98,6 +98,8 @@ namespace QL_KhachSan
                         dsphong.TENCHINHANH = tenchinhanh;
                         dsphong.TENNV = tennv;
                         dsphong.MANV = manv;
+                        DateTime ngaydat = new DateTime(int.Parse("20" + table.Tables[0].Rows[i][8].ToString().Substring(6, 2)), int.Parse(table.Tables[0].Rows[i][8].ToString().Substring(3, 2)), int.Parse(table.Tables[0].Rows[i][8].ToString().Substring(0, 2)), int.Parse(table.Tables[0].Rows[i][8].ToString().Substring(9, 2)), int.Parse(table.Tables[0].Rows[i][8].ToString().Substring(12, 2)), int.Parse(table.Tables[0].Rows[i][8].ToString().Substring(15, 2)));
+                        dsphong.NGAYDAT =ngaydat;
                         dsphong.MAHD = table.Tables[0].Rows[i][3].ToString();
                         vitridau.X = 20;
                         vitridau.Y = 150;
@@ -118,6 +120,8 @@ namespace QL_KhachSan
                         dsphong.TENPHONG = KQ.Tables[0].Rows[0][2].ToString();
                         dsphong.SDT = table.Tables[0].Rows[i][7].ToString();
                         dsphong.TENCHINHANH = tenchinhanh;
+                        DateTime ngaydat = new DateTime(int.Parse("20" + table.Tables[0].Rows[i][8].ToString().Substring(6, 2)), int.Parse(table.Tables[0].Rows[i][8].ToString().Substring(3, 2)), int.Parse(table.Tables[0].Rows[i][8].ToString().Substring(0, 2)), int.Parse(table.Tables[0].Rows[i][8].ToString().Substring(9, 2)), int.Parse(table.Tables[0].Rows[i][8].ToString().Substring(12, 2)), int.Parse(table.Tables[0].Rows[i][8].ToString().Substring(15, 2)));
+                        dsphong.NGAYDAT = ngaydat;
                         dsphong.TENNV = tennv;
                         dsphong.MANV = manv;
                         dsphong.MAHD = table.Tables[0].Rows[i][3].ToString();

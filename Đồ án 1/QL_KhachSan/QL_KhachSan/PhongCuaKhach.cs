@@ -80,6 +80,15 @@ namespace QL_KhachSan
                 sdt = value;
             }
         }
+        private DateTime ngaydat;
+        public DateTime NGAYDAT
+        {
+            set
+            {
+                ngaydat = value;
+            }
+        }
+
         private void picture_Click(object sender, EventArgs e)
         {
             this.ParentForm.Hide();
@@ -99,6 +108,7 @@ namespace QL_KhachSan
         private void PhongCuaKhach_Load(object sender, EventArgs e)
         {
             label.Text = tenphong;
+            lb_ngaydat.Text = ngaydat.Day.ToString() + "/" + ngaydat.Month.ToString() + "/" + ngaydat.Year.ToString();
         }
     }
 }

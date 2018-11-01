@@ -41,8 +41,6 @@ namespace QL_KhachSan
             rtbHuyPhong.Visible = false;
             rtbMatKhau.Visible = false;
             rtbThongTin.Visible = false;
-            rtbDoiPhong.Visible = false;
-            rtbDoiPhong.ReadOnly = true;
             rtbDangXuat.ReadOnly = true;
             rtbDatPhong.ReadOnly = true;
             rtbHuyPhong.ReadOnly = true;
@@ -95,7 +93,6 @@ namespace QL_KhachSan
                 rtbHuyPhong.Visible = true;
                 rtbMatKhau.Visible = false;
                 rtbThongTin.Visible = false;
-                rtbDoiPhong.Visible = false;
             }
             else if (cbbLuaChon.Text == "Đổi Mật Khẩu")
             {
@@ -105,7 +102,6 @@ namespace QL_KhachSan
                 rtbHuyPhong.Visible = false;
                 rtbMatKhau.Visible = true;
                 rtbThongTin.Visible = false;
-                rtbDoiPhong.Visible = false;
             }
             else  if (cbbLuaChon.Text.Equals("Đăng Xuất"))
                 {
@@ -115,7 +111,6 @@ namespace QL_KhachSan
                     rtbHuyPhong.Visible = false;
                     rtbMatKhau.Visible = false;
                     rtbThongTin.Visible = false;
-                rtbDoiPhong.Visible = false;
             }
             else if (cbbLuaChon.Text.Equals("Đặt Phòng"))
             {
@@ -125,7 +120,6 @@ namespace QL_KhachSan
                 rtbHuyPhong.Visible = false;
                 rtbMatKhau.Visible = false;
                 rtbThongTin.Visible = false;
-                rtbDoiPhong.Visible = false;
             }
             else if (cbbLuaChon.Text.Equals("Thông Tin Phòng Đã Đặt"))
             {
@@ -135,17 +129,8 @@ namespace QL_KhachSan
                 rtbHuyPhong.Visible = false;
                 rtbMatKhau.Visible = false;
                 rtbThongTin.Visible = true;
-                rtbDoiPhong.Visible = false;
             }
-            else
-            {
-                rtbDangXuat.Visible = false;
-                rtbDatPhong.Visible = false;
-                rtbHuyPhong.Visible = false;
-                rtbMatKhau.Visible = false;
-                rtbThongTin.Visible = false;
-                rtbDoiPhong.Visible = true;
-            }
+           
         }
     }
 }

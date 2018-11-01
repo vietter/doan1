@@ -13,7 +13,7 @@ namespace QL_KhachSan.BS_layer
         public DataSet HienThiDSPhongDaDatCuaKhachHang(DTO_HoaDon phong)
         {
             DataSet result = new DataSet();
-            string sql = "SELECT * FROM HoaDon WHERE MaChiNhanh = @MaChiNhanh AND DapUng != 'Done' AND TenDichVu LIKE 'Thuê Phòng%' ";
+            string sql = "SELECT * FROM HoaDon WHERE MaChiNhanh = @MaChiNhanh AND DapUng != 'Done' AND DatCoc ='Yes' AND TenDichVu LIKE 'Thuê Phòng%' ";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@MaChiNhanh",phong.MaChiNhanh),

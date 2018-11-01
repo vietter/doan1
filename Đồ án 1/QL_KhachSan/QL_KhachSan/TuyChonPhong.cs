@@ -72,6 +72,7 @@ namespace QL_KhachSan
                 maphong = value;
             }
         }
+        
         private string machinhanh;
         public string MACHINHANH
         {

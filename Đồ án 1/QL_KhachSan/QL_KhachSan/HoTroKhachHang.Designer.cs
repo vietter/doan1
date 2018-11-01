@@ -37,7 +37,6 @@
             this.rtbHuyPhong = new System.Windows.Forms.RichTextBox();
             this.rtbDangXuat = new System.Windows.Forms.RichTextBox();
             this.rtbThongTin = new System.Windows.Forms.RichTextBox();
-            this.rtbDoiPhong = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbTroVe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +48,6 @@
             "Đổi Mật Khẩu",
             "Đặt Phòng",
             "Hủy Phòng",
-            "Đổi Phòng",
             "Đăng Xuất",
             "Thông Tin Phòng Đã Đặt"});
             this.cbbLuaChon.Location = new System.Drawing.Point(10, 34);
@@ -131,16 +129,6 @@
             this.rtbThongTin.Text = "Tại giao diện khách hàng, click vào TÙY CHỌN PHÒNG vào phòng muốn xem thông tin c" +
     "ác dịch vụ đã đặt hoặc đặt thêm dịch vụ";
             // 
-            // rtbDoiPhong
-            // 
-            this.rtbDoiPhong.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rtbDoiPhong.Location = new System.Drawing.Point(10, 61);
-            this.rtbDoiPhong.Name = "rtbDoiPhong";
-            this.rtbDoiPhong.Size = new System.Drawing.Size(501, 98);
-            this.rtbDoiPhong.TabIndex = 35;
-            this.rtbDoiPhong.Text = "Tại giao diện khách hàng, click vào TÙY CHỌN PHÒNG của phòng muốn đổi, sau đó chọ" +
-    "n ĐỔI PHÒNG và lựa chọn phòng muốn đổi, chọn YES\n";
-            // 
             // HoTroKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,7 +136,6 @@
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(523, 165);
             this.ControlBox = false;
-            this.Controls.Add(this.rtbDoiPhong);
             this.Controls.Add(this.rtbThongTin);
             this.Controls.Add(this.rtbDangXuat);
             this.Controls.Add(this.rtbHuyPhong);
@@ -178,6 +165,5 @@
         private System.Windows.Forms.RichTextBox rtbHuyPhong;
         private System.Windows.Forms.RichTextBox rtbDangXuat;
         private System.Windows.Forms.RichTextBox rtbThongTin;
-        private System.Windows.Forms.RichTextBox rtbDoiPhong;
     }
 }
